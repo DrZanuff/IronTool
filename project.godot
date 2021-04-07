@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Tool"
+config/name="IronTool"
 config/icon="res://icon.png"
 
 [rendering]
