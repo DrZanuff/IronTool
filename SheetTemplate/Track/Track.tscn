@@ -1,0 +1,178 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Boxes/Tre.svg" type="Texture" id=1]
+[ext_resource path="res://Assets/Boxes/Zero.svg" type="Texture" id=2]
+[ext_resource path="res://Assets/Boxes/Two.svg" type="Texture" id=3]
+[ext_resource path="res://Assets/Boxes/One.svg" type="Texture" id=4]
+[ext_resource path="res://Assets/Boxes/Four.svg" type="Texture" id=5]
+[ext_resource path="res://SheetTemplate/Track/Track.gd" type="Script" id=6]
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.321569, 0.309804, 0.972549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.262745, 0.262745, 0.262745, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.262745, 0.262745, 0.262745, 1 )
+
+[node name="Track" type="HBoxContainer"]
+margin_left = 82.0
+margin_right = 655.0
+margin_bottom = 51.0
+size_flags_stretch_ratio = 0.8
+custom_constants/separation = 7
+alignment = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt1" type="OptionButton" parent="."]
+margin_right = 51.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 51, 51 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt2" type="OptionButton" parent="."]
+margin_left = 58.0
+margin_right = 109.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt3" type="OptionButton" parent="."]
+margin_left = 116.0
+margin_right = 167.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt4" type="OptionButton" parent="."]
+margin_left = 174.0
+margin_right = 225.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt5" type="OptionButton" parent="."]
+margin_left = 232.0
+margin_right = 283.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt6" type="OptionButton" parent="."]
+margin_left = 290.0
+margin_right = 341.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt7" type="OptionButton" parent="."]
+margin_left = 348.0
+margin_right = 399.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt8" type="OptionButton" parent="."]
+margin_left = 406.0
+margin_right = 457.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt9" type="OptionButton" parent="."]
+margin_left = 464.0
+margin_right = 515.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
+
+[node name="Opt10" type="OptionButton" parent="."]
+margin_left = 522.0
+margin_right = 573.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 42, 42 )
+custom_icons/arrow = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 2 )
+items = [ "", ExtResource( 2 ), false, 0, null, "", ExtResource( 4 ), false, 1, null, "", ExtResource( 3 ), false, 2, null, "", ExtResource( 1 ), false, 3, null, "", ExtResource( 5 ), false, 4, null ]
+selected = 0
