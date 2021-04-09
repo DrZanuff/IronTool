@@ -69,22 +69,22 @@ func _clear():
 	score = -1
 	unmark()
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.pressed:
-			match event.scancode:
-				KEY_1:
-					_mark_progress(0)
-				KEY_2:
-					_mark_progress(1)
-				KEY_3:
-					_mark_progress(2)
-				KEY_4:
-					_mark_progress(3)
-				KEY_5:
-					_mark_progress(4)
-				KEY_6:
-					_clear()
-
-func _physics_process(delta: float) -> void:
-	print(score)
+#func _input(event: InputEvent) -> void:
+#	if event is InputEventKey:
+#		if event.pressed:
+#			match event.scancode:
+#				KEY_1:
+#					_mark_progress(0)
+#				KEY_2:
+#					_mark_progress(1)
+#				KEY_3:
+#					_mark_progress(2)
+#				KEY_4:
+#					_mark_progress(3)
+#				KEY_5:
+#					_mark_progress(4)
+#				KEY_6:
+#					_clear()
+#
+#func _physics_process(delta: float) -> void:
+#	print(score)
