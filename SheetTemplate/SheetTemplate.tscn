@@ -136,7 +136,7 @@ __meta__ = {
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 988.0
-margin_bottom = 550.0
+margin_bottom = 876.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -637,12 +637,12 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 938.0
-margin_bottom = 412.0
+margin_bottom = 826.0
 rect_min_size = Vector2( 0, 115 )
 
 [node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_right = 938.0
-margin_bottom = 199.0
+margin_bottom = 613.0
 
 [node name="Summary" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
 margin_right = 938.0
@@ -1606,6 +1606,57 @@ margin_bottom = 38.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "LEARN"
+
+[node name="Vows" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+margin_top = 203.0
+margin_right = 938.0
+margin_bottom = 613.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMargin/Body/Interfaces/Body/Vows"]
+margin_top = 10.0
+margin_right = 938.0
+margin_bottom = 410.0
+rect_min_size = Vector2( 0, 400 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer"]
+margin_right = 938.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body"]
+margin_right = 938.0
+margin_bottom = 19.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin"]
+margin_left = 150.0
+margin_right = 788.0
+margin_bottom = 19.0
+custom_constants/separation = 14
+
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+margin_right = 280.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="TitleVows" type="Label" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+margin_left = 294.0
+margin_right = 344.0
+margin_bottom = 19.0
+text = "VOWS"
+
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+margin_left = 358.0
+margin_right = 638.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Plus_pressed"]
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
