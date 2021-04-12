@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
 [ext_resource path="res://Assets/ArrowRight.svg" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://SheetTemplate/Track/Track.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SheetTemplate/Vow/Vow.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -113,17 +114,18 @@ func _on_SpinBox_gui_input(event: InputEvent) -> void:
 			prefix = \"+\"
 "
 
-[node name="SheetTemplate" type="Control"]
+[node name="SheetTemplate" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
 theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MainMargin" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 1038.0
+margin_bottom = 1376.0
 custom_constants/margin_right = 50
 custom_constants/margin_top = 50
 custom_constants/margin_left = 50
@@ -136,7 +138,7 @@ __meta__ = {
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 988.0
-margin_bottom = 876.0
+margin_bottom = 1326.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -192,6 +194,8 @@ margin_right = 215.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="Health" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
 margin_left = 235.0
@@ -303,6 +307,8 @@ margin_right = 162.0
 margin_bottom = 29.0
 size_flags_vertical = 3
 align = 1
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="Spent" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
 margin_left = 805.0
@@ -330,6 +336,8 @@ margin_right = 113.0
 margin_bottom = 29.0
 size_flags_vertical = 3
 align = 1
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="MomentumMargin" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 53.0
@@ -637,12 +645,12 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 938.0
-margin_bottom = 826.0
+margin_bottom = 1276.0
 rect_min_size = Vector2( 0, 115 )
 
 [node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_right = 938.0
-margin_bottom = 613.0
+margin_bottom = 1063.0
 
 [node name="Summary" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
 margin_right = 938.0
@@ -1610,7 +1618,7 @@ text = "LEARN"
 [node name="Vows" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
 margin_top = 203.0
 margin_right = 938.0
-margin_bottom = 613.0
+margin_bottom = 1063.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_top = 10
@@ -1618,45 +1626,61 @@ custom_constants/margin_top = 10
 [node name="ScrollContainer" type="ScrollContainer" parent="MainMargin/Body/Interfaces/Body/Vows"]
 margin_top = 10.0
 margin_right = 938.0
-margin_bottom = 410.0
-rect_min_size = Vector2( 0, 400 )
+margin_bottom = 860.0
+rect_min_size = Vector2( 0, 850 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer"]
+[node name="VowContents" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer"]
 margin_right = 938.0
-margin_bottom = 400.0
+margin_bottom = 843.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
+custom_constants/separation = 10
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body"]
+[node name="VowTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents"]
 margin_right = 938.0
 margin_bottom = 19.0
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 
-[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin"]
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents/VowTitle"]
 margin_left = 150.0
 margin_right = 788.0
 margin_bottom = 19.0
 custom_constants/separation = 14
 
-[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents/VowTitle/TitleBox"]
 margin_right = 280.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="TitleVows" type="Label" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+[node name="TitleVows" type="Label" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents/VowTitle/TitleBox"]
 margin_left = 294.0
 margin_right = 344.0
 margin_bottom = 19.0
 text = "VOWS"
 
-[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/Body/Margin/TitleBox"]
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents/VowTitle/TitleBox"]
 margin_left = 358.0
 margin_right = 638.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
+
+[node name="Vow1" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents" instance=ExtResource( 6 )]
+margin_top = 29.0
+margin_bottom = 225.0
+
+[node name="Vow2" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents" instance=ExtResource( 6 )]
+margin_top = 235.0
+margin_bottom = 431.0
+
+[node name="Vow3" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents" instance=ExtResource( 6 )]
+margin_top = 441.0
+margin_bottom = 637.0
+
+[node name="Vow4" parent="MainMargin/Body/Interfaces/Body/Vows/ScrollContainer/VowContents" instance=ExtResource( 6 )]
+margin_top = 647.0
+margin_bottom = 843.0
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Plus_pressed"]
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
