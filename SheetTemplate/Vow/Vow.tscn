@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://SheetTemplate/Track/Track.gd" type="Script" id=1]
+[ext_resource path="res://SheetTemplate/Vow/Vow.gd" type="Script" id=1]
 [ext_resource path="res://SheetTemplate/Track/Track.tscn" type="PackedScene" id=2]
 
-[sub_resource type="StyleBoxFlat" id=15]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -11,30 +11,38 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 border_width_left = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
 
-[node name="Vow" type="MarginContainer"]
-margin_top = 25.0
+[node name="Vow" type="MarginContainer" groups=[
+"Vow",
+]]
 margin_right = 938.0
-margin_bottom = 221.0
+margin_bottom = 202.0
+mouse_filter = 1
+mouse_default_cursor_shape = 6
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 938.0
-margin_bottom = 196.0
-custom_styles/panel = SubResource( 15 )
+margin_bottom = 202.0
+custom_styles/panel = SubResource( 1 )
 
 [node name="VowBody" type="VBoxContainer" parent="."]
 margin_right = 938.0
-margin_bottom = 196.0
+margin_bottom = 202.0
 
 [node name="Info" type="MarginContainer" parent="VowBody"]
 margin_right = 938.0
-margin_bottom = 82.0
+margin_bottom = 72.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -44,23 +52,23 @@ custom_constants/margin_bottom = 10
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 928.0
-margin_bottom = 72.0
+margin_bottom = 62.0
 
 [node name="VowNameInput" type="LineEdit" parent="VowBody/Info/VowData"]
 margin_right = 918.0
-margin_bottom = 29.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 placeholder_text = "Vow"
 
 [node name="VowThreat" type="HBoxContainer" parent="VowBody/Info/VowData"]
-margin_top = 33.0
+margin_top = 28.0
 margin_right = 918.0
-margin_bottom = 62.0
+margin_bottom = 52.0
 
 [node name="VowThreatInput" type="LineEdit" parent="VowBody/Info/VowData/VowThreat"]
 margin_right = 814.0
-margin_bottom = 29.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 placeholder_text = "Threat"
@@ -68,24 +76,26 @@ placeholder_text = "Threat"
 [node name="ButtonMenace" type="Button" parent="VowBody/Info/VowData/VowThreat"]
 margin_left = 818.0
 margin_right = 918.0
-margin_bottom = 29.0
+margin_bottom = 24.0
 rect_min_size = Vector2( 100, 0 )
+toggle_mode = true
 text = "MENACE"
 
 [node name="Menace" type="MarginContainer" parent="VowBody"]
 visible = false
-margin_top = 86.0
+margin_top = 76.0
 margin_right = 938.0
-margin_bottom = 126.0
+margin_bottom = 111.0
+mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="VowBody/Menace"]
 margin_right = 938.0
-margin_bottom = 40.0
-custom_styles/panel = SubResource( 14 )
+margin_bottom = 35.0
+custom_styles/panel = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="VowBody/Menace"]
 margin_right = 938.0
-margin_bottom = 40.0
+margin_bottom = 35.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 5
 custom_constants/margin_left = 10
@@ -95,76 +105,77 @@ custom_constants/margin_bottom = 10
 margin_left = 10.0
 margin_top = 5.0
 margin_right = 928.0
-margin_bottom = 30.0
+margin_bottom = 25.0
 custom_constants/separation = 9
 alignment = 1
 
 [node name="Button" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_right = 94.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button2" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 103.0
 margin_right = 197.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button3" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 206.0
 margin_right = 300.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button4" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 309.0
 margin_right = 403.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button5" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 412.0
 margin_right = 506.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button6" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 515.0
 margin_right = 609.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button7" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 618.0
 margin_right = 712.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button8" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 721.0
 margin_right = 815.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Button9" type="Button" parent="VowBody/Menace/MarginContainer/HBoxContainer"]
 margin_left = 824.0
 margin_right = 918.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Level" type="MarginContainer" parent="VowBody"]
-margin_top = 86.0
+margin_top = 76.0
 margin_right = 938.0
-margin_bottom = 121.0
+margin_bottom = 106.0
+mouse_filter = 2
 custom_constants/margin_right = 50
 custom_constants/margin_top = 5
 custom_constants/margin_left = 50
@@ -174,47 +185,48 @@ custom_constants/margin_bottom = 5
 margin_left = 50.0
 margin_top = 5.0
 margin_right = 888.0
-margin_bottom = 30.0
+margin_bottom = 25.0
 custom_constants/separation = 17
 
 [node name="ButtonTroublesome" type="Button" parent="VowBody/Level/LevelButtons"]
 margin_right = 154.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "TROUBLESOME"
 
 [node name="ButtonDangerous" type="Button" parent="VowBody/Level/LevelButtons"]
 margin_left = 171.0
 margin_right = 325.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "DANGEROUS"
 
 [node name="ButtonFormidable" type="Button" parent="VowBody/Level/LevelButtons"]
 margin_left = 342.0
 margin_right = 496.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "FORMIDABLE"
 
 [node name="ButtonExtreme" type="Button" parent="VowBody/Level/LevelButtons"]
 margin_left = 513.0
 margin_right = 667.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "EXTREME"
 
 [node name="ButtonEpic" type="Button" parent="VowBody/Level/LevelButtons"]
 margin_left = 684.0
 margin_right = 838.0
-margin_bottom = 25.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Epic"
 
 [node name="Progress" type="MarginContainer" parent="VowBody"]
-margin_top = 125.0
+margin_top = 110.0
 margin_right = 938.0
-margin_bottom = 196.0
+margin_bottom = 181.0
+mouse_filter = 2
 custom_constants/margin_right = 50
 custom_constants/margin_top = 10
 custom_constants/margin_left = 50
@@ -228,39 +240,142 @@ margin_bottom = 61.0
 custom_constants/separation = 11
 
 [node name="ButtonMark" type="Button" parent="VowBody/Progress/ProgressBody"]
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 77.0
-margin_bottom = 38.0
+margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "MARK"
 
 [node name="ButtonClear" type="Button" parent="VowBody/Progress/ProgressBody"]
 margin_left = 88.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 165.0
-margin_bottom = 38.0
+margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "CLEAR"
 
-[node name="Track" type="HBoxContainer" parent="VowBody/Progress/ProgressBody" instance=ExtResource( 2 )]
+[node name="Track" parent="VowBody/Progress/ProgressBody" instance=ExtResource( 2 )]
 margin_left = 176.0
 margin_right = 749.0
-margin_bottom = 51.0
-size_flags_stretch_ratio = 0.8
-custom_constants/separation = 7
-alignment = 1
-script = ExtResource( 1 )
+
+[node name="ButtonFulfill" type="Button" parent="VowBody/Progress/ProgressBody"]
+margin_left = 760.0
+margin_top = 15.0
+margin_right = 838.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "FULFILL"
+
+[node name="VowNumber" type="MarginContainer" parent="VowBody"]
+margin_top = 185.0
+margin_right = 938.0
+margin_bottom = 202.0
+custom_constants/margin_right = 10
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 3
+
+[node name="Number" type="Label" parent="VowBody/VowNumber"]
+margin_right = 928.0
+margin_bottom = 14.0
+text = "0"
+align = 2
+
+[node name="Control" type="Control" parent="."]
+visible = false
+margin_right = 938.0
+margin_bottom = 202.0
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color( 0, 0, 0, 0.466667 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonFulfill" type="Button" parent="VowBody/Progress/ProgressBody"]
-margin_left = 760.0
-margin_top = 13.0
+[node name="ButtonDelete" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -40.0
+margin_top = -4.0
+margin_right = 40.0
+margin_bottom = 16.0
+text = "DELETE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="MarginContainer" parent="."]
+visible = false
+margin_right = 938.0
+margin_bottom = 202.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 25
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Delete"]
+margin_left = 100.0
+margin_top = 25.0
 margin_right = 838.0
-margin_bottom = 38.0
+margin_bottom = 192.0
+
+[node name="Body" type="VBoxContainer" parent="Delete"]
+margin_left = 100.0
+margin_top = 25.0
+margin_right = 838.0
+margin_bottom = 192.0
+
+[node name="Margin" type="MarginContainer" parent="Delete/Body"]
+margin_right = 738.0
+margin_bottom = 123.0
 size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "FULFILL"
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Delete/Body/Margin"]
+margin_right = 738.0
+margin_bottom = 123.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Delete/Body/Margin/CenterContainer"]
+margin_left = 230.0
+margin_top = 54.0
+margin_right = 508.0
+margin_bottom = 68.0
+text = "Are you sure you wante to Delete this Vow?"
+align = 1
+valign = 1
+
+[node name="Options" type="MarginContainer" parent="Delete/Body"]
+margin_top = 127.0
+margin_right = 738.0
+margin_bottom = 167.0
+custom_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Delete/Body/Options"]
+margin_right = 738.0
+margin_bottom = 20.0
+custom_constants/separation = 23
+alignment = 1
+
+[node name="ButtonNo" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 325.0
+margin_right = 355.0
+margin_bottom = 20.0
+text = "No"
+
+[node name="ButtonYes" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 378.0
+margin_right = 412.0
+margin_bottom = 20.0
+text = "Yes"
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="toggled" from="VowBody/Info/VowData/VowThreat/ButtonMenace" to="." method="_on_ButtonMenace_toggled"]
+[connection signal="pressed" from="Control/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
