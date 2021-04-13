@@ -6,6 +6,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
+scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -13,5 +14,5 @@ __meta__ = {
 [node name="SheetTemplate" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1038.0
+margin_right = 1012.0
 margin_bottom = 1376.0
