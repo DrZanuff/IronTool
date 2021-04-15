@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -158,6 +158,19 @@ func _on_SpinBox_gui_input(event: InputEvent) -> void:
 			prefix = \"+\"
 "
 
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
 [node name="SheetTemplate" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -169,7 +182,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 1671.0
+margin_bottom = 600.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -182,7 +195,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 999.0
-margin_bottom = 1621.0
+margin_bottom = 550.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -689,30 +702,31 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 1571.0
+margin_bottom = 368.0
 rect_min_size = Vector2( 0, 115 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+[node name="Summary" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_right = 974.0
 margin_bottom = 1358.0
 
-[node name="Summary" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+[node name="Stats" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
 margin_right = 974.0
 margin_bottom = 110.0
 
-[node name="Stats" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary"]
+[node name="Stats" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats"]
 margin_right = 974.0
 margin_bottom = 110.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
-[node name="Stats" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats"]
+[node name="Stats" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats"]
 margin_left = 100.0
 margin_right = 874.0
 margin_bottom = 110.0
 size_flags_horizontal = 3
 
-[node name="Edge" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats"]
+[node name="Edge" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats"]
 margin_right = 151.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 110, 0 )
@@ -723,27 +737,27 @@ custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 script = SubResource( 5 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 141.0
 margin_bottom = 90.0
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body"]
 margin_right = 131.0
 margin_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin"]
 margin_right = 131.0
 margin_bottom = 51.0
 
-[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin"]
+[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin"]
 margin_right = 131.0
 margin_bottom = 51.0
 alignment = 1
 
-[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl"]
+[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl"]
 margin_right = 35.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -754,7 +768,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Minus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -764,7 +778,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl"]
 margin_left = 39.0
 margin_right = 91.0
 margin_bottom = 51.0
@@ -776,12 +790,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
 margin_right = 52.0
 margin_bottom = 5.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
 margin_top = 9.0
 margin_right = 52.0
 margin_bottom = 28.0
@@ -791,7 +805,7 @@ text = "EDGE"
 align = 1
 valign = 1
 
-[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
+[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Body"]
 margin_top = 32.0
 margin_right = 52.0
 margin_bottom = 51.0
@@ -802,7 +816,7 @@ text = "1"
 align = 1
 valign = 1
 
-[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl"]
+[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl"]
 margin_left = 95.0
 margin_right = 131.0
 margin_bottom = 51.0
@@ -814,7 +828,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Plus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -824,12 +838,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body"]
+[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body"]
 margin_top = 55.0
 margin_right = 131.0
 margin_bottom = 80.0
 
-[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll"]
+[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll"]
 margin_right = 46.0
 margin_bottom = 25.0
 size_flags_stretch_ratio = 0.5
@@ -839,7 +853,7 @@ max_value = 5.0
 prefix = "+"
 script = SubResource( 13 )
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -848,7 +862,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll"]
+[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll"]
 margin_left = 50.0
 margin_right = 131.0
 margin_bottom = 25.0
@@ -858,7 +872,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 enabled_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Roll"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -866,7 +880,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 14.0
 margin_right = 34.0
 margin_bottom = 25.0
@@ -876,14 +890,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 38.0
 margin_top = 3.0
 margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
-[node name="Heart" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats"]
+[node name="Heart" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats"]
 margin_left = 155.0
 margin_right = 307.0
 margin_bottom = 110.0
@@ -895,27 +909,27 @@ custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 script = SubResource( 5 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 142.0
 margin_bottom = 90.0
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body"]
 margin_right = 132.0
 margin_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 
-[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin"]
+[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 alignment = 1
 
-[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl"]
+[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl"]
 margin_right = 35.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -926,7 +940,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Minus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Minus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -936,7 +950,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl"]
 margin_left = 39.0
 margin_right = 92.0
 margin_bottom = 51.0
@@ -948,12 +962,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
 margin_right = 53.0
 margin_bottom = 5.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
 margin_top = 9.0
 margin_right = 53.0
 margin_bottom = 28.0
@@ -963,7 +977,7 @@ text = "HEART"
 align = 1
 valign = 1
 
-[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
+[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Body"]
 margin_top = 32.0
 margin_right = 53.0
 margin_bottom = 51.0
@@ -974,7 +988,7 @@ text = "1"
 align = 1
 valign = 1
 
-[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl"]
+[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl"]
 margin_left = 96.0
 margin_right = 132.0
 margin_bottom = 51.0
@@ -986,7 +1000,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Plus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Plus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -996,12 +1010,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body"]
+[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body"]
 margin_top = 55.0
 margin_right = 132.0
 margin_bottom = 80.0
 
-[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll"]
+[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll"]
 margin_right = 46.0
 margin_bottom = 25.0
 size_flags_stretch_ratio = 0.5
@@ -1011,7 +1025,7 @@ max_value = 5.0
 prefix = "+"
 script = SubResource( 13 )
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Modifier"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Modifier"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1020,7 +1034,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll"]
+[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll"]
 margin_left = 50.0
 margin_right = 132.0
 margin_bottom = 25.0
@@ -1030,7 +1044,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 enabled_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Roll"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -1038,7 +1052,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 14.0
 margin_right = 34.0
 margin_bottom = 25.0
@@ -1048,14 +1062,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 38.0
 margin_top = 3.0
 margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
-[node name="Iron" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats"]
+[node name="Iron" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats"]
 margin_left = 311.0
 margin_right = 462.0
 margin_bottom = 110.0
@@ -1067,27 +1081,27 @@ custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 script = SubResource( 5 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 141.0
 margin_bottom = 90.0
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body"]
 margin_right = 131.0
 margin_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin"]
 margin_right = 131.0
 margin_bottom = 51.0
 
-[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin"]
+[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin"]
 margin_right = 131.0
 margin_bottom = 51.0
 alignment = 1
 
-[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl"]
+[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl"]
 margin_right = 35.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -1098,7 +1112,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Minus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Minus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1108,7 +1122,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl"]
 margin_left = 39.0
 margin_right = 91.0
 margin_bottom = 51.0
@@ -1120,12 +1134,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
 margin_right = 52.0
 margin_bottom = 5.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
 margin_top = 9.0
 margin_right = 52.0
 margin_bottom = 28.0
@@ -1135,7 +1149,7 @@ text = "IRON"
 align = 1
 valign = 1
 
-[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
+[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Body"]
 margin_top = 32.0
 margin_right = 52.0
 margin_bottom = 51.0
@@ -1146,7 +1160,7 @@ text = "1"
 align = 1
 valign = 1
 
-[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl"]
+[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl"]
 margin_left = 95.0
 margin_right = 131.0
 margin_bottom = 51.0
@@ -1158,7 +1172,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Plus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Plus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1168,12 +1182,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body"]
+[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body"]
 margin_top = 55.0
 margin_right = 131.0
 margin_bottom = 80.0
 
-[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll"]
+[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll"]
 margin_right = 46.0
 margin_bottom = 25.0
 size_flags_stretch_ratio = 0.5
@@ -1183,7 +1197,7 @@ max_value = 5.0
 prefix = "+"
 script = SubResource( 13 )
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Modifier"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Modifier"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1192,7 +1206,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll"]
+[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll"]
 margin_left = 50.0
 margin_right = 131.0
 margin_bottom = 25.0
@@ -1202,7 +1216,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 enabled_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Roll"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -1210,7 +1224,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 14.0
 margin_right = 34.0
 margin_bottom = 25.0
@@ -1220,14 +1234,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 38.0
 margin_top = 3.0
 margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
-[node name="Shadow" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats"]
+[node name="Shadow" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats"]
 margin_left = 466.0
 margin_right = 618.0
 margin_bottom = 110.0
@@ -1239,27 +1253,27 @@ custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 script = SubResource( 5 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 142.0
 margin_bottom = 90.0
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body"]
 margin_right = 132.0
 margin_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 
-[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin"]
+[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 alignment = 1
 
-[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl"]
+[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl"]
 margin_right = 25.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -1270,7 +1284,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Minus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Minus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1280,7 +1294,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl"]
 margin_left = 29.0
 margin_right = 103.0
 margin_bottom = 51.0
@@ -1292,12 +1306,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
 margin_right = 74.0
 margin_bottom = 5.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
 margin_top = 9.0
 margin_right = 74.0
 margin_bottom = 28.0
@@ -1307,7 +1321,7 @@ text = "SHADOW"
 align = 1
 valign = 1
 
-[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
+[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Body"]
 margin_top = 32.0
 margin_right = 74.0
 margin_bottom = 51.0
@@ -1318,7 +1332,7 @@ text = "1"
 align = 1
 valign = 1
 
-[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl"]
+[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl"]
 margin_left = 107.0
 margin_right = 132.0
 margin_bottom = 51.0
@@ -1330,7 +1344,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Plus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Plus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1340,12 +1354,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body"]
+[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body"]
 margin_top = 55.0
 margin_right = 132.0
 margin_bottom = 80.0
 
-[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll"]
+[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll"]
 margin_right = 46.0
 margin_bottom = 25.0
 size_flags_stretch_ratio = 0.5
@@ -1355,7 +1369,7 @@ max_value = 5.0
 prefix = "+"
 script = SubResource( 13 )
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Modifier"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Modifier"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1364,7 +1378,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll"]
+[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll"]
 margin_left = 50.0
 margin_right = 132.0
 margin_bottom = 25.0
@@ -1374,7 +1388,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 enabled_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Roll"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -1382,7 +1396,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 14.0
 margin_right = 34.0
 margin_bottom = 25.0
@@ -1392,14 +1406,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 38.0
 margin_top = 3.0
 margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
-[node name="Wits" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats"]
+[node name="Wits" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats"]
 margin_left = 622.0
 margin_right = 774.0
 margin_bottom = 110.0
@@ -1411,27 +1425,27 @@ custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 script = SubResource( 5 )
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 142.0
 margin_bottom = 90.0
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body"]
 margin_right = 132.0
 margin_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 
-[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin"]
+[node name="StatControl" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin"]
 margin_right = 132.0
 margin_bottom = 51.0
 alignment = 1
 
-[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl"]
+[node name="Minus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl"]
 margin_right = 35.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -1442,7 +1456,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Minus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Minus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1452,7 +1466,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl"]
 margin_left = 39.0
 margin_right = 92.0
 margin_bottom = 51.0
@@ -1464,12 +1478,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
 margin_right = 53.0
 margin_bottom = 5.0
 rect_min_size = Vector2( 0, 5 )
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
 margin_top = 9.0
 margin_right = 53.0
 margin_bottom = 28.0
@@ -1479,7 +1493,7 @@ text = "WITS"
 align = 1
 valign = 1
 
-[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
+[node name="Value" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Body"]
 margin_top = 32.0
 margin_right = 53.0
 margin_bottom = 51.0
@@ -1490,7 +1504,7 @@ text = "1"
 align = 1
 valign = 1
 
-[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl"]
+[node name="Plus" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl"]
 margin_left = 96.0
 margin_right = 132.0
 margin_bottom = 51.0
@@ -1502,7 +1516,7 @@ custom_styles/focus = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Plus"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Plus"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1512,12 +1526,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body"]
+[node name="BoxRoll" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body"]
 margin_top = 55.0
 margin_right = 132.0
 margin_bottom = 80.0
 
-[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll"]
+[node name="Modifier" type="SpinBox" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll"]
 margin_right = 46.0
 margin_bottom = 25.0
 size_flags_stretch_ratio = 0.5
@@ -1527,7 +1541,7 @@ max_value = 5.0
 prefix = "+"
 script = SubResource( 13 )
 
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Modifier"]
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Modifier"]
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1536,7 +1550,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll"]
+[node name="Roll" type="Button" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll"]
 margin_left = 50.0
 margin_right = 132.0
 margin_bottom = 25.0
@@ -1546,7 +1560,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 enabled_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Roll"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -1554,7 +1568,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 14.0
 margin_right = 34.0
 margin_bottom = 25.0
@@ -1564,14 +1578,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
 margin_left = 38.0
 margin_top = 3.0
 margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary"]
 margin_top = 114.0
 margin_right = 974.0
 margin_bottom = 119.0
@@ -1579,7 +1593,7 @@ rect_min_size = Vector2( 0, 5 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Failures" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+[node name="Failures" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
 margin_top = 123.0
 margin_right = 974.0
 margin_bottom = 199.0
@@ -1587,48 +1601,48 @@ custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 custom_constants/margin_bottom = 0
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Failures"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Failures"]
 margin_left = 100.0
 margin_right = 874.0
 margin_bottom = 76.0
 custom_constants/separation = 6
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Failures/Body"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Failures/Body"]
 margin_right = 774.0
 margin_bottom = 19.0
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
-[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Failures/Body/Margin"]
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/Margin"]
 margin_left = 50.0
 margin_right = 724.0
 margin_bottom = 19.0
 custom_constants/separation = 14
 
-[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Failures/Body/Margin/TitleBox"]
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/Margin/TitleBox"]
 margin_right = 284.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="TitleFailure" type="Label" parent="MainMargin/Body/Interfaces/Body/Failures/Body/Margin/TitleBox"]
+[node name="TitleFailure" type="Label" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/Margin/TitleBox"]
 margin_left = 298.0
 margin_right = 375.0
 margin_bottom = 19.0
 text = "FAILURES"
 
-[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Failures/Body/Margin/TitleBox"]
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/Margin/TitleBox"]
 margin_left = 389.0
 margin_right = 674.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Failures/Body"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Failures/Body"]
 margin_top = 25.0
 margin_right = 774.0
 margin_bottom = 76.0
 alignment = 1
 
-[node name="BtnClear" type="Button" parent="MainMargin/Body/Interfaces/Body/Failures/Body/HBoxContainer"]
+[node name="BtnClear" type="Button" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/HBoxContainer"]
 margin_left = 18.0
 margin_top = 13.0
 margin_right = 82.0
@@ -1637,23 +1651,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "CLEAR"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Failures/Body/HBoxContainer"]
+[node name="ReferenceRect" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/HBoxContainer"]
 margin_left = 86.0
 margin_right = 96.0
 margin_bottom = 51.0
 rect_min_size = Vector2( 10, 0 )
 
-[node name="Track" parent="MainMargin/Body/Interfaces/Body/Failures/Body/HBoxContainer" instance=ExtResource( 5 )]
+[node name="Track" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/HBoxContainer" instance=ExtResource( 5 )]
 margin_left = 100.0
 margin_right = 673.0
 
-[node name="ReferenceRect2" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Body/Failures/Body/HBoxContainer"]
+[node name="ReferenceRect2" type="ReferenceRect" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/HBoxContainer"]
 margin_left = 677.0
 margin_right = 687.0
 margin_bottom = 51.0
 rect_min_size = Vector2( 10, 0 )
 
-[node name="BtnLearn" type="Button" parent="MainMargin/Body/Interfaces/Body/Failures/Body/HBoxContainer"]
+[node name="BtnLearn" type="Button" parent="MainMargin/Body/Interfaces/Summary/Failures/Body/HBoxContainer"]
 margin_left = 691.0
 margin_top = 13.0
 margin_right = 756.0
@@ -1662,7 +1676,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "LEARN"
 
-[node name="Vows" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+[node name="Vows" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
 margin_top = 203.0
 margin_right = 974.0
 margin_bottom = 971.0
@@ -1670,63 +1684,63 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_top = 10
 
-[node name="VowContents" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows"]
+[node name="VowContents" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Vows"]
 margin_top = 10.0
 margin_right = 974.0
 margin_bottom = 768.0
 size_flags_horizontal = 3
 custom_constants/separation = 10
 
-[node name="VowTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents"]
+[node name="VowTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents"]
 margin_right = 974.0
 margin_bottom = 19.0
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 
-[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowTitle"]
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowTitle"]
 margin_left = 150.0
 margin_right = 824.0
 margin_bottom = 19.0
 custom_constants/separation = 14
 
-[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowTitle/TitleBox"]
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowTitle/TitleBox"]
 margin_right = 298.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="TitleVows" type="Label" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowTitle/TitleBox"]
+[node name="TitleVows" type="Label" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowTitle/TitleBox"]
 margin_left = 312.0
 margin_right = 362.0
 margin_bottom = 19.0
 text = "VOWS"
 
-[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowTitle/TitleBox"]
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowTitle/TitleBox"]
 margin_left = 376.0
 margin_right = 674.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="VowList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents"]
+[node name="VowList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents"]
 margin_top = 29.0
 margin_right = 974.0
 margin_bottom = 703.0
 script = ExtResource( 7 )
 
-[node name="Vow1" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList" instance=ExtResource( 6 )]
+[node name="Vow1" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" instance=ExtResource( 6 )]
 margin_right = 974.0
 margin_bottom = 222.0
 
-[node name="Vow2" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList" instance=ExtResource( 6 )]
+[node name="Vow2" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" instance=ExtResource( 6 )]
 margin_top = 226.0
 margin_right = 974.0
 margin_bottom = 448.0
 
-[node name="Vow3" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList" instance=ExtResource( 6 )]
+[node name="Vow3" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" instance=ExtResource( 6 )]
 margin_top = 452.0
 margin_right = 974.0
 margin_bottom = 674.0
 
-[node name="VowControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents"]
+[node name="VowControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents"]
 margin_top = 713.0
 margin_right = 974.0
 margin_bottom = 758.0
@@ -1735,14 +1749,14 @@ custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowControl"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 969.0
 margin_bottom = 35.0
 alignment = 1
 
-[node name="ButtonAddVow" type="Button" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowControl/HBoxContainer" groups=[
+[node name="ButtonAddVow" type="Button" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer" groups=[
 "HideGroup",
 ]]
 margin_right = 56.0
@@ -1750,7 +1764,7 @@ margin_bottom = 25.0
 size_flags_horizontal = 2
 text = "+ADD"
 
-[node name="ButtonModify" type="Button" parent="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowControl/HBoxContainer"]
+[node name="ButtonModify" type="Button" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer"]
 margin_left = 888.0
 margin_right = 964.0
 margin_bottom = 25.0
@@ -1758,7 +1772,7 @@ size_flags_horizontal = 10
 toggle_mode = true
 text = "MODIFY"
 
-[node name="Debilities" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+[node name="Debilities" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
 margin_top = 975.0
 margin_right = 974.0
 margin_bottom = 1121.0
@@ -1766,77 +1780,77 @@ custom_constants/margin_right = 0
 custom_constants/margin_top = 5
 custom_constants/margin_left = 0
 
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities"]
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities"]
 margin_top = 5.0
 margin_right = 974.0
 margin_bottom = 146.0
 
-[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body"]
+[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body"]
 margin_right = 974.0
 margin_bottom = 19.0
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 
-[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Title"]
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Title"]
 margin_left = 150.0
 margin_right = 824.0
 margin_bottom = 19.0
 custom_constants/separation = 14
 
-[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Title/TitleBox"]
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Title/TitleBox"]
 margin_right = 280.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="TitleFailure" type="Label" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Title/TitleBox"]
+[node name="TitleFailure" type="Label" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Title/TitleBox"]
 margin_left = 294.0
 margin_right = 379.0
 margin_bottom = 19.0
 text = "DEBILITIES"
 
-[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Title/TitleBox"]
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Title/TitleBox"]
 margin_left = 393.0
 margin_right = 674.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="Banes" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body"]
+[node name="Banes" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body"]
 margin_top = 23.0
 margin_right = 974.0
 margin_bottom = 141.0
 custom_constants/margin_top = 15
 
-[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes"]
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes"]
 margin_top = 15.0
 margin_right = 974.0
 margin_bottom = 118.0
 
-[node name="Conditions" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox"]
+[node name="Conditions" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox"]
 margin_right = 322.0
 margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions"]
+[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions"]
 margin_right = 322.0
 margin_bottom = 29.0
 custom_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/MarginTitle"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/MarginTitle"]
 margin_right = 322.0
 margin_bottom = 19.0
 text = "CONDITIONS"
 align = 1
 valign = 1
 
-[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions"]
+[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions"]
 margin_top = 33.0
 margin_right = 322.0
 margin_bottom = 103.0
 custom_constants/margin_right = 20
 custom_constants/margin_left = 20
 
-[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/Buttons"]
+[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/Buttons"]
 margin_left = 20.0
 margin_right = 302.0
 margin_bottom = 70.0
@@ -1846,7 +1860,7 @@ custom_constants/vseparation = 20
 custom_constants/hseparation = 30
 columns = 2
 
-[node name="BtnWounded" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
+[node name="BtnWounded" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
 margin_right = 126.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
@@ -1854,7 +1868,7 @@ size_flags_vertical = 3
 toggle_mode = true
 text = "Wounded"
 
-[node name="BtnShaken" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
+[node name="BtnShaken" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
 margin_left = 156.0
 margin_right = 282.0
 margin_bottom = 25.0
@@ -1863,7 +1877,7 @@ size_flags_vertical = 3
 toggle_mode = true
 text = "Shaken"
 
-[node name="BtnUnprepared" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
+[node name="BtnUnprepared" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
 margin_top = 45.0
 margin_right = 126.0
 margin_bottom = 70.0
@@ -1872,7 +1886,7 @@ size_flags_vertical = 3
 toggle_mode = true
 text = "Unprepared"
 
-[node name="BtnEncumbered" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
+[node name="BtnEncumbered" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Conditions/Buttons/GridContainer"]
 margin_left = 156.0
 margin_top = 45.0
 margin_right = 282.0
@@ -1882,33 +1896,33 @@ size_flags_vertical = 3
 toggle_mode = true
 text = "Encumbered"
 
-[node name="BanesBurdens" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox"]
+[node name="BanesBurdens" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox"]
 margin_left = 326.0
 margin_right = 648.0
 margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens"]
+[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens"]
 margin_right = 322.0
 margin_bottom = 29.0
 custom_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/MarginTitle"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/MarginTitle"]
 margin_right = 322.0
 margin_bottom = 19.0
 text = "BANES & BURDENS"
 align = 1
 valign = 1
 
-[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens"]
+[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens"]
 margin_top = 33.0
 margin_right = 322.0
 margin_bottom = 103.0
 custom_constants/margin_right = 20
 custom_constants/margin_left = 20
 
-[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/Buttons"]
+[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/Buttons"]
 margin_left = 20.0
 margin_right = 302.0
 margin_bottom = 70.0
@@ -1918,14 +1932,14 @@ custom_constants/vseparation = 20
 custom_constants/hseparation = 30
 columns = 2
 
-[node name="BtnCorrupted" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
+[node name="BtnCorrupted" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
 margin_right = 126.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Corrupted"
 
-[node name="BtnMaimed" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
+[node name="BtnMaimed" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
 margin_left = 156.0
 margin_right = 282.0
 margin_bottom = 25.0
@@ -1933,7 +1947,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Maimed"
 
-[node name="BtnCursed" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
+[node name="BtnCursed" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
 margin_top = 45.0
 margin_right = 126.0
 margin_bottom = 70.0
@@ -1941,7 +1955,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Cursed"
 
-[node name="BtnTormented" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
+[node name="BtnTormented" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/BanesBurdens/Buttons/GridContainer"]
 margin_left = 156.0
 margin_top = 45.0
 margin_right = 282.0
@@ -1950,26 +1964,26 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Tormented"
 
-[node name="Assets" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox"]
+[node name="Assets" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox"]
 margin_left = 652.0
 margin_right = 974.0
 margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets"]
+[node name="MarginTitle" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets"]
 margin_right = 322.0
 margin_bottom = 29.0
 custom_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/MarginTitle"]
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/MarginTitle"]
 margin_right = 322.0
 margin_bottom = 19.0
 text = "ASSETS"
 align = 1
 valign = 1
 
-[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets"]
+[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets"]
 margin_top = 33.0
 margin_right = 322.0
 margin_bottom = 103.0
@@ -1977,7 +1991,7 @@ size_flags_vertical = 3
 custom_constants/margin_right = 20
 custom_constants/margin_left = 20
 
-[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/Buttons"]
+[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/Buttons"]
 margin_left = 20.0
 margin_right = 302.0
 margin_bottom = 70.0
@@ -1987,7 +2001,7 @@ custom_constants/vseparation = 20
 custom_constants/hseparation = 30
 columns = 2
 
-[node name="BtnLeech" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
+[node name="BtnLeech" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
 margin_top = 12.0
 margin_right = 126.0
 margin_bottom = 37.0
@@ -1995,7 +2009,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Leech"
 
-[node name="BtnOathBreaker" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
+[node name="BtnOathBreaker" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
 margin_left = 156.0
 margin_top = 12.0
 margin_right = 282.0
@@ -2004,7 +2018,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Oathbreaker"
 
-[node name="Button3" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
+[node name="Button3" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
 visible = false
 margin_top = 45.0
 margin_right = 126.0
@@ -2012,7 +2026,7 @@ margin_bottom = 70.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button4" type="Button" parent="MainMargin/Body/Interfaces/Body/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
+[node name="Button4" type="Button" parent="MainMargin/Body/Interfaces/Summary/Debilities/Body/Banes/HBox/Assets/Buttons/GridContainer"]
 visible = false
 margin_top = 45.0
 margin_right = 126.0
@@ -2020,47 +2034,47 @@ margin_bottom = 70.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="QuickNotes" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body"]
+[node name="QuickNotes" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
 margin_top = 1125.0
 margin_right = 974.0
 margin_bottom = 1358.0
 custom_constants/margin_top = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Body/QuickNotes"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Summary/QuickNotes"]
 margin_top = 20.0
 margin_right = 974.0
 margin_bottom = 233.0
 
-[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer"]
+[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer"]
 margin_right = 974.0
 margin_bottom = 19.0
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 
-[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer/Title"]
+[node name="TitleBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer/Title"]
 margin_left = 150.0
 margin_right = 824.0
 margin_bottom = 19.0
 custom_constants/separation = 14
 
-[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer/Title/TitleBox"]
+[node name="HSeparator1" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer/Title/TitleBox"]
 margin_right = 296.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="TitleNotes" type="Label" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer/Title/TitleBox"]
+[node name="TitleNotes" type="Label" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer/Title/TitleBox"]
 margin_left = 310.0
 margin_right = 363.0
 margin_bottom = 19.0
 text = "NOTES"
 
-[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer/Title/TitleBox"]
+[node name="HSeparator2" type="HSeparator" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer/Title/TitleBox"]
 margin_left = 377.0
 margin_right = 674.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 
-[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer"]
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer"]
 margin_top = 23.0
 margin_right = 974.0
 margin_bottom = 213.0
@@ -2069,27 +2083,286 @@ custom_constants/margin_top = 5
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 5
 
-[node name="TextEdit" type="TextEdit" parent="MainMargin/Body/Interfaces/Body/QuickNotes/VBoxContainer/Margin"]
+[node name="TextEdit" type="TextEdit" parent="MainMargin/Body/Interfaces/Summary/QuickNotes/VBoxContainer/Margin"]
 margin_left = 10.0
 margin_top = 5.0
 margin_right = 964.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 0, 180 )
 wrap_enabled = true
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Minus_pressed"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge" method="_on_Plus_pressed"]
-[connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart" method="_on_Minus_pressed"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart" method="_on_Plus_pressed"]
-[connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Heart/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron" method="_on_Minus_pressed"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron" method="_on_Plus_pressed"]
-[connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Iron/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow" method="_on_Minus_pressed"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow" method="_on_Plus_pressed"]
-[connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Shadow/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits" method="_on_Minus_pressed"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits" method="_on_Plus_pressed"]
-[connection signal="gui_input" from="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Body/Summary/Stats/Stats/Wits/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
-[connection signal="pressed" from="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowControl/HBoxContainer/ButtonAddVow" to="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList" method="_on_ButtonAddVow_pressed"]
-[connection signal="toggled" from="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowControl/HBoxContainer/ButtonModify" to="MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList" method="_on_ButtonModify_toggled"]
+
+[node name="Sites" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+margin_right = 974.0
+margin_bottom = 155.0
+
+[node name="Site" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites"]
+margin_right = 974.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 15
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site"]
+margin_top = 15.0
+margin_right = 974.0
+margin_bottom = 155.0
+custom_styles/panel = SubResource( 14 )
+
+[node name="SiteBody" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site"]
+margin_top = 15.0
+margin_right = 974.0
+margin_bottom = 155.0
+
+[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody"]
+margin_right = 974.0
+margin_bottom = 140.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 964.0
+margin_bottom = 130.0
+custom_constants/separation = 15
+
+[node name="Row1" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
+margin_right = 954.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_vertical = 3
+custom_constants/separation = 15
+
+[node name="Name" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1"]
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name"]
+margin_right = 469.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name"]
+margin_right = 469.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer"]
+margin_left = 10.0
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSiteName" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
+margin_right = 87.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "SITE NAME:"
+valign = 1
+
+[node name="InputSiteName" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
+margin_left = 96.0
+margin_right = 459.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 15 )
+placeholder_text = "Site Name"
+
+[node name="Objective" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1"]
+margin_left = 484.0
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective"]
+margin_right = 470.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective"]
+margin_right = 470.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer"]
+margin_left = 10.0
+margin_right = 470.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelObjective" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
+margin_right = 91.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "OBJECTIVE:"
+valign = 1
+
+[node name="InputObjective" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
+margin_left = 100.0
+margin_right = 460.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 16 )
+placeholder_text = "Objective"
+
+[node name="Row3" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
+margin_top = 45.0
+margin_right = 954.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3"]
+margin_right = 954.0
+margin_bottom = 30.0
+
+[node name="InnerRow" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3"]
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+custom_constants/separation = 15
+
+[node name="Theme" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow"]
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme"]
+margin_right = 469.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme"]
+margin_right = 469.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer"]
+margin_left = 10.0
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTheme" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
+margin_right = 58.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "THEME:"
+valign = 1
+
+[node name="InputTheme" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
+margin_left = 67.0
+margin_right = 459.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 16 )
+placeholder_text = "Theme"
+
+[node name="Domain" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow"]
+margin_left = 484.0
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain"]
+margin_right = 470.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain"]
+margin_right = 470.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer"]
+margin_left = 10.0
+margin_right = 470.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelDomain" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
+margin_right = 70.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "DOMAIN:"
+valign = 1
+
+[node name="InputDomain" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
+margin_left = 79.0
+margin_right = 460.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 16 )
+placeholder_text = "Domain"
+
+[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
+margin_top = 90.0
+margin_right = 954.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/margin_right = 10
+custom_constants/margin_left = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons"]
+margin_left = 10.0
+margin_right = 944.0
+margin_bottom = 30.0
+custom_constants/separation = 30
+
+[node name="Button" type="Button" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons/HBoxContainer"]
+margin_right = 452.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "DETAILS"
+
+[node name="Button2" type="Button" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons/HBoxContainer"]
+margin_left = 482.0
+margin_right = 934.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "THEMES & DOMAINS"
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
+[connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart" method="_on_Minus_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart" method="_on_Plus_pressed"]
+[connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron" method="_on_Minus_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron" method="_on_Plus_pressed"]
+[connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow" method="_on_Minus_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow" method="_on_Plus_pressed"]
+[connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits" method="_on_Minus_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits" method="_on_Plus_pressed"]
+[connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer/ButtonAddVow" to="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" method="_on_ButtonAddVow_pressed"]
+[connection signal="toggled" from="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer/ButtonModify" to="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" method="_on_ButtonModify_toggled"]
