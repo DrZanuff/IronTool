@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SheetTemplate/Track/Track.tscn" type="PackedScene" id=2]
+
+[node name="TrackFull" type="VBoxContainer"]
+margin_right = 938.0
+margin_bottom = 202.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="MarginContainer" parent="."]
+margin_right = 938.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_constants/margin_right = 50
+custom_constants/margin_top = 5
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 5
+
+[node name="LevelButtons" type="HBoxContainer" parent="Level"]
+margin_left = 50.0
+margin_top = 5.0
+margin_right = 888.0
+margin_bottom = 25.0
+custom_constants/separation = 17
+
+[node name="ButtonTroublesome" type="Button" parent="Level/LevelButtons"]
+margin_right = 154.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "TROUBLESOME"
+
+[node name="ButtonDangerous" type="Button" parent="Level/LevelButtons"]
+margin_left = 171.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "DANGEROUS"
+
+[node name="ButtonFormidable" type="Button" parent="Level/LevelButtons"]
+margin_left = 342.0
+margin_right = 496.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "FORMIDABLE"
+
+[node name="ButtonExtreme" type="Button" parent="Level/LevelButtons"]
+margin_left = 513.0
+margin_right = 667.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "EXTREME"
+
+[node name="ButtonEpic" type="Button" parent="Level/LevelButtons"]
+margin_left = 684.0
+margin_right = 838.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Epic"
+
+[node name="Progress" type="MarginContainer" parent="."]
+margin_top = 34.0
+margin_right = 938.0
+margin_bottom = 105.0
+mouse_filter = 2
+custom_constants/margin_right = 50
+custom_constants/margin_top = 10
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 10
+
+[node name="ProgressBody" type="HBoxContainer" parent="Progress"]
+margin_left = 50.0
+margin_top = 10.0
+margin_right = 888.0
+margin_bottom = 61.0
+custom_constants/separation = 11
+
+[node name="ButtonMark" type="Button" parent="Progress/ProgressBody"]
+margin_top = 15.0
+margin_right = 74.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "MARK"
+
+[node name="ButtonClear" type="Button" parent="Progress/ProgressBody"]
+margin_left = 85.0
+margin_top = 15.0
+margin_right = 160.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "CLEAR"
+
+[node name="Track" parent="Progress/ProgressBody" instance=ExtResource( 2 )]
+margin_left = 171.0
+margin_right = 744.0
+
+[node name="ButtonConclude" type="Button" parent="Progress/ProgressBody"]
+margin_left = 755.0
+margin_top = 15.0
+margin_right = 838.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "CONCLUDE"

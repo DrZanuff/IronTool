@@ -1,7 +1,7 @@
 extends MarginContainer
 
 func _ready() -> void:
-	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Body/Vows/VowContents/VowList.connect(
+	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList.connect(
 		"vow_added",self,"scroll_vertical"
 	)
 

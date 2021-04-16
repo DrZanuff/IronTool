@@ -1,0 +1,34 @@
+[gd_scene format=2]
+
+[node name="Title" type="MarginContainer"]
+margin_right = 974.0
+margin_bottom = 19.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleBox" type="HBoxContainer" parent="."]
+margin_left = 150.0
+margin_right = 824.0
+margin_bottom = 19.0
+custom_constants/separation = 14
+
+[node name="HSeparator1" type="HSeparator" parent="TitleBox"]
+margin_right = 291.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="TitleBox"]
+margin_left = 305.0
+margin_top = 2.0
+margin_right = 369.0
+margin_bottom = 16.0
+text = "TEMPLATE"
+
+[node name="HSeparator2" type="HSeparator" parent="TitleBox"]
+margin_left = 383.0
+margin_right = 674.0
+margin_bottom = 19.0
+size_flags_horizontal = 3

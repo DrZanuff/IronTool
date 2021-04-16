@@ -1,0 +1,1044 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://SheetTemplate/Track/TrackFull.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SheetTemplate/Site/Site.gd" type="Script" id=2]
+[ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=3]
+[ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Site" type="MarginContainer"]
+margin_right = 974.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 15
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 15.0
+margin_right = 974.0
+margin_bottom = 900.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="SiteBody" type="VBoxContainer" parent="."]
+margin_top = 15.0
+margin_right = 974.0
+margin_bottom = 900.0
+
+[node name="Title" type="MarginContainer" parent="SiteBody"]
+margin_right = 974.0
+margin_bottom = 140.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Title"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 964.0
+margin_bottom = 130.0
+custom_constants/separation = 15
+
+[node name="Row1" type="HBoxContainer" parent="SiteBody/Title/Body"]
+margin_right = 954.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_vertical = 3
+custom_constants/separation = 15
+
+[node name="Name" type="MarginContainer" parent="SiteBody/Title/Body/Row1"]
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="SiteBody/Title/Body/Row1/Name"]
+margin_right = 469.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SiteBody/Title/Body/Row1/Name"]
+margin_right = 469.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="SiteBody/Title/Body/Row1/Name/MarginContainer"]
+margin_left = 10.0
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSiteName" type="Label" parent="SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
+margin_right = 72.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "SITE NAME:"
+valign = 1
+
+[node name="InputSiteName" type="LineEdit" parent="SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
+margin_left = 81.0
+margin_right = 459.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 2 )
+placeholder_text = "Site Name"
+
+[node name="Objective" type="MarginContainer" parent="SiteBody/Title/Body/Row1"]
+margin_left = 484.0
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="SiteBody/Title/Body/Row1/Objective"]
+margin_right = 470.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SiteBody/Title/Body/Row1/Objective"]
+margin_right = 470.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="SiteBody/Title/Body/Row1/Objective/MarginContainer"]
+margin_left = 10.0
+margin_right = 470.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelObjective" type="Label" parent="SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
+margin_right = 69.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "OBJECTIVE:"
+valign = 1
+
+[node name="InputObjective" type="LineEdit" parent="SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
+margin_left = 78.0
+margin_right = 460.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Objective"
+
+[node name="Row3" type="MarginContainer" parent="SiteBody/Title/Body"]
+margin_top = 45.0
+margin_right = 954.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Panel" type="Panel" parent="SiteBody/Title/Body/Row3"]
+margin_right = 954.0
+margin_bottom = 30.0
+
+[node name="InnerRow" type="HBoxContainer" parent="SiteBody/Title/Body/Row3"]
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+custom_constants/separation = 15
+
+[node name="Theme" type="MarginContainer" parent="SiteBody/Title/Body/Row3/InnerRow"]
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="SiteBody/Title/Body/Row3/InnerRow/Theme"]
+margin_right = 469.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SiteBody/Title/Body/Row3/InnerRow/Theme"]
+margin_right = 469.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer"]
+margin_left = 10.0
+margin_right = 469.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTheme" type="Label" parent="SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
+margin_right = 47.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "THEME:"
+valign = 1
+
+[node name="InputTheme" type="LineEdit" parent="SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
+margin_left = 56.0
+margin_right = 459.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Theme"
+
+[node name="Domain" type="MarginContainer" parent="SiteBody/Title/Body/Row3/InnerRow"]
+margin_left = 484.0
+margin_right = 954.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="SiteBody/Title/Body/Row3/InnerRow/Domain"]
+margin_right = 470.0
+margin_bottom = 30.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SiteBody/Title/Body/Row3/InnerRow/Domain"]
+margin_right = 470.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer"]
+margin_left = 10.0
+margin_right = 470.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelDomain" type="Label" parent="SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
+margin_right = 61.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "DOMAIN:"
+valign = 1
+
+[node name="InputDomain" type="LineEdit" parent="SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
+margin_left = 70.0
+margin_right = 460.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Domain"
+
+[node name="Buttons" type="MarginContainer" parent="SiteBody/Title/Body"]
+margin_top = 90.0
+margin_right = 954.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/margin_right = 10
+custom_constants/margin_left = 10
+
+[node name="HBox" type="HBoxContainer" parent="SiteBody/Title/Body/Buttons"]
+margin_left = 10.0
+margin_right = 944.0
+margin_bottom = 30.0
+custom_constants/separation = 30
+
+[node name="BtnDetails" type="Button" parent="SiteBody/Title/Body/Buttons/HBox"]
+margin_right = 452.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+text = "DETAILS"
+
+[node name="BtnThemeDomain" type="Button" parent="SiteBody/Title/Body/Buttons/HBox"]
+margin_left = 482.0
+margin_right = 934.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+text = "THEMES & DOMAINS"
+
+[node name="Details" type="MarginContainer" parent="SiteBody"]
+margin_top = 144.0
+margin_right = 974.0
+margin_bottom = 885.0
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details"]
+margin_right = 974.0
+margin_bottom = 741.0
+
+[node name="TrackFull" parent="SiteBody/Details/Body" instance=ExtResource( 1 )]
+margin_right = 974.0
+margin_bottom = 105.0
+
+[node name="VowTitle" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 109.0
+margin_right = 974.0
+margin_bottom = 133.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleBox" type="HBoxContainer" parent="SiteBody/Details/Body/VowTitle"]
+margin_left = 150.0
+margin_right = 824.0
+margin_bottom = 14.0
+custom_constants/separation = 14
+
+[node name="HSeparator1" type="HSeparator" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
+margin_right = 291.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
+margin_left = 305.0
+margin_right = 369.0
+margin_bottom = 14.0
+text = "DENIZENS"
+
+[node name="HSeparator2" type="HSeparator" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
+margin_left = 383.0
+margin_right = 674.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Buttons" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 137.0
+margin_right = 974.0
+margin_bottom = 187.0
+custom_constants/margin_right = 150
+custom_constants/margin_top = 10
+custom_constants/margin_left = 150
+custom_constants/margin_bottom = 10
+
+[node name="Rolls" type="HBoxContainer" parent="SiteBody/Details/Body/Buttons"]
+margin_left = 150.0
+margin_top = 10.0
+margin_right = 824.0
+margin_bottom = 40.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="BtnPickDenizen" type="Button" parent="SiteBody/Details/Body/Buttons/Rolls"]
+margin_right = 312.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+text = "PICK DENIZEN"
+
+[node name="Icon" type="MarginContainer" parent="SiteBody/Details/Body/Buttons/Rolls/BtnPickDenizen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_top = 2
+custom_constants/margin_left = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="TextureRect" parent="SiteBody/Details/Body/Buttons/Rolls/BtnPickDenizen/Icon"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 312.0
+margin_bottom = 30.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnRandAllDenizen" type="Button" parent="SiteBody/Details/Body/Buttons/Rolls"]
+margin_left = 362.0
+margin_right = 674.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+text = "RANDOMIZE DENIZEN MATRIX"
+
+[node name="Icon" type="MarginContainer" parent="SiteBody/Details/Body/Buttons/Rolls/BtnRandAllDenizen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_top = 2
+custom_constants/margin_left = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="TextureRect" parent="SiteBody/Details/Body/Buttons/Rolls/BtnRandAllDenizen/Icon"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 312.0
+margin_bottom = 30.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 191.0
+margin_right = 974.0
+margin_bottom = 418.0
+custom_constants/margin_right = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="SiteBody/Details/Body/Table"]
+margin_left = 20.0
+margin_right = 954.0
+margin_bottom = 217.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 28
+columns = 4
+
+[node name="Range-01-27" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_right = 212.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "VERY COMMON 01-27"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-28-41" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 240.0
+margin_right = 452.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "COMMON 28-41"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-42-55" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 480.0
+margin_right = 692.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "COMMON 42-55"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-56-69" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 720.0
+margin_right = 932.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "COMMON 56-69"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-70-75" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_top = 79.0
+margin_right = 212.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "UNCOMMON 70-75"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-76-81" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 240.0
+margin_top = 79.0
+margin_right = 452.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "UNCOMMON 76-81"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-82-87" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 480.0
+margin_top = 79.0
+margin_right = 692.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "UNCOMMON 82-87"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-01-34" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 720.0
+margin_top = 79.0
+margin_right = 932.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "UNCOMMON 88-93"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-94-95" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_top = 158.0
+margin_right = 212.0
+margin_bottom = 217.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "RARE 94-95"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-96-97" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 240.0
+margin_top = 158.0
+margin_right = 452.0
+margin_bottom = 217.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "RARE 96-97"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-98-99" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 480.0
+margin_top = 158.0
+margin_right = 692.0
+margin_bottom = 217.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "RARE 98-99"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Range-100" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
+margin_left = 720.0
+margin_top = 158.0
+margin_right = 932.0
+margin_bottom = 217.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-100"]
+margin_top = 5.0
+margin_right = 212.0
+margin_bottom = 54.0
+
+[node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body"]
+margin_right = 212.0
+margin_bottom = 14.0
+text = "UNFORESEEN 100"
+
+[node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body"]
+margin_top = 18.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+
+[node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body/Input"]
+margin_right = 171.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+placeholder_text = "Denizen"
+
+[node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body/Input"]
+margin_left = 175.0
+margin_right = 212.0
+margin_bottom = 31.0
+icon = ExtResource( 3 )
+
+[node name="Tutorial" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 422.0
+margin_right = 974.0
+margin_bottom = 529.0
+custom_constants/margin_right = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 15
+
+[node name="Steps" type="HBoxContainer" parent="SiteBody/Details/Body/Tutorial"]
+margin_left = 10.0
+margin_right = 964.0
+margin_bottom = 92.0
+
+[node name="Label1" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_top = 9.0
+margin_right = 148.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "When the outcome of a move prompts an encounter with a denizen, you may:"
+autowrap = true
+
+[node name="Label2" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 152.0
+margin_top = 38.0
+margin_right = 197.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+custom_fonts/font = SubResource( 4 )
+text = ">"
+align = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 201.0
+margin_top = 9.0
+margin_right = 350.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "Choose or introduce a denizen based on the situation and what you know of this place."
+autowrap = true
+
+[node name="Label4" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 354.0
+margin_top = 38.0
+margin_right = 398.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+custom_fonts/font = SubResource( 4 )
+text = "or"
+align = 1
+autowrap = true
+
+[node name="Label5" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 402.0
+margin_right = 551.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "Roll on the matrix to generate a random encounter. If the field is blank, add a new denizen."
+autowrap = true
+
+[node name="Label6" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 555.0
+margin_top = 38.0
+margin_right = 599.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+custom_fonts/font = SubResource( 4 )
+text = "or"
+align = 1
+autowrap = true
+
+[node name="Label7" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 603.0
+margin_right = 752.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "Identify a denizen as ‘likely’ to appear, and Ask the Oracle. If the answer is “no,” roll on the matrix."
+autowrap = true
+
+[node name="Label8" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 756.0
+margin_top = 38.0
+margin_right = 801.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+custom_fonts/font = SubResource( 4 )
+text = "or"
+align = 1
+autowrap = true
+
+[node name="Label9" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
+margin_left = 805.0
+margin_top = 9.0
+margin_right = 954.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "Pick two denizens, rate one as ‘likely’, and Ask the Oracle to determine which you encounter."
+autowrap = true
+
+[node name="Title" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 533.0
+margin_right = 974.0
+margin_bottom = 547.0
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleBox" type="HBoxContainer" parent="SiteBody/Details/Body/Title"]
+margin_left = 150.0
+margin_right = 824.0
+margin_bottom = 14.0
+custom_constants/separation = 14
+
+[node name="HSeparator1" type="HSeparator" parent="SiteBody/Details/Body/Title/TitleBox"]
+margin_right = 302.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="SiteBody/Details/Body/Title/TitleBox"]
+margin_left = 316.0
+margin_right = 358.0
+margin_bottom = 14.0
+text = "NOTES"
+
+[node name="HSeparator2" type="HSeparator" parent="SiteBody/Details/Body/Title/TitleBox"]
+margin_left = 372.0
+margin_right = 674.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Notes" type="MarginContainer" parent="SiteBody/Details/Body"]
+margin_top = 551.0
+margin_right = 974.0
+margin_bottom = 741.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 30
+
+[node name="TextEdit" type="TextEdit" parent="SiteBody/Details/Body/Notes"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 954.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 0, 150 )
+wrap_enabled = true
+[connection signal="toggled" from="SiteBody/Title/Body/Buttons/HBox/BtnDetails" to="." method="_on_BtnDetails_toggled"]

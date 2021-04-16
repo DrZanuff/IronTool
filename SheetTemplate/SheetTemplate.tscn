@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://SheetTemplate/Track/Track.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SheetTemplate/Vow/Vow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://SheetTemplate/Scripts/VowList.gd" type="Script" id=7]
+[ext_resource path="res://SheetTemplate/Site/Site.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -158,19 +159,6 @@ func _on_SpinBox_gui_input(event: InputEvent) -> void:
 			prefix = \"+\"
 "
 
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
-draw_center = false
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
-
-[sub_resource type="StyleBoxEmpty" id=15]
-
-[sub_resource type="StyleBoxEmpty" id=16]
-
 [node name="SheetTemplate" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -182,7 +170,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 1243.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -195,7 +183,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 999.0
-margin_bottom = 550.0
+margin_bottom = 1193.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -702,7 +690,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 368.0
+margin_bottom = 1143.0
 rect_min_size = Vector2( 0, 115 )
 
 [node name="Summary" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
@@ -881,8 +869,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 11.0
+margin_right = 36.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -891,9 +879,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 40.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 69.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1053,8 +1041,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1063,9 +1051,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1225,8 +1213,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 11.0
+margin_right = 36.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1235,9 +1223,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 40.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 69.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1397,8 +1385,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1407,9 +1395,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1569,8 +1557,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1579,9 +1567,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -2093,262 +2081,10 @@ wrap_enabled = true
 
 [node name="Sites" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_right = 974.0
-margin_bottom = 155.0
+margin_bottom = 930.0
 
-[node name="Site" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites"]
-margin_right = 974.0
-margin_bottom = 155.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/margin_top = 15
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site"]
-margin_top = 15.0
-margin_right = 974.0
-margin_bottom = 155.0
-custom_styles/panel = SubResource( 14 )
-
-[node name="SiteBody" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site"]
-margin_top = 15.0
-margin_right = 974.0
-margin_bottom = 155.0
-
-[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody"]
-margin_right = 974.0
-margin_bottom = 140.0
-custom_constants/margin_right = 10
-custom_constants/margin_top = 10
-custom_constants/margin_left = 10
-custom_constants/margin_bottom = 10
-
-[node name="Body" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 964.0
-margin_bottom = 130.0
-custom_constants/separation = 15
-
-[node name="Row1" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
-margin_right = 954.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 0, 30 )
-size_flags_vertical = 3
-custom_constants/separation = 15
-
-[node name="Name" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1"]
-margin_right = 469.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name"]
-margin_right = 469.0
-margin_bottom = 30.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name"]
-margin_right = 469.0
-margin_bottom = 30.0
-custom_constants/margin_right = 0
-custom_constants/margin_left = 10
-
-[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer"]
-margin_left = 10.0
-margin_right = 469.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 9
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LabelSiteName" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
-margin_right = 87.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-text = "SITE NAME:"
-valign = 1
-
-[node name="InputSiteName" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Name/MarginContainer/HBox"]
-margin_left = 96.0
-margin_right = 459.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-custom_styles/normal = SubResource( 15 )
-placeholder_text = "Site Name"
-
-[node name="Objective" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1"]
-margin_left = 484.0
-margin_right = 954.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective"]
-margin_right = 470.0
-margin_bottom = 30.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective"]
-margin_right = 470.0
-margin_bottom = 30.0
-custom_constants/margin_right = 0
-custom_constants/margin_left = 10
-
-[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer"]
-margin_left = 10.0
-margin_right = 470.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 9
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LabelObjective" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
-margin_right = 91.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-text = "OBJECTIVE:"
-valign = 1
-
-[node name="InputObjective" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row1/Objective/MarginContainer/HBox"]
-margin_left = 100.0
-margin_right = 460.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-custom_styles/normal = SubResource( 16 )
-placeholder_text = "Objective"
-
-[node name="Row3" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
-margin_top = 45.0
-margin_right = 954.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 0, 30 )
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3"]
-margin_right = 954.0
-margin_bottom = 30.0
-
-[node name="InnerRow" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3"]
-margin_right = 954.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-custom_constants/separation = 15
-
-[node name="Theme" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow"]
-margin_right = 469.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme"]
-margin_right = 469.0
-margin_bottom = 30.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme"]
-margin_right = 469.0
-margin_bottom = 30.0
-custom_constants/margin_right = 0
-custom_constants/margin_left = 10
-
-[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer"]
-margin_left = 10.0
-margin_right = 469.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 9
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LabelTheme" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
-margin_right = 58.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-text = "THEME:"
-valign = 1
-
-[node name="InputTheme" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Theme/MarginContainer/HBox"]
-margin_left = 67.0
-margin_right = 459.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-custom_styles/normal = SubResource( 16 )
-placeholder_text = "Theme"
-
-[node name="Domain" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow"]
-margin_left = 484.0
-margin_right = 954.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain"]
-margin_right = 470.0
-margin_bottom = 30.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain"]
-margin_right = 470.0
-margin_bottom = 30.0
-custom_constants/margin_right = 0
-custom_constants/margin_left = 10
-
-[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer"]
-margin_left = 10.0
-margin_right = 470.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 9
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LabelDomain" type="Label" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
-margin_right = 70.0
-margin_bottom = 30.0
-size_flags_vertical = 3
-text = "DOMAIN:"
-valign = 1
-
-[node name="InputDomain" type="LineEdit" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Row3/InnerRow/Domain/MarginContainer/HBox"]
-margin_left = 79.0
-margin_right = 460.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-custom_styles/normal = SubResource( 16 )
-placeholder_text = "Domain"
-
-[node name="Buttons" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body"]
-margin_top = 90.0
-margin_right = 954.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 0, 30 )
-custom_constants/margin_right = 10
-custom_constants/margin_left = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons"]
-margin_left = 10.0
-margin_right = 944.0
-margin_bottom = 30.0
-custom_constants/separation = 30
-
-[node name="Button" type="Button" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons/HBoxContainer"]
-margin_right = 452.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "DETAILS"
-
-[node name="Button2" type="Button" parent="MainMargin/Body/Interfaces/Sites/Site/SiteBody/Title/Body/Buttons/HBoxContainer"]
-margin_left = 482.0
-margin_right = 934.0
-margin_bottom = 30.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "THEMES & DOMAINS"
+[node name="Site" parent="MainMargin/Body/Interfaces/Sites" instance=ExtResource( 8 )]
+margin_bottom = 930.0
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]

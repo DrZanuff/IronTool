@@ -375,7 +375,6 @@ margin_right = 412.0
 margin_bottom = 20.0
 text = "Yes"
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="toggled" from="VowBody/Info/VowData/VowThreat/ButtonMenace" to="." method="_on_ButtonMenace_toggled"]
 [connection signal="pressed" from="Control/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
 [connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]
 [connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
