@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "CAVERN"
+description = "A place of stone and darkness."
+features = [ "Twisting passages", "Cramped caves", "Vast chamber", "Subterranean waterway", "Cave pool", "Natural bridge", "Towering stone formations", "Natural illumination", "Dark pit", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen lairs here", "Cave-in", "Flooding", "Perilous climb or descent", "Fissure or sinkhole" ]

@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
-theme_name = "HALLOWED"
+_name = "HALLOWED"
 description = "The faithful worship here."
 features = [ "Temple or altar", "Offerings or atonements", "Religious relic or idol", "Consecrated ground", "Dwellings or gathering place" ]
 dangers = [ "Denizen defends their sanctum", "Denizen enacts the will of their god", "Denizen seeks martyrdom", "Secret of the faith is revealed", "Greater purpose is revealed", "Unexpected disciples are revealed", "Divine manifestations", "Aspect of the faith beguiles you", "Unexpected leader is revealed", "Embodiment of a god or myth", "Protective ward or barrier", "Prophecies reveal a dark fate" ]

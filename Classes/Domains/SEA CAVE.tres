@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "SEA CAVE"
+description = "Stone passages carved by ocean waves."
+features = [ "Watery tunnels", "Eroded chamber", "Flooded chamber", "Vast chamber", "Dry passages", "Freshwater inlet", "Rocky island", "Waterborne debris", "Shipwreck or boat", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen strikes without warning", "Denizen lurks below", "Flooding", "Rushing current", "Claustrophobic squeeze" ]

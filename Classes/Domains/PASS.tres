@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "PASS"
+description = "Treacherous paths over high mountains."
+features = [ "Winding mountain path", "Snowfield or glacial rocks", "River gorge", "Crashing waterfall", "Highland lake", "Forgotten cairn", "Bridge", "Overlook", "Camp or outpost", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen lairs here", "Denizen hunts", "Perilous climb or descent", "Avalanche or rockslide", "Foul weather" ]

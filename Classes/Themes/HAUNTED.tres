@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
-theme_name = "HAUNTED"
+_name = "HAUNTED"
 description = "Restless spirits are bound to this place."
 features = [ "Tomb or burial site", "Blood was spilled here", "Unnatural mists or darkness", "Messages from beyond the grave", "Apparitions of a person or event" ]
 dangers = [ "Denizen haunts this area", "Unsettling sounds or foreboding signs", "Denizen attacks without warning", "Denizen makes a costly demand", "Denizen seizes your body or mind", "Denizen taunts or lures you", "A disturbing truth is revealed", "Frightening visions", "The environment is used against you", "Trickery leads you astray", "True nature of this place is revealed", "Sudden, shocking manifestation" ]

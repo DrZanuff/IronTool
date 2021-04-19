@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
-theme_name = "WILD"
+_name = "WILD"
 description = "Nature prevails in this place."
 features = [ "Denizen’s lair", "Territorial markings", "Impressive flora or fauna", "Hunting ground or watering hole", "Remains or carrion" ]
 dangers = [ "Denizen hunts", "Denizen strikes without warning", "Denizen leverages the environment", "Denizen wields unexpected abilities", "Denizen guided by a greater threat", "Denizen protects something", "Hazardous terrain", "Weather or environmental threat", "Benign aspect becomes a threat", "Overzealous hunter", "Disturbing evidence of a victim’s fate", "Ill-fated victim in danger" ]

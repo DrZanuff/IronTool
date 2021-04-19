@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
-theme_name = "CORRUPTED"
+_name = "CORRUPTED"
 description = "This place is tainted by dark magic."
 features = [ "Mystic focus or conduit", "Strange environmental disturbances", "Mystic runes or markings", "Blight or decay", "Evidence of a foul ritual" ]
 dangers = [ "Denizen spawned from dark magic", "Denizen controls dark magic", "Denizen corrupted by dark magic", "Corruption marks you", "Innocents held in thrall", "Revelations of a terrible truth", "Mystic trap or trigger", "Mystic barrier or ward", "Illusions lead you astray", "Dark ritual in progress", "Lingering effects of a dark ritual", "Dread harbingers of a greater magic" ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "RUIN"
+description = "The crumbling legacy of a dead civilization."
+features = [ "Crumbling corridors and chambers", "Collapsed architecture", "Rubble-choked hall", "Courtyard", "Archive or library", "Broken statuary or fading murals", "Preserved vault", "Temple to forgotten gods", "Mausoleum", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Ancient mechanism or trap", "Collapsing wall or ceiling", "Blocked or broken passage", "Unstable floor above a new danger", "Ancient secrets best left buried" ]

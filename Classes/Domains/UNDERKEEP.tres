@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "UNDERKEEP"
+description = "An age-old subterranean dungeon."
+features = [ "Carved passages", "Hall or chamber", "Stairs into the depths", "Grand doorway or entrance", "Tomb or catacombs", "Rough-hewn cave", "Foundry or workshop", "Shrine or temple", "Imposing architecture or artistry", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Ancient mechanism or trap", "Crumbling architecture", "Blocked or broken passage", "Artifact with a hidden danger", "Denizen lurks in darkness" ]

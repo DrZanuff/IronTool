@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "STRONGHOLD"
+description = "A fortress secured against trespassers."
+features = [ "Connecting passageways", "Barracks or common quarters", "Large hall", "Workshop or library", "Command center or leadership", "Ladder or stairwell", "Storage", "Kitchen or larder", "Courtyard", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Blocked or guarded path", "Caught in the open", "Chokepoint", "Trap", "Alarm trigger" ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "MINE"
+description = "Tunnels dug greedily and deep."
+features = [ "Cramped tunnels", "Mine works", "Excavated chamber", "Mineshaft", "Collapsed tunnel", "Cluttered storage", "Housing or common areas", "Flooded chamber", "Unearthed secret", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Cave-in", "Flooding", "Unstable platforms or architecture", "Hazardous gas pocket", "Weakened terrain" ]

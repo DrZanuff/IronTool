@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "FROZEN CAVERN"
+description = "A place of deep caves and enduring cold."
+features = [ "Maze of icy tunnels", "Glistening cave", "Vast chamber", "Frigid waterway", "Icy pools", "Magnificent ice formations", "Frozen waterfall", "Deep crevasses", "Discovery locked in the ice", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen lairs here", "Fracturing ice", "Crumbling chasm", "Bitter chill", "Disorienting reflections" ]

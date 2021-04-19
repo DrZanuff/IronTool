@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "ICE REACH"
+description = "A frigid landscape formed of frozen seas."
+features = [ "Plains of ice and snow", "Seawater channel", "Icy highlands", "Crevasse", "Ice floes", "Ship trapped in ice", "Animal herd or habitat", "Frozen carcass", "Camp or outpost", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen hunts", "Fragile ice above watery depths", "Perilous climb or descent", "Avalanche or icefall", "Foul weather" ]

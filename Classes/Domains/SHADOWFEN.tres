@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "SHADOWFEN"
+description = "A primeval marsh, cloaked in mist."
+features = [ "Narrow path through a fetid bog", "Stagnant waterway", "Flooded thicket", "Island of dry land", "Submerged discovery", "Preserved corpses", "Overgrown structure", "Tall reeds", "Camp or outpost", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen hunts", "Deep water blocks the path", "Toxic environment", "Concealing or disorienting mist", "Hidden quagmire" ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "BARROW"
+description = "The dead are enshrined here."
+features = [ "Burial chambers", "Maze of narrow passages", "Shrine", "Stately vault", "Offerings to the dead", "Statuary or tapestries", "Remains of a grave robber", "Mass grave", "Exhumed corpses", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen guards this area", "Trap", "Death makes its presence known", "Crumbling architecture", "Grave goods with hidden dangers" ]

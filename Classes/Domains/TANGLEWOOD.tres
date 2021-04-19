@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+_name = "TANGLEWOOD"
+description = "A perilous forest of eternal shadow."
+features = [ "Dense thicket", "Overgrown path", "Waterway", "Clearing", "Elder tree", "Brambles", "Overgrown structure", "Rocky outcrop", "Camp or outpost", "Something unusual or unexpected", "You transition into a new theme", "You transition into a new domain" ]
+dangers = [ "Denizen hunts", "Denizen lairs here", "Trap or snare", "Path leads you astray", "Entangling plant life" ]

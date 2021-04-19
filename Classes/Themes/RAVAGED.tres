@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+[ext_resource path="res://Classes/ThemesDomains.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
-theme_name = "RAVAGED"
+_name = "RAVAGED"
 description = "Time, disaster, or strife have taken their toll."
 features = [ "Path of destruction", "Abandoned or ruined dwelling", "Untouched or preserved area", "Traces of what was lost", "Ill-fated victims" ]
 dangers = [ "Precarious architecture or terrain", "Imminent collapse or destruction", "Path undermined", "Blocked or broken path", "Vestiges of a destructive force", "Unexpected environmental threat", "Echoes of a troubling past", "Signs of a horrible fate", "Denizen seeks retribution", "Denizen leverages the environment", "Denizen restores what was lost", "Ravages return anew" ]

@@ -10,17 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
-"class": "Themes",
+"class": "ThemesDomains",
 "language": "GDScript",
-"path": "res://Classes/Theme.gd"
+"path": "res://Classes/ThemesDomains.gd"
 } ]
 _global_script_class_icons={
-"Themes": ""
+"ThemesDomains": ""
 }
 
 [application]
 
 config/name="IronTool"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

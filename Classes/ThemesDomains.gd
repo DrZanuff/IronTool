@@ -1,20 +1,20 @@
 extends Resource
 
-class_name Themes
+class_name ThemesDomains
 
-export (String) var theme_name
+export (String) var _name
 export (String) var description
 export (Array,String) var features
 export (Array,String) var dangers
 
 func get_data_as_object():
 	var data = {
-		"NAME"        : theme_name,
+		"NAME"        : _name,
 		"DESCRIPTION" : description,
 		"FEATURES"    : features,
 		"DANGERS"     : dangers,
 	}
 	return data
 
-func get_theme_name():
-	return theme_name
+func get_name():
+	return _name
