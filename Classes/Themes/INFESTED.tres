@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+theme_name = "INFESTED"
+description = "Foul creatures dwell here."
+features = [ "Inhabited nest", "Abandoned nest", "Ravaged terrain or architecture", "Remains or carrion", "Hoarded food" ]
+dangers = [ "Denizens swarm and attack", "Toxic or sickening environment", "Denizen stalks you", "Denizen takes or destroys something", "Denizen reveals surprising cleverness", "Denizen guided by a greater threat", "Denizen blocks the path", "Denizen funnels you down a new path", "Denizen undermines the path", "Denizen lays in wait", "Trap or snare", "Victim’s horrible fate is revealed" ]

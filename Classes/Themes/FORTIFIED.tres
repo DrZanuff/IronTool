@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Theme.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+theme_name = "FORTIFIED"
+description = "Foes defend this place against intruders."
+features = [ "Camp or quarters", "Guarded location", "Storage or repository", "Work or training area", "Command center or leadership" ]
+dangers = [ "Denizen patrols the area", "Denizen on guard", "Denizen ready to sound the alarm", "Denizen sets an ambush", "Denizen lures you into a trap", "Denizens converge on this area", "Pets or underlings", "Unexpected alliance revealed", "Nefarious plans revealed", "Unexpected leader revealed", "Trap", "Alarm trigger" ]
