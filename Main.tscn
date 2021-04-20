@@ -25,5 +25,5 @@ __meta__ = {
 [node name="SheetTemplate" parent="MainScroll" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1012.0
-margin_bottom = 634.0
+margin_right = 1024.0
+margin_bottom = 543.0

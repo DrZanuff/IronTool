@@ -6,8 +6,7 @@
 [ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
-draw_center = false
+bg_color = Color( 0.145098, 0.145098, 0.164706, 0.294118 )
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -39,9 +38,13 @@ corner_radius_bottom_left = 10
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.172549, 0.172549, 0.172549, 0.513726 )
 
-[node name="Site" type="MarginContainer"]
+[node name="Site" type="MarginContainer" groups=[
+"Site",
+]]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
+mouse_default_cursor_shape = 6
 size_flags_horizontal = 3
 size_flags_vertical = 0
 custom_constants/margin_top = 15
@@ -54,16 +57,19 @@ __meta__ = {
 margin_top = 15.0
 margin_right = 1024.0
 margin_bottom = 600.0
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
 [node name="SiteBody" type="VBoxContainer" parent="."]
 margin_top = 15.0
 margin_right = 1024.0
 margin_bottom = 600.0
+mouse_filter = 2
 
 [node name="Title" type="MarginContainer" parent="SiteBody"]
 margin_right = 1024.0
 margin_bottom = 140.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -80,6 +86,7 @@ custom_constants/separation = 15
 margin_right = 1004.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
+mouse_filter = 2
 size_flags_vertical = 3
 custom_constants/separation = 15
 
@@ -274,6 +281,7 @@ margin_top = 90.0
 margin_right = 1004.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 0, 30 )
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_left = 10
 
@@ -281,6 +289,7 @@ custom_constants/margin_left = 10
 margin_left = 10.0
 margin_right = 994.0
 margin_bottom = 30.0
+mouse_filter = 2
 custom_constants/separation = 30
 
 [node name="BtnDetails" type="Button" parent="SiteBody/Title/Body/Buttons/HBox"]
@@ -303,21 +312,22 @@ text = "THEMES & DOMAINS"
 [node name="Details" type="MarginContainer" parent="SiteBody"]
 visible = false
 margin_top = 144.0
-margin_right = 974.0
-margin_bottom = 885.0
+margin_right = 1024.0
+margin_bottom = 866.0
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details"]
-margin_right = 974.0
-margin_bottom = 741.0
+margin_right = 1024.0
+margin_bottom = 722.0
 
 [node name="TrackFull" parent="SiteBody/Details/Body" instance=ExtResource( 1 )]
-margin_right = 974.0
+margin_right = 1024.0
 margin_bottom = 105.0
 
 [node name="VowTitle" type="MarginContainer" parent="SiteBody/Details/Body"]
 margin_top = 109.0
-margin_right = 974.0
+margin_right = 1024.0
 margin_bottom = 133.0
+mouse_filter = 2
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 custom_constants/margin_bottom = 10
@@ -327,31 +337,34 @@ __meta__ = {
 
 [node name="TitleBox" type="HBoxContainer" parent="SiteBody/Details/Body/VowTitle"]
 margin_left = 150.0
-margin_right = 824.0
+margin_right = 874.0
 margin_bottom = 14.0
 custom_constants/separation = 14
 
 [node name="HSeparator1" type="HSeparator" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
-margin_right = 291.0
+margin_right = 316.0
 margin_bottom = 14.0
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="Title" type="Label" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
-margin_left = 305.0
-margin_right = 369.0
+margin_left = 330.0
+margin_right = 394.0
 margin_bottom = 14.0
 text = "DENIZENS"
 
 [node name="HSeparator2" type="HSeparator" parent="SiteBody/Details/Body/VowTitle/TitleBox"]
-margin_left = 383.0
-margin_right = 674.0
+margin_left = 408.0
+margin_right = 724.0
 margin_bottom = 14.0
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="Buttons" type="MarginContainer" parent="SiteBody/Details/Body"]
 margin_top = 137.0
-margin_right = 974.0
+margin_right = 1024.0
 margin_bottom = 187.0
+mouse_filter = 2
 custom_constants/margin_right = 150
 custom_constants/margin_top = 10
 custom_constants/margin_left = 150
@@ -360,13 +373,13 @@ custom_constants/margin_bottom = 10
 [node name="Rolls" type="HBoxContainer" parent="SiteBody/Details/Body/Buttons"]
 margin_left = 150.0
 margin_top = 10.0
-margin_right = 824.0
+margin_right = 874.0
 margin_bottom = 40.0
 custom_constants/separation = 50
 alignment = 1
 
 [node name="BtnPickDenizen" type="Button" parent="SiteBody/Details/Body/Buttons/Rolls"]
-margin_right = 312.0
+margin_right = 337.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
@@ -385,7 +398,7 @@ __meta__ = {
 [node name="Texture" type="TextureRect" parent="SiteBody/Details/Body/Buttons/Rolls/BtnPickDenizen/Icon"]
 margin_left = 8.0
 margin_top = 2.0
-margin_right = 312.0
+margin_right = 337.0
 margin_bottom = 30.0
 mouse_filter = 2
 texture = ExtResource( 3 )
@@ -395,8 +408,8 @@ __meta__ = {
 }
 
 [node name="BtnRandAllDenizen" type="Button" parent="SiteBody/Details/Body/Buttons/Rolls"]
-margin_left = 362.0
-margin_right = 674.0
+margin_left = 387.0
+margin_right = 724.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
@@ -415,7 +428,7 @@ __meta__ = {
 [node name="Texture" type="TextureRect" parent="SiteBody/Details/Body/Buttons/Rolls/BtnRandAllDenizen/Icon"]
 margin_left = 8.0
 margin_top = 2.0
-margin_right = 312.0
+margin_right = 337.0
 margin_bottom = 30.0
 mouse_filter = 2
 texture = ExtResource( 3 )
@@ -426,22 +439,23 @@ __meta__ = {
 
 [node name="Table" type="MarginContainer" parent="SiteBody/Details/Body"]
 margin_top = 191.0
-margin_right = 974.0
+margin_right = 1024.0
 margin_bottom = 418.0
+mouse_filter = 2
 custom_constants/margin_right = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 10
 
 [node name="GridContainer" type="GridContainer" parent="SiteBody/Details/Body/Table"]
 margin_left = 20.0
-margin_right = 954.0
+margin_right = 1004.0
 margin_bottom = 217.0
 custom_constants/vseparation = 20
 custom_constants/hseparation = 28
 columns = 4
 
 [node name="Range-01-27" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 59.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -451,35 +465,35 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "VERY COMMON 01-27"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-27/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-28-41" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 240.0
-margin_right = 452.0
+margin_left = 253.0
+margin_right = 478.0
 margin_bottom = 59.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -489,35 +503,35 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "COMMON 28-41"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-28-41/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-42-55" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 480.0
-margin_right = 692.0
+margin_left = 506.0
+margin_right = 731.0
 margin_bottom = 59.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -527,35 +541,35 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "COMMON 42-55"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-42-55/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-56-69" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 720.0
-margin_right = 932.0
+margin_left = 759.0
+margin_right = 984.0
 margin_bottom = 59.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -565,35 +579,35 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "COMMON 56-69"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-56-69/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-70-75" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
 margin_top = 79.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 138.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -603,36 +617,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "UNCOMMON 70-75"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-70-75/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-76-81" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 240.0
+margin_left = 253.0
 margin_top = 79.0
-margin_right = 452.0
+margin_right = 478.0
 margin_bottom = 138.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -642,36 +656,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "UNCOMMON 76-81"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-76-81/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-82-87" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 480.0
+margin_left = 506.0
 margin_top = 79.0
-margin_right = 692.0
+margin_right = 731.0
 margin_bottom = 138.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -681,36 +695,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "UNCOMMON 82-87"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-82-87/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-01-34" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 720.0
+margin_left = 759.0
 margin_top = 79.0
-margin_right = 932.0
+margin_right = 984.0
 margin_bottom = 138.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -720,35 +734,35 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "UNCOMMON 88-93"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-01-34/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-94-95" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
 margin_top = 158.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 217.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -758,36 +772,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "RARE 94-95"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-94-95/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-96-97" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 240.0
+margin_left = 253.0
 margin_top = 158.0
-margin_right = 452.0
+margin_right = 478.0
 margin_bottom = 217.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -797,36 +811,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "RARE 96-97"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-96-97/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-98-99" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 480.0
+margin_left = 506.0
 margin_top = 158.0
-margin_right = 692.0
+margin_right = 731.0
 margin_bottom = 217.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -836,36 +850,36 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "RARE 98-99"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-98-99/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Range-100" type="MarginContainer" parent="SiteBody/Details/Body/Table/GridContainer"]
-margin_left = 720.0
+margin_left = 759.0
 margin_top = 158.0
-margin_right = 932.0
+margin_right = 984.0
 margin_bottom = 217.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 0
@@ -875,59 +889,59 @@ custom_constants/margin_bottom = 5
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-100"]
 margin_top = 5.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 54.0
 
 [node name="LabelRange" type="Label" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body"]
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 14.0
 text = "UNFORESEEN 100"
 
 [node name="Input" type="HBoxContainer" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body"]
 margin_top = 18.0
-margin_right = 212.0
+margin_right = 225.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 
 [node name="InputDenizenName" type="LineEdit" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body/Input"]
-margin_right = 171.0
+margin_right = 184.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Denizen"
 
 [node name="BtnRandDenizen" type="Button" parent="SiteBody/Details/Body/Table/GridContainer/Range-100/Body/Input"]
-margin_left = 175.0
-margin_right = 212.0
+margin_left = 188.0
+margin_right = 225.0
 margin_bottom = 31.0
 icon = ExtResource( 3 )
 
 [node name="Tutorial" type="MarginContainer" parent="SiteBody/Details/Body"]
 margin_top = 422.0
-margin_right = 974.0
-margin_bottom = 529.0
+margin_right = 1024.0
+margin_bottom = 510.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 15
 
 [node name="Steps" type="HBoxContainer" parent="SiteBody/Details/Body/Tutorial"]
 margin_left = 10.0
-margin_right = 964.0
-margin_bottom = 92.0
+margin_right = 1014.0
+margin_bottom = 73.0
 
 [node name="Label1" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_top = 9.0
-margin_right = 148.0
-margin_bottom = 82.0
+margin_right = 156.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "When the outcome of a move prompts an encounter with a denizen, you may:"
 autowrap = true
 
 [node name="Label2" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 152.0
-margin_top = 38.0
-margin_right = 197.0
-margin_bottom = 54.0
+margin_left = 160.0
+margin_top = 28.0
+margin_right = 207.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 custom_fonts/font = SubResource( 4 )
@@ -936,20 +950,19 @@ align = 1
 autowrap = true
 
 [node name="Label3" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 201.0
-margin_top = 9.0
-margin_right = 350.0
-margin_bottom = 82.0
+margin_left = 211.0
+margin_right = 368.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Choose or introduce a denizen based on the situation and what you know of this place."
 autowrap = true
 
 [node name="Label4" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 354.0
-margin_top = 38.0
-margin_right = 398.0
-margin_bottom = 54.0
+margin_left = 372.0
+margin_top = 28.0
+margin_right = 419.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 custom_fonts/font = SubResource( 4 )
@@ -958,19 +971,19 @@ align = 1
 autowrap = true
 
 [node name="Label5" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 402.0
-margin_right = 551.0
-margin_bottom = 92.0
+margin_left = 423.0
+margin_right = 580.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Roll on the matrix to generate a random encounter. If the field is blank, add a new denizen."
 autowrap = true
 
 [node name="Label6" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 555.0
-margin_top = 38.0
-margin_right = 599.0
-margin_bottom = 54.0
+margin_left = 584.0
+margin_top = 28.0
+margin_right = 631.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 custom_fonts/font = SubResource( 4 )
@@ -979,19 +992,19 @@ align = 1
 autowrap = true
 
 [node name="Label7" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 603.0
-margin_right = 752.0
-margin_bottom = 92.0
+margin_left = 635.0
+margin_right = 792.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Identify a denizen as ‘likely’ to appear, and Ask the Oracle. If the answer is “no,” roll on the matrix."
 autowrap = true
 
 [node name="Label8" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 756.0
-margin_top = 38.0
-margin_right = 801.0
-margin_bottom = 54.0
+margin_left = 796.0
+margin_top = 28.0
+margin_right = 843.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 custom_fonts/font = SubResource( 4 )
@@ -1000,19 +1013,19 @@ align = 1
 autowrap = true
 
 [node name="Label9" type="Label" parent="SiteBody/Details/Body/Tutorial/Steps"]
-margin_left = 805.0
-margin_top = 9.0
-margin_right = 954.0
-margin_bottom = 82.0
+margin_left = 847.0
+margin_right = 1004.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Pick two denizens, rate one as ‘likely’, and Ask the Oracle to determine which you encounter."
 autowrap = true
 
 [node name="Title" type="MarginContainer" parent="SiteBody/Details/Body"]
-margin_top = 533.0
-margin_right = 974.0
-margin_bottom = 547.0
+margin_top = 514.0
+margin_right = 1024.0
+margin_bottom = 528.0
+mouse_filter = 2
 custom_constants/margin_right = 150
 custom_constants/margin_left = 150
 __meta__ = {
@@ -1021,31 +1034,34 @@ __meta__ = {
 
 [node name="TitleBox" type="HBoxContainer" parent="SiteBody/Details/Body/Title"]
 margin_left = 150.0
-margin_right = 824.0
+margin_right = 874.0
 margin_bottom = 14.0
 custom_constants/separation = 14
 
 [node name="HSeparator1" type="HSeparator" parent="SiteBody/Details/Body/Title/TitleBox"]
-margin_right = 302.0
+margin_right = 327.0
 margin_bottom = 14.0
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="Title" type="Label" parent="SiteBody/Details/Body/Title/TitleBox"]
-margin_left = 316.0
-margin_right = 358.0
+margin_left = 341.0
+margin_right = 383.0
 margin_bottom = 14.0
 text = "NOTES"
 
 [node name="HSeparator2" type="HSeparator" parent="SiteBody/Details/Body/Title/TitleBox"]
-margin_left = 372.0
-margin_right = 674.0
+margin_left = 397.0
+margin_right = 724.0
 margin_bottom = 14.0
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="Notes" type="MarginContainer" parent="SiteBody/Details/Body"]
-margin_top = 551.0
-margin_right = 974.0
-margin_bottom = 741.0
+margin_top = 532.0
+margin_right = 1024.0
+margin_bottom = 722.0
+mouse_filter = 2
 custom_constants/margin_right = 20
 custom_constants/margin_top = 10
 custom_constants/margin_left = 20
@@ -1054,12 +1070,13 @@ custom_constants/margin_bottom = 30
 [node name="TextEdit" type="TextEdit" parent="SiteBody/Details/Body/Notes"]
 margin_left = 20.0
 margin_top = 10.0
-margin_right = 954.0
+margin_right = 1004.0
 margin_bottom = 160.0
 rect_min_size = Vector2( 0, 150 )
 wrap_enabled = true
 
 [node name="ThemeDomains" type="MarginContainer" parent="SiteBody"]
+visible = false
 margin_top = 144.0
 margin_right = 1024.0
 margin_bottom = 306.0
@@ -1071,6 +1088,7 @@ margin_bottom = 162.0
 [node name="MarginContainer" type="MarginContainer" parent="SiteBody/ThemeDomains/Body"]
 margin_right = 1024.0
 margin_bottom = 4.0
+mouse_filter = 2
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
@@ -1078,11 +1096,13 @@ custom_constants/margin_left = 50
 margin_left = 50.0
 margin_right = 974.0
 margin_bottom = 4.0
+mouse_filter = 2
 
 [node name="Rolls" type="MarginContainer" parent="SiteBody/ThemeDomains/Body"]
 margin_top = 8.0
 margin_right = 1024.0
 margin_bottom = 38.0
+mouse_filter = 2
 custom_constants/margin_top = 5
 custom_constants/margin_bottom = 0
 
@@ -1111,15 +1131,15 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="SiteBody/ThemeDomains/Body/Rolls/HBoxContainer/BtnFeature/Hbox"]
-margin_left = 89.0
+margin_left = 87.0
 margin_top = 5.0
-margin_right = 181.0
+margin_right = 179.0
 margin_bottom = 19.0
 text = "ROLL FEATURE"
 
 [node name="TextureRect" type="TextureRect" parent="SiteBody/ThemeDomains/Body/Rolls/HBoxContainer/BtnFeature/Hbox"]
-margin_left = 190.0
-margin_right = 210.0
+margin_left = 188.0
+margin_right = 213.0
 margin_bottom = 25.0
 mouse_filter = 2
 texture = ExtResource( 3 )
@@ -1143,15 +1163,15 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="SiteBody/ThemeDomains/Body/Rolls/HBoxContainer/BtnDanger/Hbox"]
-margin_left = 90.0
+margin_left = 87.0
 margin_top = 5.0
-margin_right = 181.0
+margin_right = 178.0
 margin_bottom = 19.0
 text = "ROLL DANGER"
 
 [node name="TextureRect" type="TextureRect" parent="SiteBody/ThemeDomains/Body/Rolls/HBoxContainer/BtnDanger/Hbox"]
-margin_left = 190.0
-margin_right = 210.0
+margin_left = 187.0
+margin_right = 212.0
 margin_bottom = 25.0
 mouse_filter = 2
 texture = ExtResource( 3 )
@@ -1169,6 +1189,7 @@ margin_left = 60.0
 margin_right = 510.0
 margin_bottom = 95.0
 rect_min_size = Vector2( 450, 0 )
+mouse_filter = 2
 size_flags_vertical = 0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -1180,6 +1201,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 440.0
 margin_bottom = 85.0
+mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
 
 [node name="VBox" type="VBoxContainer" parent="SiteBody/ThemeDomains/Body/HBody/Theme"]
@@ -1192,6 +1214,7 @@ custom_constants/separation = 6
 [node name="Title" type="MarginContainer" parent="SiteBody/ThemeDomains/Body/HBody/Theme/VBox"]
 margin_right = 430.0
 margin_bottom = 24.0
+mouse_filter = 2
 custom_constants/margin_top = 10
 
 [node name="Theme" type="Label" parent="SiteBody/ThemeDomains/Body/HBody/Theme/VBox/Title"]
@@ -1205,6 +1228,7 @@ align = 1
 margin_top = 30.0
 margin_right = 430.0
 margin_bottom = 75.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -1274,9 +1298,10 @@ stretch_mode = 4
 
 [node name="Table" type="MarginContainer" parent="SiteBody/ThemeDomains/Body/HBody/Theme/VBox"]
 visible = false
-margin_top = 76.0
+margin_top = 81.0
 margin_right = 430.0
-margin_bottom = 699.0
+margin_bottom = 704.0
+mouse_filter = 2
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/ThemeDomains/Body/HBody/Theme/VBox/Table"]
 margin_right = 430.0
@@ -1286,6 +1311,7 @@ size_flags_vertical = 3
 [node name="PlaceDescription" type="MarginContainer" parent="SiteBody/ThemeDomains/Body/HBody/Theme/VBox/Table/Body"]
 margin_right = 430.0
 margin_bottom = 34.0
+mouse_filter = 2
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
@@ -1301,6 +1327,7 @@ text = "Place description goes here"
 margin_top = 38.0
 margin_right = 430.0
 margin_bottom = 52.0
+mouse_filter = 2
 custom_constants/margin_top = 0
 custom_constants/margin_bottom = 0
 
@@ -1314,6 +1341,7 @@ align = 1
 margin_top = 56.0
 margin_right = 430.0
 margin_bottom = 214.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 0
 custom_constants/margin_left = 10
@@ -1550,6 +1578,7 @@ text = "Just some Test here to talk about stuff"
 margin_top = 218.0
 margin_right = 430.0
 margin_bottom = 232.0
+mouse_filter = 2
 custom_constants/margin_top = 0
 custom_constants/margin_bottom = 0
 
@@ -1563,6 +1592,7 @@ align = 1
 margin_top = 236.0
 margin_right = 430.0
 margin_bottom = 623.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 0
 custom_constants/margin_left = 10
@@ -2112,6 +2142,7 @@ margin_left = 514.0
 margin_right = 964.0
 margin_bottom = 95.0
 rect_min_size = Vector2( 450, 0 )
+mouse_filter = 2
 size_flags_vertical = 0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -2123,6 +2154,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 440.0
 margin_bottom = 85.0
+mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
 
 [node name="VBox" type="VBoxContainer" parent="SiteBody/ThemeDomains/Body/HBody/Domain"]
@@ -2135,6 +2167,7 @@ custom_constants/separation = 6
 [node name="Title" type="MarginContainer" parent="SiteBody/ThemeDomains/Body/HBody/Domain/VBox"]
 margin_right = 430.0
 margin_bottom = 24.0
+mouse_filter = 2
 custom_constants/margin_top = 10
 
 [node name="Domain" type="Label" parent="SiteBody/ThemeDomains/Body/HBody/Domain/VBox/Title"]
@@ -2148,6 +2181,7 @@ align = 1
 margin_top = 30.0
 margin_right = 430.0
 margin_bottom = 75.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -2217,6 +2251,7 @@ visible = false
 margin_top = 76.0
 margin_right = 430.0
 margin_bottom = 699.0
+mouse_filter = 2
 
 [node name="Body" type="VBoxContainer" parent="SiteBody/ThemeDomains/Body/HBody/Domain/VBox/Table"]
 margin_right = 430.0
@@ -2226,6 +2261,7 @@ size_flags_vertical = 3
 [node name="DomainDescription" type="MarginContainer" parent="SiteBody/ThemeDomains/Body/HBody/Domain/VBox/Table/Body"]
 margin_right = 430.0
 margin_bottom = 34.0
+mouse_filter = 2
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
@@ -2241,6 +2277,7 @@ text = "Place description goes here"
 margin_top = 38.0
 margin_right = 430.0
 margin_bottom = 52.0
+mouse_filter = 2
 custom_constants/margin_top = 0
 custom_constants/margin_bottom = 0
 
@@ -2254,6 +2291,7 @@ align = 1
 margin_top = 56.0
 margin_right = 430.0
 margin_bottom = 438.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 0
 custom_constants/margin_left = 10
@@ -2802,6 +2840,7 @@ text = "You transition into a new domain"
 margin_top = 442.0
 margin_right = 430.0
 margin_bottom = 456.0
+mouse_filter = 2
 custom_constants/margin_top = 0
 custom_constants/margin_bottom = 0
 
@@ -2815,6 +2854,7 @@ align = 1
 margin_top = 460.0
 margin_right = 430.0
 margin_bottom = 623.0
+mouse_filter = 2
 custom_constants/margin_right = 10
 custom_constants/margin_top = 0
 custom_constants/margin_left = 10
@@ -3046,8 +3086,123 @@ margin_top = 5.0
 margin_right = 331.0
 margin_bottom = 19.0
 text = "Just some Test here to talk about stuff"
-[connection signal="toggled" from="SiteBody/Title/Body/Buttons/HBox/BtnDetails" to="." method="_on_BtnDetails_toggled"]
+
+[node name="SiteNumber" type="MarginContainer" parent="SiteBody"]
+margin_top = 144.0
+margin_right = 1024.0
+margin_bottom = 161.0
+custom_constants/margin_right = 10
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 3
+
+[node name="Number" type="Label" parent="SiteBody/SiteNumber"]
+margin_right = 1014.0
+margin_bottom = 14.0
+text = "0"
+align = 2
+
+[node name="Control" type="Control" parent="."]
+visible = false
+margin_top = 15.0
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color( 0, 0, 0, 0.466667 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnDeleteSite" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -28.5
+margin_top = -3.0
+margin_right = 28.5
+margin_bottom = 17.0
+text = "DELETE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="MarginContainer" parent="."]
+visible = false
+margin_top = 15.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 25
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Delete"]
+margin_left = 100.0
+margin_top = 25.0
+margin_right = 924.0
+margin_bottom = 575.0
+
+[node name="Body" type="VBoxContainer" parent="Delete"]
+margin_left = 100.0
+margin_top = 25.0
+margin_right = 924.0
+margin_bottom = 575.0
+
+[node name="Margin" type="MarginContainer" parent="Delete/Body"]
+margin_right = 824.0
+margin_bottom = 506.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Delete/Body/Margin"]
+margin_right = 824.0
+margin_bottom = 506.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Delete/Body/Margin/CenterContainer"]
+margin_left = 274.0
+margin_top = 246.0
+margin_right = 550.0
+margin_bottom = 260.0
+text = "Are you sure you wante to Delete this Site?"
+align = 1
+valign = 1
+
+[node name="Options" type="MarginContainer" parent="Delete/Body"]
+margin_top = 510.0
+margin_right = 824.0
+margin_bottom = 550.0
+custom_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Delete/Body/Options"]
+margin_right = 824.0
+margin_bottom = 20.0
+custom_constants/separation = 23
+alignment = 1
+
+[node name="ButtonNo" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 368.0
+margin_right = 398.0
+margin_bottom = 20.0
+text = "No"
+
+[node name="ButtonYes" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 421.0
+margin_right = 455.0
+margin_bottom = 20.0
+text = "Yes"
+[connection signal="gui_input" from="." to="." method="_on_Site_gui_input"]
+[connection signal="pressed" from="SiteBody/Title/Body/Buttons/HBox/BtnDetails" to="." method="_BtnView_pressed" binds= [ "detail" ]]
+[connection signal="pressed" from="SiteBody/Title/Body/Buttons/HBox/BtnThemeDomain" to="." method="_BtnView_pressed" binds= [ "theme_domain" ]]
 [connection signal="item_selected" from="SiteBody/ThemeDomains/Body/HBody/Theme/VBox/ThemeSelect/HBox/Themes" to="." method="_on_Themes_item_selected"]
 [connection signal="pressed" from="SiteBody/ThemeDomains/Body/HBody/Theme/VBox/ThemeSelect/HBox/BtnTheme" to="." method="_on_BtnTheme_pressed"]
 [connection signal="item_selected" from="SiteBody/ThemeDomains/Body/HBody/Domain/VBox/DomainSelect/HBox/Domains" to="." method="_on_Domains_item_selected"]
 [connection signal="pressed" from="SiteBody/ThemeDomains/Body/HBody/Domain/VBox/DomainSelect/HBox/BtnDomain" to="." method="_on_BtnDomain_pressed"]
+[connection signal="pressed" from="Control/BtnDeleteSite" to="." method="_on_BtnDeleteSite_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]

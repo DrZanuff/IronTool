@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://SheetTemplate/Vow/Vow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://SheetTemplate/Scripts/VowList.gd" type="Script" id=7]
 [ext_resource path="res://SheetTemplate/Site/Site.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SheetTemplate/Scripts/SiteList.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -183,7 +184,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 1118.0
+margin_bottom = 600.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -196,7 +197,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 999.0
-margin_bottom = 1068.0
+margin_bottom = 550.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -703,7 +704,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 1018.0
+margin_bottom = 443.0
 rect_min_size = Vector2( 0, 115 )
 
 [node name="Summary" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
@@ -1758,7 +1759,7 @@ margin_bottom = 35.0
 alignment = 1
 
 [node name="ButtonAddVow" type="Button" parent="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer" groups=[
-"HideGroup",
+"HideGroupVow",
 ]]
 margin_right = 56.0
 margin_bottom = 25.0
@@ -2094,10 +2095,50 @@ wrap_enabled = true
 
 [node name="Sites" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_right = 974.0
-margin_bottom = 805.0
+margin_bottom = 230.0
 
-[node name="Site" parent="MainMargin/Body/Interfaces/Sites" instance=ExtResource( 8 )]
-margin_bottom = 805.0
+[node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
+margin_right = 974.0
+margin_bottom = 181.0
+script = ExtResource( 9 )
+
+[node name="Site" parent="MainMargin/Body/Interfaces/Sites/SiteList" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 974.0
+margin_bottom = 181.0
+
+[node name="SiteControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Sites"]
+margin_top = 185.0
+margin_right = 974.0
+margin_bottom = 230.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Sites/SiteControl"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 969.0
+margin_bottom = 35.0
+alignment = 1
+
+[node name="ButtonAddSite" type="Button" parent="MainMargin/Body/Interfaces/Sites/SiteControl/HBoxContainer" groups=[
+"HideGroupSite",
+]]
+margin_right = 56.0
+margin_bottom = 25.0
+size_flags_horizontal = 2
+text = "+ADD"
+
+[node name="ButtonModifySite" type="Button" parent="MainMargin/Body/Interfaces/Sites/SiteControl/HBoxContainer"]
+margin_left = 888.0
+margin_right = 964.0
+margin_bottom = 25.0
+size_flags_horizontal = 10
+toggle_mode = true
+text = "MODIFY"
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
@@ -2115,3 +2156,5 @@ margin_bottom = 805.0
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer/ButtonAddVow" to="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" method="_on_ButtonAddVow_pressed"]
 [connection signal="toggled" from="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowControl/HBoxContainer/ButtonModify" to="MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList" method="_on_ButtonModify_toggled"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Sites/SiteControl/HBoxContainer/ButtonAddSite" to="MainMargin/Body/Interfaces/Sites/SiteList" method="_on_ButtonAddSite_pressed"]
+[connection signal="toggled" from="MainMargin/Body/Interfaces/Sites/SiteControl/HBoxContainer/ButtonModifySite" to="MainMargin/Body/Interfaces/Sites/SiteList" method="_on_ButtonModifySite_toggled"]

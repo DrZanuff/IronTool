@@ -8,10 +8,9 @@ func _on_ButtonAddVow_pressed() -> void:
 	add_child(new_vow)
 	emit_signal("vow_added")
 	
-
 func _on_ButtonModify_toggled(button_pressed: bool) -> void:
 	get_tree().call_group("Vow","show_control",button_pressed)
-	get_tree().call_group("HideGroup","hide" if button_pressed else "show")
+	get_tree().call_group("HideGroupVow","hide" if button_pressed else "show")
 
 func call_update():
 	yield(get_tree(),"idle_frame")

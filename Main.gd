@@ -4,6 +4,9 @@ func _ready() -> void:
 	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Summary/Vows/VowContents/VowList.connect(
 		"vow_added",self,"scroll_vertical"
 	)
+	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Sites/SiteList.connect(
+		"site_added", self , "scroll_vertical"
+	)
 
 func scroll_vertical():
 	$Tween.interpolate_property(
