@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://SheetTemplate/Scripts/SiteList.gd" type="Script" id=9]
 [ext_resource path="res://SheetTemplate/Progress/Progress.tscn" type="PackedScene" id=10]
 [ext_resource path="res://SheetTemplate/Scripts/ProgressList.gd" type="Script" id=11]
+[ext_resource path="res://SheetTemplate/Bond/Bond.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -706,7 +707,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 456.0
+margin_bottom = 438.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
@@ -2101,7 +2102,7 @@ wrap_enabled = true
 visible = false
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 243.0
+margin_bottom = 240.0
 
 [node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
 margin_right = 974.0
@@ -2147,6 +2148,7 @@ toggle_mode = true
 text = "MODIFY"
 
 [node name="Progresses" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_top = 10.0
 margin_right = 974.0
 margin_bottom = 243.0
@@ -2185,6 +2187,98 @@ size_flags_horizontal = 2
 text = "+ADD"
 
 [node name="ButtonModifyProgress" type="Button" parent="MainMargin/Body/Interfaces/Progresses/ProgressControl/HBoxContainer"]
+margin_left = 888.0
+margin_right = 964.0
+margin_bottom = 25.0
+size_flags_horizontal = 10
+toggle_mode = true
+text = "MODIFY"
+
+[node name="Bonds" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+margin_top = 10.0
+margin_right = 974.0
+margin_bottom = 225.0
+
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
+margin_right = 974.0
+margin_bottom = 86.0
+
+[node name="BondControl" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Bonds/Margin"]
+margin_right = 974.0
+margin_bottom = 86.0
+custom_constants/separation = 7
+
+[node name="Track" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl" instance=ExtResource( 5 )]
+margin_left = 0.0
+margin_right = 974.0
+
+[node name="BtnWriteEpilogue" type="Button" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl"]
+margin_left = 372.0
+margin_top = 58.0
+margin_right = 602.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 230, 28 )
+size_flags_horizontal = 4
+
+[node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hbox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin"]
+margin_right = 230.0
+margin_bottom = 28.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 23.0
+text = "WRITE YOUR EPILOGUE"
+
+[node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
+margin_left = 198.0
+margin_right = 223.0
+margin_bottom = 28.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="BondList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Bonds"]
+margin_top = 90.0
+margin_right = 974.0
+margin_bottom = 166.0
+
+[node name="Bond" parent="MainMargin/Body/Interfaces/Bonds/BondList" instance=ExtResource( 12 )]
+margin_bottom = 76.0
+
+[node name="BondControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
+margin_top = 170.0
+margin_right = 974.0
+margin_bottom = 215.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Bonds/BondControl"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 969.0
+margin_bottom = 35.0
+alignment = 1
+
+[node name="ButtonAddBond" type="Button" parent="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer" groups=[
+"HideGroupBond",
+]]
+margin_right = 56.0
+margin_bottom = 25.0
+size_flags_horizontal = 2
+text = "+ADD"
+
+[node name="ButtonModifyBond" type="Button" parent="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer"]
 margin_left = 888.0
 margin_right = 964.0
 margin_bottom = 25.0

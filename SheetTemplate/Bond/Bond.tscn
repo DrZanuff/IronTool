@@ -1,0 +1,203 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SheetTemplate/Bond/Bond.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.87451, 0.866667, 0.109804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 5.0
+content_margin_top = 4.0
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.87451, 0.866667, 0.109804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+
+[node name="Bond" type="MarginContainer"]
+margin_right = 974.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/margin_right = 0
+custom_constants/margin_left = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 974.0
+margin_bottom = 77.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 974.0
+margin_bottom = 77.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="Margin"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 954.0
+margin_bottom = 72.0
+custom_constants/separation = 6
+
+[node name="Title" type="MarginContainer" parent="Margin/Body"]
+margin_right = 934.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 0
+
+[node name="HBox" type="HBoxContainer" parent="Margin/Body/Title"]
+margin_right = 934.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Margin/Body/Title/HBox"]
+margin_right = 42.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "NAME:"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="Margin/Body/Title/HBox"]
+margin_left = 50.0
+margin_right = 400.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 350, 0 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Name"
+
+[node name="BtnDetails" type="Button" parent="Margin/Body"]
+margin_top = 36.0
+margin_right = 934.0
+margin_bottom = 56.0
+toggle_mode = true
+text = "DETAILS"
+
+[node name="Details" type="VBoxContainer" parent="Margin/Body"]
+visible = false
+margin_top = 58.0
+margin_right = 934.0
+margin_bottom = 188.0
+size_flags_vertical = 3
+custom_constants/separation = 6
+
+[node name="Location" type="MarginContainer" parent="Margin/Body/Details"]
+margin_right = 934.0
+margin_bottom = 30.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 0
+
+[node name="HBox" type="HBoxContainer" parent="Margin/Body/Details/Location"]
+margin_right = 934.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Margin/Body/Details/Location/HBox"]
+margin_right = 72.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "LOCATION:"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="Margin/Body/Details/Location/HBox"]
+margin_left = 80.0
+margin_right = 430.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 350, 0 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Location"
+
+[node name="Descriptor" type="MarginContainer" parent="Margin/Body/Details"]
+margin_top = 36.0
+margin_right = 934.0
+margin_bottom = 66.0
+custom_constants/margin_right = 0
+custom_constants/margin_left = 0
+
+[node name="HBox" type="HBoxContainer" parent="Margin/Body/Details/Descriptor"]
+margin_right = 934.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Margin/Body/Details/Descriptor/HBox"]
+margin_right = 90.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+text = "DESCRIPTORS:"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="Margin/Body/Details/Descriptor/HBox"]
+margin_left = 98.0
+margin_right = 448.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 350, 0 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Descriptors"
+
+[node name="Notes" type="VBoxContainer" parent="Margin/Body/Details"]
+margin_top = 72.0
+margin_right = 934.0
+margin_bottom = 130.0
+size_flags_vertical = 3
+
+[node name="TextEdit" type="TextEdit" parent="Margin/Body/Details/Notes"]
+margin_right = 934.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Resizer" type="HSeparator" parent="Margin/Body/Details/Notes"]
+margin_top = 54.0
+margin_right = 934.0
+margin_bottom = 58.0
+mouse_default_cursor_shape = 9
+size_flags_horizontal = 3
+[connection signal="toggled" from="Margin/Body/BtnDetails" to="." method="_on_BtnDetails_toggled"]
+[connection signal="mouse_entered" from="Margin/Body/Details/Notes/Resizer" to="." method="_on_Resizer_mouse_entered"]
+[connection signal="mouse_exited" from="Margin/Body/Details/Notes/Resizer" to="." method="_on_Resizer_mouse_exited"]
