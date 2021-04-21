@@ -58,7 +58,7 @@ func mark(n , last_tick):
 		var node = get_child(i)
 		if node is OptionButton:
 			node.select(4)
-
+	
 	get_child(n).select(last_tick)
 	score = n if last_tick == 4 else n-1
 

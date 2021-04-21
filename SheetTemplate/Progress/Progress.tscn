@@ -1,0 +1,321 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SheetTemplate/Track/Track.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SheetTemplate/Progress/Progress.gd" type="Script" id=2]
+[ext_resource path="res://SheetTemplate/Track/TrackMark.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 0.215686 )
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[node name="Progress" type="MarginContainer" groups=[
+"Progress",
+]]
+margin_right = 974.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 100 )
+mouse_default_cursor_shape = 6
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 974.0
+margin_bottom = 169.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Body" type="VBoxContainer" parent="."]
+margin_right = 974.0
+margin_bottom = 169.0
+
+[node name="MarginInfo" type="MarginContainer" parent="Body"]
+margin_right = 974.0
+margin_bottom = 39.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 5
+
+[node name="ProgressInfo" type="HBoxContainer" parent="Body/MarginInfo"]
+margin_right = 974.0
+margin_bottom = 34.0
+custom_constants/separation = 0
+
+[node name="MarginName" type="MarginContainer" parent="Body/MarginInfo/ProgressInfo"]
+margin_right = 779.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Panel" type="Panel" parent="Body/MarginInfo/ProgressInfo/MarginName"]
+margin_right = 779.0
+margin_bottom = 34.0
+
+[node name="InputProgressName" type="MarginContainer" parent="Body/MarginInfo/ProgressInfo/MarginName"]
+margin_right = 779.0
+margin_bottom = 34.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 5
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 5
+
+[node name="LineEdit" type="LineEdit" parent="Body/MarginInfo/ProgressInfo/MarginName/InputProgressName"]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 769.0
+margin_bottom = 29.0
+placeholder_text = "Progress Name"
+
+[node name="BtnChallenge" type="Button" parent="Body/MarginInfo/ProgressInfo"]
+margin_left = 779.0
+margin_right = 974.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+text = "CHALLENGE"
+
+[node name="Level" type="MarginContainer" parent="Body"]
+margin_top = 43.0
+margin_right = 974.0
+margin_bottom = 73.0
+mouse_filter = 2
+custom_constants/margin_right = 50
+custom_constants/margin_top = 5
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 5
+
+[node name="LevelButtons" type="HBoxContainer" parent="Body/Level"]
+margin_left = 50.0
+margin_top = 5.0
+margin_right = 924.0
+margin_bottom = 25.0
+custom_constants/separation = 17
+
+[node name="ButtonTroublesome" type="Button" parent="Body/Level/LevelButtons"]
+margin_right = 161.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "TROUBLESOME"
+
+[node name="ButtonDangerous" type="Button" parent="Body/Level/LevelButtons"]
+margin_left = 178.0
+margin_right = 339.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "DANGEROUS"
+
+[node name="ButtonFormidable" type="Button" parent="Body/Level/LevelButtons"]
+margin_left = 356.0
+margin_right = 517.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "FORMIDABLE"
+
+[node name="ButtonExtreme" type="Button" parent="Body/Level/LevelButtons"]
+margin_left = 534.0
+margin_right = 695.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "EXTREME"
+
+[node name="ButtonEpic" type="Button" parent="Body/Level/LevelButtons"]
+margin_left = 712.0
+margin_right = 874.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Epic"
+
+[node name="Progress" type="MarginContainer" parent="Body"]
+margin_top = 77.0
+margin_right = 974.0
+margin_bottom = 148.0
+mouse_filter = 2
+custom_constants/margin_right = 50
+custom_constants/margin_top = 10
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 10
+
+[node name="ProgressBody" type="HBoxContainer" parent="Body/Progress"]
+margin_left = 50.0
+margin_top = 10.0
+margin_right = 924.0
+margin_bottom = 61.0
+custom_constants/separation = 11
+
+[node name="ButtonMark" type="Button" parent="Body/Progress/ProgressBody"]
+margin_top = 15.0
+margin_right = 89.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "MARK"
+
+[node name="ButtonClear" type="Button" parent="Body/Progress/ProgressBody"]
+margin_left = 100.0
+margin_top = 15.0
+margin_right = 189.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "CLEAR"
+
+[node name="Track" parent="Body/Progress/ProgressBody" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_right = 773.0
+
+[node name="ButtonFulfill" type="Button" parent="Body/Progress/ProgressBody"]
+margin_left = 784.0
+margin_top = 15.0
+margin_right = 874.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "FULFILL"
+
+[node name="Countdown" type="MarginContainer" parent="Body"]
+visible = false
+margin_top = 162.0
+margin_right = 974.0
+margin_bottom = 223.0
+custom_constants/margin_right = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 10
+
+[node name="Hbox" type="HBoxContainer" parent="Body/Countdown"]
+margin_left = 50.0
+margin_right = 924.0
+margin_bottom = 51.0
+
+[node name="Title" type="MarginContainer" parent="Body/Countdown/Hbox"]
+margin_right = 196.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 196, 0 )
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Body/Countdown/Hbox/Title"]
+margin_top = 18.0
+margin_right = 196.0
+margin_bottom = 32.0
+text = "COUNTDOWN"
+align = 1
+
+[node name="TrackMark" parent="Body/Countdown/Hbox" instance=ExtResource( 3 )]
+
+[node name="ProgressNumber" type="MarginContainer" parent="Body"]
+margin_top = 152.0
+margin_right = 974.0
+margin_bottom = 169.0
+custom_constants/margin_right = 10
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 3
+
+[node name="Number" type="Label" parent="Body/ProgressNumber"]
+margin_right = 964.0
+margin_bottom = 14.0
+text = "0"
+align = 2
+
+[node name="Control" type="Control" parent="."]
+visible = false
+margin_right = 974.0
+margin_bottom = 169.0
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color( 0, 0, 0, 0.466667 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDelete" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -40.0
+margin_top = -4.0
+margin_right = 40.0
+margin_bottom = 16.0
+text = "DELETE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="MarginContainer" parent="."]
+visible = false
+margin_right = 974.0
+margin_bottom = 169.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="Delete"]
+margin_right = 974.0
+margin_bottom = 169.0
+
+[node name="Body" type="VBoxContainer" parent="Delete"]
+margin_right = 974.0
+margin_bottom = 169.0
+
+[node name="Margin" type="MarginContainer" parent="Delete/Body"]
+margin_right = 974.0
+margin_bottom = 125.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Delete/Body/Margin"]
+margin_right = 974.0
+margin_bottom = 125.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Delete/Body/Margin/CenterContainer"]
+margin_left = 333.0
+margin_top = 55.0
+margin_right = 640.0
+margin_bottom = 69.0
+text = "Are you sure you wante to Delete this Progress?"
+align = 1
+valign = 1
+
+[node name="Options" type="MarginContainer" parent="Delete/Body"]
+margin_top = 129.0
+margin_right = 974.0
+margin_bottom = 169.0
+custom_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Delete/Body/Options"]
+margin_right = 974.0
+margin_bottom = 20.0
+custom_constants/separation = 23
+alignment = 1
+
+[node name="ButtonNo" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 443.0
+margin_right = 473.0
+margin_bottom = 20.0
+text = "No"
+
+[node name="ButtonYes" type="Button" parent="Delete/Body/Options/HBoxContainer"]
+margin_left = 496.0
+margin_right = 530.0
+margin_bottom = 20.0
+text = "Yes"
+[connection signal="gui_input" from="." to="." method="_on_Progress_gui_input"]
+[connection signal="toggled" from="Body/MarginInfo/ProgressInfo/BtnChallenge" to="." method="_on_BtnChallenge_toggled"]
+[connection signal="pressed" from="Control/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]
+[connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
