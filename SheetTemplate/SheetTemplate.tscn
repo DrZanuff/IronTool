@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://SheetTemplate/Progress/Progress.tscn" type="PackedScene" id=10]
 [ext_resource path="res://SheetTemplate/Scripts/ProgressList.gd" type="Script" id=11]
 [ext_resource path="res://SheetTemplate/Bond/Bond.tscn" type="PackedScene" id=12]
+[ext_resource path="res://SheetTemplate/Scripts/BondList.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -707,7 +708,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 438.0
+margin_bottom = 476.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
@@ -888,8 +889,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 11.0
-margin_right = 36.0
+margin_left = 14.0
+margin_right = 34.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -898,9 +899,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 40.0
+margin_left = 38.0
 margin_top = 3.0
-margin_right = 69.0
+margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1060,8 +1061,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 12.0
-margin_right = 37.0
+margin_left = 14.0
+margin_right = 34.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1070,9 +1071,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 41.0
+margin_left = 38.0
 margin_top = 3.0
-margin_right = 70.0
+margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1232,8 +1233,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 11.0
-margin_right = 36.0
+margin_left = 14.0
+margin_right = 34.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1242,9 +1243,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 40.0
+margin_left = 38.0
 margin_top = 3.0
-margin_right = 69.0
+margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1404,8 +1405,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 12.0
-margin_right = 37.0
+margin_left = 14.0
+margin_right = 34.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1414,9 +1415,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 41.0
+margin_left = 38.0
 margin_top = 3.0
-margin_right = 70.0
+margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1576,8 +1577,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 12.0
-margin_right = 37.0
+margin_left = 14.0
+margin_right = 34.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1586,9 +1587,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 41.0
+margin_left = 38.0
 margin_top = 3.0
-margin_right = 70.0
+margin_right = 67.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -2102,7 +2103,7 @@ wrap_enabled = true
 visible = false
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 240.0
+margin_bottom = 263.0
 
 [node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
 margin_right = 974.0
@@ -2151,7 +2152,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 243.0
+margin_bottom = 263.0
 
 [node name="ProgressList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Progresses"]
 margin_right = 974.0
@@ -2197,11 +2198,12 @@ text = "MODIFY"
 [node name="Bonds" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 225.0
+margin_bottom = 263.0
 
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
 margin_right = 974.0
-margin_bottom = 86.0
+margin_bottom = 96.0
+custom_constants/margin_bottom = 10
 
 [node name="BondControl" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Bonds/Margin"]
 margin_right = 974.0
@@ -2223,6 +2225,7 @@ size_flags_horizontal = 4
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2233,31 +2236,34 @@ margin_bottom = 28.0
 alignment = 1
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
-margin_left = 6.0
+margin_left = 9.0
 margin_top = 4.0
-margin_right = 194.0
+margin_right = 197.0
 margin_bottom = 23.0
 text = "WRITE YOUR EPILOGUE"
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
-margin_left = 198.0
-margin_right = 223.0
+margin_left = 201.0
+margin_right = 221.0
 margin_bottom = 28.0
 texture = ExtResource( 1 )
 stretch_mode = 4
 
 [node name="BondList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Bonds"]
-margin_top = 90.0
+margin_top = 100.0
 margin_right = 974.0
-margin_bottom = 166.0
+margin_bottom = 204.0
+size_flags_vertical = 3
+custom_constants/separation = 15
+script = ExtResource( 13 )
 
 [node name="Bond" parent="MainMargin/Body/Interfaces/Bonds/BondList" instance=ExtResource( 12 )]
-margin_bottom = 76.0
+margin_bottom = 104.0
 
 [node name="BondControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
-margin_top = 170.0
+margin_top = 208.0
 margin_right = 974.0
-margin_bottom = 215.0
+margin_bottom = 253.0
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
@@ -2285,6 +2291,7 @@ margin_bottom = 25.0
 size_flags_horizontal = 10
 toggle_mode = true
 text = "MODIFY"
+
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
 [connection signal="gui_input" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Modifier" method="_on_SpinBox_gui_input"]
@@ -2306,3 +2313,6 @@ text = "MODIFY"
 [connection signal="toggled" from="MainMargin/Body/Interfaces/Sites/SiteControl/HBoxContainer/ButtonModifySite" to="MainMargin/Body/Interfaces/Sites/SiteList" method="_on_ButtonModifySite_toggled"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Progresses/ProgressControl/HBoxContainer/ButtonAddProgress" to="MainMargin/Body/Interfaces/Progresses/ProgressList" method="_on_ButtonAddProgress_pressed"]
 [connection signal="toggled" from="MainMargin/Body/Interfaces/Progresses/ProgressControl/HBoxContainer/ButtonModifyProgress" to="MainMargin/Body/Interfaces/Progresses/ProgressList" method="_on_ButtonModifyProgress_toggled"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonAddBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonAddBond_pressed"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonModifyBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonModifyBond_pressed"]
+[connection signal="toggled" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonModifyBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonModifyBond_toggled"]
