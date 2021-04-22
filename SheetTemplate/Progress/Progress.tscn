@@ -314,6 +314,7 @@ margin_left = 496.0
 margin_right = 530.0
 margin_bottom = 20.0
 text = "Yes"
+
 [connection signal="gui_input" from="." to="." method="_on_Progress_gui_input"]
 [connection signal="toggled" from="Body/MarginInfo/ProgressInfo/BtnChallenge" to="." method="_on_BtnChallenge_toggled"]
 [connection signal="pressed" from="Control/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
