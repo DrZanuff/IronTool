@@ -708,7 +708,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 974.0
-margin_bottom = 476.0
+margin_bottom = 328.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
@@ -2103,7 +2103,7 @@ wrap_enabled = true
 visible = false
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 263.0
+margin_bottom = 240.0
 
 [node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
 margin_right = 974.0
@@ -2152,7 +2152,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 974.0
-margin_bottom = 263.0
+margin_bottom = 243.0
 
 [node name="ProgressList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Progresses"]
 margin_right = 974.0
@@ -2196,6 +2196,7 @@ toggle_mode = true
 text = "MODIFY"
 
 [node name="Bonds" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_top = 10.0
 margin_right = 974.0
 margin_bottom = 263.0
@@ -2236,15 +2237,15 @@ margin_bottom = 28.0
 alignment = 1
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
-margin_left = 9.0
+margin_left = 6.0
 margin_top = 4.0
-margin_right = 197.0
+margin_right = 194.0
 margin_bottom = 23.0
 text = "WRITE YOUR EPILOGUE"
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Bonds/Margin/BondControl/BtnWriteEpilogue/Margin/Hbox"]
-margin_left = 201.0
-margin_right = 221.0
+margin_left = 198.0
+margin_right = 223.0
 margin_bottom = 28.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -2291,6 +2292,160 @@ margin_bottom = 25.0
 size_flags_horizontal = 10
 toggle_mode = true
 text = "MODIFY"
+
+[node name="Settings" type="MarginContainer" parent="MainMargin/Body/Interfaces"]
+margin_top = 10.0
+margin_right = 974.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 0, 100 )
+custom_constants/margin_right = 50
+custom_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Settings"]
+margin_left = 50.0
+margin_right = 924.0
+margin_bottom = 105.0
+alignment = 1
+
+[node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
+margin_right = 185.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+custom_constants/margin_right = 30
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Title"]
+margin_right = 155.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "DELVE"
+align = 2
+valign = 1
+
+[node name="Sites" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
+margin_left = 189.0
+margin_right = 357.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+
+[node name="Center" type="CenterContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Sites"]
+margin_right = 168.0
+margin_bottom = 105.0
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Sites/Center"]
+margin_left = 46.0
+margin_top = 24.0
+margin_right = 122.0
+margin_bottom = 81.0
+custom_constants/separation = -2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Sites/Center/VBox"]
+margin_right = 76.0
+margin_bottom = 19.0
+text = "Sites"
+align = 1
+
+[node name="CheckSites" type="CheckButton" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Sites/Center/VBox"]
+margin_top = 17.0
+margin_right = 76.0
+margin_bottom = 57.0
+focus_mode = 0
+pressed = true
+
+[node name="Failures" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
+margin_left = 361.0
+margin_right = 529.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+
+[node name="Center" type="CenterContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Failures"]
+margin_right = 168.0
+margin_bottom = 105.0
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Failures/Center"]
+margin_left = 46.0
+margin_top = 24.0
+margin_right = 122.0
+margin_bottom = 81.0
+custom_constants/separation = -2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Failures/Center/VBox"]
+margin_right = 76.0
+margin_bottom = 19.0
+text = "Failures"
+align = 1
+
+[node name="CheckFailures" type="CheckButton" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Failures/Center/VBox"]
+margin_top = 17.0
+margin_right = 76.0
+margin_bottom = 57.0
+focus_mode = 0
+pressed = true
+
+[node name="Rarities" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
+margin_left = 533.0
+margin_right = 701.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+
+[node name="Center" type="CenterContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Rarities"]
+margin_right = 168.0
+margin_bottom = 105.0
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Rarities/Center"]
+margin_left = 46.0
+margin_top = 24.0
+margin_right = 122.0
+margin_bottom = 81.0
+custom_constants/separation = -2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Rarities/Center/VBox"]
+margin_right = 76.0
+margin_bottom = 19.0
+text = "Rarities"
+align = 1
+
+[node name="CheckRarities" type="CheckButton" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Rarities/Center/VBox"]
+margin_top = 17.0
+margin_right = 76.0
+margin_bottom = 57.0
+focus_mode = 0
+pressed = true
+
+[node name="Threat" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
+margin_left = 705.0
+margin_right = 874.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+
+[node name="Center" type="CenterContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Threat"]
+margin_right = 169.0
+margin_bottom = 105.0
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Threat/Center"]
+margin_left = 46.0
+margin_top = 24.0
+margin_right = 122.0
+margin_bottom = 81.0
+custom_constants/separation = -2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Threat/Center/VBox"]
+margin_right = 76.0
+margin_bottom = 19.0
+text = "Threat"
+align = 1
+
+[node name="CheckThreat" type="CheckButton" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer/Threat/Center/VBox"]
+margin_top = 17.0
+margin_right = 76.0
+margin_bottom = 57.0
+focus_mode = 0
+pressed = true
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
