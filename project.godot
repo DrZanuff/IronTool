@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": "Assets",
+"language": "GDScript",
+"path": "res://Classes/Assets.gd"
+}, {
+"base": "Resource",
 "class": "ThemesDomains",
 "language": "GDScript",
 "path": "res://Classes/ThemesDomains.gd"
 } ]
 _global_script_class_icons={
+"Assets": "",
 "ThemesDomains": ""
 }
 

@@ -2,6 +2,8 @@ extends Node
 
 var themes = {}
 var domains = {}
+var assets_types = ["COMPANION","PATH","COMBAT TALENT","RITUAL","CUSTOM"]
+var assets = {}
 
 
 func _ready() -> void:

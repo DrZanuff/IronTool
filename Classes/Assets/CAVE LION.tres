@@ -1,0 +1,47 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "CAVE LION"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Your cat takes down its prey.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When your [b]cat[/b] chases down big game, you may [i]Resupply[/i] with +edge (instead of +wits). If you do, take +1 supply or +1 momentum on a strong hit.\",
+      \"skill_name\":\"Eager\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Enter the Fray[/i] or [i]Strike[/i] by sending your cat to attack, roll +edge. On a hit, take +2 momentum\",
+      \"skill_name\":\"Inescapable\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Make Camp[/i], your cat is alert to trouble. If you or an ally choose to relax, take +1 spirit. If you focus, take +1 momentum.\",
+      \"skill_name\":\"Protective\"
+    }
+  },
+  
+  {
+    \"track\":4
+  }
+  
+  
+]"

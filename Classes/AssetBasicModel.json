@@ -1,0 +1,34 @@
+[
+  {
+    "property": {"prop_name":"" , "prop_value": ""}
+  },
+  
+  {
+    "text" : ""
+  },
+  
+  {
+    "skill" : {
+      "check":"true",
+      "skill_text":"",
+      "skill_name":""
+    }
+  },
+  
+  {
+    "skill" : {
+      "check":"false",
+      "skill_text":"",
+      "skill_name":""
+    }
+  },
+  
+  {
+    "skill" : {
+      "check":"false",
+      "skill_text":"",
+      "skill_name":""
+    }
+  }
+  
+]
