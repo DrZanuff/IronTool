@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "BATTLE-SCARRED"
+data = "[
+  
+  {
+    \"text\" : \"Once you become maimed...\"
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You focus your energies: Reduce your edge or iron by 1 and add +2 to wits or heart, or +1 to each (to a maximum of +4).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You overcome your limitations: Reduce your maximum health by 1. Maimed no longer counts as a debility, and does not reduce your maximum momentum or reset value. When you [i]Endure Stress[/i] +heart, take +1 momentum on a strong hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You have stared down death before: When you are at 0 health and [i]Endure Harm[/i], you may roll +wits or +heart (instead of +health or +iron). If you do, take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

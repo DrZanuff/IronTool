@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "HORSE"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"You and your horse ride as one.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Face Danger[/i] +edge using your horse's speed and grace, or when you [i]Undertake a Journey[/i], add +1.\",
+      \"skill_name\":\"Swift\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Enter the Fray[/i] or [i]Secure an Advantage[/i] +heart by charging into combat, add +1 and take +1 momentum on a hit.\",
+      \"skill_name\":\"Fearless\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] or [i]Clash[/i] at close range while mounted, add +1 and inflict +1 harm on a hit.\",
+      \"skill_name\":\"Mighty\"
+    }
+  },
+  
+  {
+    \"track\":5
+  }
+  
+]"

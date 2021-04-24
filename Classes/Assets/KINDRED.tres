@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "KINDRED"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Your friend stands by you.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you make a move outside of combat aided by your companion's expertise, add +1.\",
+      \"skill_name\":\"Skilled\"
+    }
+  },
+  
+  {
+    \"property\": {\"prop_name\":\"Expertise\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Clash[/i] or [i]Battle[/i] alongside your companion, or when you [i]Face Danger[/i] against an attack by standing together, add +1.\",
+      \"skill_name\":\"Shield-Kin\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"Once you mark a bond with your companion, add +1 when you [i]Face Desolation[/i] in their presence.\",
+      \"skill_name\":\"Bonded\"
+    }
+  },
+  
+  {
+    \"track\":4
+  }
+  
+]"

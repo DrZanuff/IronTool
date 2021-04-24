@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "OWL"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Your owl soars through the darkness.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"If you [i]Resupply[/i] at night by sending your owl to hunt, take +2 momentum on a hit. When you [i]Enter the Fray[/i] +wits against an ambush in darkness, add +1 and take +1 momentum on a hit.\",
+      \"skill_name\":\"Nocturnal\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you leverage your owl's secret knowledge to perform a ritual, add +1 or take +1 momentum on a hit (decide before rolling).\",
+      \"skill_name\":\"Sage\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Face Death[/i], take your owl's health as +momentum before you roll.\",
+      \"skill_name\":\"Embodying\"
+    }
+  },
+  
+  {
+    \"track\":3
+  }
+  
+]"

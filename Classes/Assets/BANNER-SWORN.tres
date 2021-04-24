@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "BANNER-SWORN"
+data = "[
+
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Once you mark a bond with a leader or faction...\"
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Swear an Iron Vow [/i]to serve your leader or faction on a mission, you may reroll any dice. When you [i]Fulfill Your Vow[/i] and mark experience, take +1 experience.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Sojourn[/i] or [i]Make Camp[/i] in the company of your banner-kin, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Enter the Fray[/i] bearing your banner, add +1 and take +1 momentum on a hit. When you burn momentum while carrying your banner in combat, take +1 momentum after you reset.\"
+    }
+  }
+  
+]"

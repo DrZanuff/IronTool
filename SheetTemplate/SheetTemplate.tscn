@@ -188,7 +188,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 1681.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -201,7 +201,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 999.0
-margin_bottom = 550.0
+margin_bottom = 1631.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -889,8 +889,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 11.0
+margin_right = 36.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -899,9 +899,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 40.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 69.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1061,8 +1061,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1071,9 +1071,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Heart/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1233,8 +1233,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 11.0
+margin_right = 36.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1243,9 +1243,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Iron/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 40.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 69.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1405,8 +1405,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1415,9 +1415,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Shadow/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 
@@ -1577,8 +1577,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 14.0
-margin_right = 34.0
+margin_left = 12.0
+margin_right = 37.0
 margin_bottom = 25.0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -1587,9 +1587,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Wits/Body/BoxRoll/Roll/HBoxContainer"]
-margin_left = 38.0
+margin_left = 41.0
 margin_top = 3.0
-margin_right = 67.0
+margin_right = 70.0
 margin_bottom = 22.0
 text = "Roll"
 

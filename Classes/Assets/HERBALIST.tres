@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "HERBALIST"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you attempt to [i]Heal[/i] using herbal remedies, and you have at least +1 supply, you may choose one (decide before rolling).\"
+    }
+  },
+  
+  {
+    \"item\" : \"Add +2.\"
+  },
+  
+  {
+    \"item\" : \"On a hit, take or give an additional +1 health.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Heal[/i] a companion, ally, or other character, and score a hit, take +1 spirit or +1 momentum.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Make Camp[/i] and choose the option to partake, you can create a restorative meal. If you do, you and your companions take +1 health. Any allies who choose to partake also take +1 health, and do not suffer -supply.\"
+    }
+  }
+  
+]"

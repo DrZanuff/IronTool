@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "HOUND"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Your hound is your steadfast companion.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you Gather Information using your hound's keen senses to track your quarry or investigate a scene, add +1 and take +1 momentum on a hit.\",
+      \"skill_name\":\"Sharp\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] or [i]Clash[/i] alongside your hound and score a hit, inflict +1 harm or take +1 momentum.\",
+      \"skill_name\":\"Ferocious\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Endure Stress[/i] in the company of your hound, add +1.\",
+      \"skill_name\":\"Loyal\"
+    }
+  },
+  
+  {
+    \"track\":4
+  }
+  
+]"

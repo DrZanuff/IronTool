@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "ALCHEMIST"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you create an elixir, choose an effect: Deftness (edge), audacity (heart), vigor (iron), slyness (shadow), or clarity (wits). Then, suffer -1 supply and roll +wits. On a [b]strong hit[/b], you create a single dose. The character who consumes the elixir must [i]Face Danger[/i] +iron and score a hit, after which they add +1 when making a move with the related stat until their health, spirit, or momentum fall below +1. On a [b]weak hit[/b], as above, but suffer an additional -1 supply to create it.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and you may choose two effects for a single dose, or create two doses of the same effect.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you prepare an elixir, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

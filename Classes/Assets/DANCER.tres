@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "DANCER"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] +edge by dancing for an audience, add +1 and take +2 momentum on a hit. On a strong hit, also add +2 (one time only) if you make a move to interact with someone in the audience.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Face Danger[/i] +edge in a fight by nimbly avoiding your foe's attacks, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you or an ally make a progress move and roll a hit, you may perform a dance to commemorate the event. If you do, roll +edge. On a [b]strong hit[/b], you and each of your allies may take +2 momentum and +1 spirit. On a [b]weak hit[/b], you take +1 momentum or +1 spirit, but your allies are unmoved.\"
+    }
+  }
+  
+]"

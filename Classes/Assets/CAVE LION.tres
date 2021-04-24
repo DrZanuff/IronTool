@@ -17,7 +17,7 @@ data = "[
   
   {
     \"skill\" : {
-      \"check\":\"true\",
+      \"check\":\"false\",
       \"skill_text\":\"When your [b]cat[/b] chases down big game, you may [i]Resupply[/i] with +edge (instead of +wits). If you do, take +1 supply or +1 momentum on a strong hit.\",
       \"skill_name\":\"Eager\"
     }

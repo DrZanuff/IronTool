@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMPANION"
+asset_name = "HAWK"
+data = "[
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Your hawk can aid you while it is aloft.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Undertake a Journey[/i], or when you [i]Resupply[/i] by hunting for small game, add +1.\",
+      \"skill_name\":\"Far-seeing\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] +edge using your hawk to harass and distract your foes, add +1 and take +1 momentum on a hit.\",
+      \"skill_name\":\"Fierce\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Face Danger[/i] +wits to detect an approaching threat, or when you [i]Enter the Fray[/i] +wits against an ambush, add +2.\",
+      \"skill_name\":\"Vigilant\"
+    }
+  },
+  
+  {
+    \"track\":3
+  }
+  
+]"

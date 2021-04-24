@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "BLADE-BOUND"
+data = "[
+  
+  {
+    \"property\": {\"prop_name\":\"Name\" , \"prop_value\": \"\"}
+  },
+  
+  {
+    \"text\" : \"Once you mark a bond with a kin-blade, a sentient weapon imbued with the spirit of your ancestor...\"
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Enter the Fray[/i] or [i]Draw the Circle[/i] while wielding your kin-blade, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Gather Information[/i] by listening to the whispers of your kinblade, add +1 and take +2 momentum on a hit. Then, [i]Endure Stress[/i] (2 stress).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] with your kin-blade to inflict savage harm (decide before rolling), add +1 and inflict +2 harm on a hit. Then, [i]Endure Stress[/i] (2 stress).\"
+    }
+  }
+  
+]"

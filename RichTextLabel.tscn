@@ -35,12 +35,8 @@ custom_fonts/italics_font = SubResource( 1 )
 custom_fonts/bold_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[b]ola[/b]
-[i]ola[/i]
-ola"
-text = "ola
-ola
-ola"
+bbcode_text = "my game \\n ok"
+text = "my game \\n ok"
 script = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false

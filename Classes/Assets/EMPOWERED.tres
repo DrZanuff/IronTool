@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "EMPOWERED"
+data = "[
+
+  {
+    \"property\": {\"prop_name\":\"Title/Lineage\" , \"prop_value\": \"\"}
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Sojourn[/i] and score a weak hit or miss, you may claim the rights of hospitality warranted by your title or lineage. If you do, roll all dice again and add +1. On a [b]miss[/b], you are refused, and your presumption causes significant new trouble.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you exert your title or lineage to [i]Compel[/i], add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you forgo your title or lineage and [i]Forge a Bond[/i] as an equal, or when you [i]Swear an Iron Vow[/i] to serve someone of a lower station, add +1 and take +1 momentum or +1 spirit on a hit.\"
+    }
+  }
+  
+]"
