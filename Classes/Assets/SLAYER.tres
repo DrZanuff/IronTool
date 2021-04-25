@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "SLAYER"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Gather Information[/i] by tracking a beast or horror, or when you [i]Secure an Advantage[/i] by readying yourself for a fight against them, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Swear an Iron Vow[/i] to slay a beast or horror, you may reroll any dice. [i]When you Fulfill Your Vow[/i] and mark experience, take +1 experience.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you slay a beast or horror (at least formidable), you may take a trophy and choose one.\"
+    }
+  },
+  
+  {
+    \"item\" : \"Power a ritual: When you or an ally make a ritual move, reroll any dice (one time only).\"
+  },
+  
+  {
+    \"item\" : \"Prove your worth: When you Sojourn, reroll any dice (one time only).\"
+  }
+  
+]"

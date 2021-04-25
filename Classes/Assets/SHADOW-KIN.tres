@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "SHADOW-KIN"
+data = "[
+  
+  {
+    \"text\" : \"Once you become corrupted...\" 
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"You harden your heart: Reduce your heart stat by 1 and add up to +2 to shadow (to a maximum of +4).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You are attuned to the realms of shadow: When you perform a ritual, add +1.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You know the sly ways of death: When you [i]Face Death[/i], you may roll +shadow (instead of +heart). You may also suffer -1 momentum and add +1 (decide before rolling).\"
+    }
+  }
+  
+]"

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "LONG-ARM"
+data = "[
+  {
+    \"text\" : \"If you wield a staff...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"In your hands, a humble staff is a deadly weapon (2 harm). When you instead use it as a simple weapon (1 harm), you may [i]Strike[/i] or [i]Clash[/i] +edge (instead of iron). If you do, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] +edge using your staff to disarm, trip, shove, or stun your foe, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Undertake a Journey[/i] and score a [b]strong hit[/b], or if you accompany an ally who scores a strong hit on that move, your staff provides support and comfort in your travels; take +1 momentum.\"
+    }
+  }
+  
+]"

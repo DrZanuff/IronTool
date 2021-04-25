@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "RIDER"
+data = "[
+  
+  {
+    \"text\" : \"If you are with your horse companion...\" 
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Heal[/i] your horse, or when you [i]Face Danger[/i] to calm or encourage it, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Undertake a Journey[/i], you may push your horse harder and add +1 (after rolling). If you do, make the [i]Companion Endure Harm[/i] move (1 harm).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] +wits by sizing up a perilous situation from the saddle, you are one with your horse's instincts. Add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

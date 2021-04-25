@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "DUELIST"
+data = "[
+  {
+    \"text\" : \"If you wield a bladed weapon in each hand...\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Strike[/i] or [i]Clash[/i], you may add +2. If you do (decide before rolling), inflict +1 harm on a strong hit and count a weak hit as a miss.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"Once per fight, when you [i]Secure an Advantage[/i] +edge by making a bold display of your combat prowess, you may reroll any dice.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Draw the Circle[/i], choose one (before rolling).\"
+    }
+  },
+
+  {
+    \"item\" : \"Add +2.\"
+  },
+  
+  {
+    \"item\" : \"Take +2 momentum on a hit.\"
+  }
+  
+]"

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "SWORDMASTER"
+data = "[
+  {
+    \"text\" : \"If you wield a sword...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Strike[/i] or [i]Clash[/i] and burn momentum to improve your result, inflict +2 harm. If the fight continues, add +1 on your next move.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Clash[/i] and score a strong hit, you may add +1 if you immediately follow with a [i]Strike[/i].\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Swear an Iron Vow[/i] by kneeling and grasping your sword's blade, add +1 and take +1 momentum on a hit. If you let the edge draw blood from your hands, [i]Endure Harm[/i] (1 harm) in exchange for an additional +1 momentum on a hit.\"
+    }
+  }
+  
+]"

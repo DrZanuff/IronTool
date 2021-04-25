@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "OATHBREAKER"
+data = "[
+
+  {
+    \"text\" : \"Once you Forsake a Vow...\"
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"[b]This asset counts as a debility[/b]. One time only, when you [i]Swear an Iron Vow[/i] to redeem yourself (extreme or greater), give that vow a special mark. When you [i]Reach a Milestone[/i] on the marked vow, take +2 momentum.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] or [i]Compel[/i] by reaffirming your commitment to your marked vow, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Fulfill Your Vow[/i] on your marked quest and score a hit, you find redemption and automatically activate this ability at no cost. You may then improve one of your stats by +1 and [b]discard this asset[/b].\"
+    }
+  }
+  
+]"

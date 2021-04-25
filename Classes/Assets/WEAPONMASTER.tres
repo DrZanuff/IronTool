@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "WEAPONMASTER"
+data = "[
+  {
+    \"text\" : \"Once you [i]Fulfill Your Vow[/i] (formidable or greater) in service to a seasoned warrior, and [i]Forge a Bond[/i] to train with them...\"   
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] by sizing up your foe in a fight, or in a charged situation which may lead to a fight, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you study or train in a new weapon or technique, you may obtain and upgrade that combat talent for 1 fewer experience.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Turn the Tide[/i] with a sudden change of weapon or technique, and your next move is a [i]Strike[/i], you may add +1 and inflict +2 harm on a strong hit.\"
+    }
+  }
+  
+]"

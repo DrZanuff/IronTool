@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "THUNDER-BRINGER"
+data = "[
+  {
+    \"text\" : \"If you wield a mighty hammer...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Face Danger[/i], [i]Secure an Advantage[/i], or [i]Compel[/i] by hitting or breaking an inanimate object, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] a foe to knock them back, stun them, or put them off balance, inflict 1 harm (instead of 2) and take +2 momentum on a hit. On a [b]strong hit[/b], you also create an opening and add +1 on your next move.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Turn the Tide[/i], you may [i]Strike[/i] with all the fury and power you can muster. If you do (decide before rolling), you may reroll any dice and inflict +2 harm on a [b]strong hit[/b], but count a [b]weak hit[/b] as a miss.\"
+    }
+  }
+  
+]"

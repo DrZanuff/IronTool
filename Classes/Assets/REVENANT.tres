@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "REVENANT"
+data = "[
+  
+  {
+    \"text\" : \"Once you Face Death and return to the world of the living...\" 
+  },
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you are at 0 health, and [i]Endure Harm[/i] or [i]Face Death[/i], add +1. If you then burn momentum to improve your result, envision what bond or vow binds you to this world, and take +2 momentum after you reset.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you make a move to investigate, oppose, or interact with a horror, spirit, or other undead being, add +1.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you bring death to your foe to [i]End the Fight[/i], you may burn momentum to cancel one (not both) of the challenge dice if your momentum is greater than the value of that die. If you do, [i]Endure Stress[/i] (2 stress).\"
+    }
+  }
+  
+]"

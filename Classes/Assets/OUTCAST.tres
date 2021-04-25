@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "OUTCAST"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When your supply is reduced to 0, suffer any remaining -supply as -momentum. Then, roll +wits. On a [b]strong hit[/b], you manage to scrape by and take +1 supply. On a [b]weak hit[/b], you may suffer -2 momentum in exchange for +1 supply. On a [b]miss[/b], you are [i]Out of Supply[/i].\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Sojourn[/i], you may reroll any dice. If you do (decide before your first roll), your needs are few, but your isolation sets you apart from others. A strong hit counts as a weak hit..\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Reach Your Destination[/i] and roll a [b]strong hit[/b], you recall or recognize something helpful about this place. Envision what it is, and take +2 momentum.\"
+    }
+  }
+  
+]"

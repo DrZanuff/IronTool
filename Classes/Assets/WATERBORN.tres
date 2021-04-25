@@ -1,0 +1,44 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "WATERBORN"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Face Danger[/i], [i]Gather Information[/i], or [i]Secure an Advantage[/i] related to your knowledge of watercraft, water travel, or aquatic environments or creatures, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Undertake a Journey[/i] by boat or ship, add +1. On a [b]strong hit[/b], also choose one.\"
+    }
+  },
+  
+  {
+    \"item\" : \"The wind is at your back: Mark progress twice.\"
+  },
+  
+  {
+    \"item\" : \"Find safe anchor: [i]Make Camp[/i] now and reroll any dice.\"
+  },
+  
+  {
+    \"item\" : \"Reap the bounty: [i]Resupply[/i] now and reroll any dice.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Enter the Fray[/i] aboard a boat or ship, reroll any dice.\"
+    }
+  }
+  
+]"

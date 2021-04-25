@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "WAYFINDER"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Undertake a Journey[/i], take +1 momentum on a [b]strong hit[/b]. If you burn momentum to improve your result, also take +1 momentum after you reset.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] or [i]Gather Information[/i] by carefully surveying the landscape or scouting ahead, add +1 and take +1 momentum on a hit\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Swear an Iron Vow[/i] to safely guide someone on a perilous journey, you may reroll any dice. When you [i]Fulfill Your Vow[/i] and mark experience, take +1 experience.\"
+    }
+  }
+  
+]"

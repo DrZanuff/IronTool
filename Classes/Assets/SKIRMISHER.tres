@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "SKIRMISHER"
+data = "[
+  {
+    \"text\" : \"If you wield a spear...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you Face Danger by holding a foe at bay using your spear's reach, roll +iron or +edge. If you score a hit, you may...\"
+    }
+  },
+  
+  {
+    \"item\" : \"Iron: [i]Strike[/i] (if you have initiative) or [i]Clash[/i] now, and add +1.\"
+  },
+  
+  {
+    \"item\" : \"Edge: Take +1 momentum.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] in close combat, you may attempt to drive your spear home (decide before rolling). If you do, add +1 and inflict +2 harm on a hit. If you score a hit and the fight continues, [i]Face Danger[/i] +iron to recover your spear.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] by bracing your spear against a charging foe, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

@@ -1,0 +1,51 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "IRONCLAD"
+data = "[
+  {
+    \"text\" : \"If you wear armor...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you equip or adjust your armor, choose one.\"
+    }
+  },
+  
+  {
+    \"item\" : \"[b]Lightly armored[/b]:When you [i]Endure Harm[/i] in a fight, add +1 and take +1 momentum on a hit.\"
+  },
+  
+  {
+    \"item\" : \"[b]Geared for war[/b]:Mark encumbered. When you [i]Endure Harm[/i] in a fight, add +2 and take +1 momentum on a hit.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Clash[/i] while you are geared for war, add +1.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Compel[/i] in a situation where strength of arms is a factor, add +2.\"
+    }
+  },
+  
+  {
+    \"named_track\" : [
+      {\"name\" : \"LIGHTLY ARMORED\" , \"check\" : \"false\"},
+      {\"name\" : \"GEARED FOR WAR\" , \"check\" : \"false\"}
+    ]
+    
+  }
+  
+]"

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "SLINGER"
+data = "[
+  {
+    \"text\" : \"If you wield a sling...\"  
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When launched from a sling, a simple stone inflicts deadly harm (2 harm). When you [i]Enter the Fray[/i] by barraging your foe with sling-bullets, inflict harm on a strong hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Strike[/i] by launching stones at an advancing foe, you may choose one (before rolling).\"
+    }
+  },
+  
+  {
+    \"item\" : \"Hold them back: Retain initiative on a [b]weak hit[/b], but inflict only 1 harm.\"
+  },
+  
+  {
+    \"item\" : \"Hit them hard: Inflict +1 harm on a hit, but suffer -1 momentum.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] by preparing stones of a special quality or material, add +1. Then, take +1 momentum or +1 supply on a hit.\"
+    }
+  }
+  
+]"

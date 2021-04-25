@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT TALENT"
+asset_name = "CUTTHROAT"
+data = "[
+  {
+    \"text\" : \"If you wield a dagger or knife...\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you are in position to [i]Strike[/i] at an unsuspecting foe, choose one (before rolling).\"
+    }
+  },
+  
+  {
+    \"item\" : \"Add +2 and take +1 momentum on a hit.\"
+  },
+  
+  {
+    \"item\" : \"Inflict +2 harm on a hit.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Compel[/i] someone at the point of your blade, or when you rely on your blade to [i]Face Danger[/i], add +1.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"Once per fight, when you [i]Secure an Advantage[/i] +shadow by performing a feint or misdirection, reroll any dice and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

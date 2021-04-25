@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "SPIRIT-BOUND"
+data = "[
+
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"You are haunted by someone whose death you caused through your actions or failures. When you consult with their spirit to [i]Secure an Advantage[/i] or [i]Gather Information[/i], add +1 and take +2 momentum on a hit. On a [b]weak hit[/b], also [i]Endure Stress[/i] (1 stress).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you [i]Face Death[/i] guided by the spirit, add +1. On a [b]strong hit[/b], envision what you learn and take 1 experience.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"One time only, when you successfully [i]Fulfill Your Vow[/i] (formidable or greater) in service to the spirit, choose one.\"
+    }
+  },
+  
+  {
+    \"item\" : \"Let them go: Take 2 experience for each marked ability and discard this asset.\"
+  },
+  
+  {
+    \"item\" : \"Deepen your connection: Add +1 more when you leverage this asset.\"
+  }
+  
+]"

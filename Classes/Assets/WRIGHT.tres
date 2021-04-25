@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PATH"
+asset_name = "WRIGHT"
+data = "[
+  {
+    \"property\" : { \"prop_name\" : \"Specialty\" , \"prop_value\" : \"\" }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you [i]Secure an Advantage[/i] by crafting a useful item using your specialty, or when you [i]Face Danger[/i] to create or repair an item in a perilous situation, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and you may suffer -1 supply (after you roll) to add an additional +1.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you give the item you create as a gift to commemorate an important event or relationship, you may (one time only) reroll any dice when you [i]Compel[/i], [i]Forge a Bond[/i], or [i]Test Your Bond[/i].\"
+    }
+  }
+  
+]"
