@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://SheetTemplate/Scripts/ProgressList.gd" type="Script" id=11]
 [ext_resource path="res://SheetTemplate/Bond/Bond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://SheetTemplate/Scripts/BondList.gd" type="Script" id=13]
+[ext_resource path="res://SheetTemplate/Asset/Asset.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -188,7 +189,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 1681.0
+margin_bottom = 600.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -201,7 +202,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 999.0
-margin_bottom = 1631.0
+margin_bottom = 550.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2294,6 +2295,7 @@ toggle_mode = true
 text = "MODIFY"
 
 [node name="Settings" type="MarginContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_top = 10.0
 margin_right = 974.0
 margin_bottom = 115.0
@@ -2446,6 +2448,16 @@ margin_right = 76.0
 margin_bottom = 57.0
 focus_mode = 0
 pressed = true
+
+[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces"]
+margin_top = 10.0
+margin_right = 974.0
+margin_bottom = 115.0
+columns = 2
+
+[node name="Asset" parent="MainMargin/Body/Interfaces/GridContainer" instance=ExtResource( 14 )]
+margin_right = 350.0
+margin_bottom = 64.0
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]

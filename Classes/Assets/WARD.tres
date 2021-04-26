@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 type = "RITUAL"
 asset_name = "WARD"
-data = "[
+data = "s[
   
   {
     \"skill\" : {

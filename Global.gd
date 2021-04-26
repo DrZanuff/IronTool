@@ -27,6 +27,18 @@ func _ready() -> void:
 				load("res://Classes/Domains/"+file_name).get_data_as_object()
 			)
 		file_name = dir.get_next()
-	
+		
+	dir.open("res://Classes/Assets/")
+	dir.list_dir_begin()
+	file_name = dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir():
+			var asset = load("res://Classes/Assets/"+file_name)
+			
+			if assets.has(asset.type) == false:
+				assets[asset.type] = {}
+			assets[asset.type][asset.asset_name] = asset.get_data_as_object()
+			 
+		file_name = dir.get_next()
 
 

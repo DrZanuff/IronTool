@@ -30,7 +30,7 @@ data = "[
   },
   
   {
-    \"track\" : 6
+    \"track\" : { \"size\":6 , \"value\":6 }
   }
   
 ]"
