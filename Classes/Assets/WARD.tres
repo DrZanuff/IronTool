@@ -1,0 +1,44 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "WARD"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you walk a wide circle, sprinkling the ground with salt, roll +wits. On a [b]strong hit[/b], choose two. On a [b]weak hit[/b], choose one.\"
+    }
+  },
+  
+  {
+    \"item\" : \"When a foe first crosses the boundary, take +1 momentum.\"
+  },
+  
+  {
+    \"item\" : \"When you first inflict harm against a foe within the boundary, inflict +1 harm.\"
+  },
+  
+  {
+    \"item\" : \"Your ward is ‘likely' ([i]Ask the Oracle[/i]) to trap a foe within the boundary.\"
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and improve the effect of your ward (+2 momentum, +2 harm, and ‘almost certain')..\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

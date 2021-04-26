@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "INVOKE"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you consume the mystical essence of your surroundings, roll +wits. On a [b]strong hit[/b], add the value of your action die to your essence track (max 6). You may then [i]Secure an Advantage[/i] or [i]Face Danger[/i] +essence to create minor mystical effects or illusions. If you do, suffer -1 essence and take +1 momentum on a hit. On a [b]weak hit[/b], as above, but capturing these energies is harrowing; [i]Endure Stress[/i] (2 stress).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You may [i]Compel[/i] +essence (and suffer -1 essence) through a show of power.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 essence on a hit.\"
+    }
+  },
+  
+  {
+    \"track\" : 6
+  }
+  
+]"

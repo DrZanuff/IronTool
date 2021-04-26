@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "BIND"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you wear an animal pelt and dance in moonlight, roll +wits. On a [b]strong hit[/b], you or an ally may wear the pelt and add +1 when making moves with the related stat (wolf-edge; bear-iron; deer-heart; fox-shadow; boar-wits). If the wearer rolls a 1 on their action die while making a move using the pelt, the magic is spent. On a [b]weak hit[/b], as above, but the wilds call as you dance; [i]Endure Stress[/i] (2 stress).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and you may instead perform this ritual wearing the pelt of a beast. If you do, name the related stat and add +2 (instead of +1).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

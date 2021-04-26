@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "LEECH"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you mark your hands or weapon with an intricate blood rune, roll +iron. On a [b]strong hit[/b], the rune thirsts for fresh blood. One time only, when you make a move to inflict harm, reroll any dice and inflict +2 harm on a hit. Then, for each point of harm inflicted, take +1 and allocate it as +health or +momentum. On a [b]weak hit[/b], as above, but this asset counts as a debility until the rune's thirst is quenched\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and you may also touch an ally or companion and let them take +1 health or momentum for each unallocated point.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

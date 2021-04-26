@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "TETHER"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you commune with the spirits of a place, roll +heart. If you share a bond with someone there, add +1. On a [b]strong hit[/b], you are tethered. When you [i]Undertake a Journey[/i] to return, you may roll +spirit or +heart (instead of +wits), and take +1 momentum on a hit. When you [i]Reach Your Destination[/i], take +2 momentum on a [b]strong hit[/b]. The tether is lost if you perform this ritual elsewhere, or when you [i]Face Desolation[/i]. On a [b]weak hit[/b], as above, but the spirits reveal a disturbing aspect of the place; [i]Endure Stress[/i] (2 stress).\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and you may also reroll any dice when you [i]Sojourn[/i] in the tethered place.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"

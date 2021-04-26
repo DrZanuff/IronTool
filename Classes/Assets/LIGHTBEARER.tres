@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "LIGHTBEARER"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you focus on a source of light and capture its essence, roll +wits. On a [b]strong hit[/b], set your light track to +6. On a [b]weak hit[/b], make it +3. Then, when you make a move to overcome or navigate darkness, you may add +2 and suffer -1 light.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"You may use your light to [i]Strike[/i] or [i]Clash[/i] against a dark-dwelling foe. Choose the amount of light to unleash, and roll +light (instead of +iron or +edge). Suffer -light equal to that amount. On a hit, your harm is 1+ your unleashed light.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  },
+  
+  {
+    \"track\" : 6
+  }
+  
+]"

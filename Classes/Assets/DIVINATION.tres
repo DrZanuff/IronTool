@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Assets.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "RITUAL"
+asset_name = "DIVINATION"
+data = "[
+  
+  {
+    \"skill\" : {
+      \"check\":\"true\",
+      \"skill_text\":\"When you take a drop of blood from a willing subject (not yourself) and cast the rune-carved stones, roll +heart. On a [b]strong hit[/b], you may read the runes to [i]Gather Information[/i] about the subject and people close to them, including insight you and the subject have no knowledge of. If you do, add +1. On a [b]weak hit[/b], as above, but the answers are revealed only with extra time and focus; suffer -2 momentum.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"As above, and your divination can also reveal information about the subject's future.\"
+    }
+  },
+  
+  {
+    \"skill\" : {
+      \"check\":\"false\",
+      \"skill_text\":\"When you perform this ritual, add +1 and take +1 momentum on a hit.\"
+    }
+  }
+  
+]"
