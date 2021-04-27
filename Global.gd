@@ -40,5 +40,6 @@ func _ready() -> void:
 			assets[asset.type][asset.asset_name] = asset.get_data_as_object()
 			 
 		file_name = dir.get_next()
+	
 
 

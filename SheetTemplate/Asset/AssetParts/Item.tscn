@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/Item.gd" type="Script" id=1]
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/RichTextLabel.tscn" type="PackedScene" id=2]
+
+[node name="Item" type="MarginContainer"]
+margin_right = 300.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/margin_top = 0
+custom_constants/margin_left = 20
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_right = 300.0
+margin_bottom = 42.0
+
+[node name="Center" type="CenterContainer" parent="HBox"]
+margin_right = 25.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 25, 0 )
+
+[node name="Margin" type="MarginContainer" parent="HBox/Center"]
+margin_left = 5.0
+margin_top = 13.0
+margin_right = 20.0
+margin_bottom = 28.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Dot" type="ColorRect" parent="HBox/Center/Margin"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 5, 5 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" parent="HBox" instance=ExtResource( 2 )]
+margin_left = 29.0
+margin_right = 280.0
+margin_bottom = 42.0
