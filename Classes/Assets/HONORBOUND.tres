@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-type = "COMPANION"
+type = "PATH"
 asset_name = "HONORBOUND"
 data = "[
 

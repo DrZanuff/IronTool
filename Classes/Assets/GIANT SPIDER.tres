@@ -37,7 +37,7 @@ data = "[
       \"skill_text\":\"When your spider sets a trap, add +1 as you [i]Enter the Fray[/i] +shadow. On a [b]strong hit[/b], also inflict 2 harm.\",
       \"skill_name\":\"Ensnaring\"
     }
-  }
+  },
 
   {
    \"track\" : { \"size\":4 , \"value\":4 }

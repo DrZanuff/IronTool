@@ -7,6 +7,7 @@ var property = load("res://SheetTemplate/Asset/AssetParts/Property.tscn")
 var asset_track = load("res://SheetTemplate/Asset/AssetParts/AssetTrack.tscn")
 var named_asset_track = load("res://SheetTemplate/Asset/AssetParts/NamedAssetTrack.tscn")
 var asset_item = load("res://SheetTemplate/Asset/AssetParts/Item.tscn")
+var optionButton = load("res://SheetTemplate/Asset/AssetParts/OptionButton.tscn")
 
 func _ready() -> void:
 	update_list()
@@ -22,10 +23,10 @@ func update_list():
 	types_array.sort()
 	
 	for i in types_array:
-#	for i in Global.assets:
 		$Body/Margin/OptMargin/OptType.add_item(i)
-		var new_opt = OptionButton.new()
+		var new_opt = optionButton.instance()
 		$Body/Info/Types.add_child(new_opt)
+		new_opt.focus_mode = Control.FOCUS_CLICK
 		new_opt.visible = false
 		new_opt.name = i
 		new_opt.add_item("SELECT")
@@ -35,9 +36,6 @@ func update_list():
 		assets_array.sort()
 		for a in assets_array:
 			new_opt.add_item(a)
-		
-#		for asset in Global.assets[i]:
-#			new_opt.add_item(asset)
 	
 	$Body/Margin/OptMargin/OptType.add_item("CUSTOM")
 	
@@ -50,6 +48,8 @@ func check_saved_assets():
 func _on_OptType_item_selected(index: int) -> void:
 	var type_name = opt_type.get_item_text(opt_type.selected)
 	clear_itens()
+	hide_all_assets_list()
+	$Body/Info/Types.show()
 	$Body/Info/Types.show()
 	
 	if type_name == "SELECT":
@@ -60,13 +60,20 @@ func _on_OptType_item_selected(index: int) -> void:
 		if $Body/Info/Types.has_node(type_name):
 			$Body/Info/Types.get_node(type_name).show()
 
+func hide_all_assets_list():
+	for node in $Body/Info/Types.get_children():
+		node.visible = false
+		if node is OptionButton:
+			node.select(0)
+
 func show_data(index,list : OptionButton):
 	clear_itens()
 	var type_name = opt_type.get_item_text(opt_type.selected)
 	var asset_name = list.get_item_text(list.selected)
+	if asset_name == "SELECT":
+		return
 	var asset_data = JSON.parse(Global.assets[type_name][asset_name].data).result
 	for item in asset_data:
-		print(item)
 		if item.has("skill"):
 			var new_skill = skill.instance()
 			new_skill.set_text(item.skill.skill_text)
@@ -99,3 +106,18 @@ func show_data(index,list : OptionButton):
 func clear_itens():
 	for n in $Body/Itens/Body.get_children():
 		n.queue_free()
+
+func _input(event: InputEvent) -> void:
+	if $Body/Margin/OptMargin/OptType.has_focus():
+		var selection = $Body/Margin/OptMargin/OptType.selected
+		if event.is_action_pressed("ui_down"):
+			selection += 1
+			if selection > $Body/Margin/OptMargin/OptType.get_item_count()-1:
+				selection = 0
+			$Body/Margin/OptMargin/OptType.select(selection)
+		if event.is_action_pressed("ui_up"):
+			selection -= 1
+			if selection < 0:
+				selection = $Body/Margin/OptMargin/OptType.get_item_count()-1
+			$Body/Margin/OptMargin/OptType.select(selection)
+		$Body/Margin/OptMargin/OptType.emit_signal("item_selected",selection)

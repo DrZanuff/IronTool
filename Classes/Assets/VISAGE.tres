@@ -11,14 +11,14 @@ data = "[
   {
     \"skill\" : {
       \"check\":\"true\",
-      \"skill_text\":\"When you paint yourself in blood and ash, roll +wits. On a [b]strong hit[/b], you may add +2 and take +1 momentum on a hit when you [i]Secure an Advantage[/i] or [i]Compel[/i] using fear or intimidation. If you roll a 1 on your action die when making a move aided by your visage, the magic is spent. On a [b]weak hit[/]b, as above, but the blood must be your own; [i]Endure Harm[/i] (2 harm).\"
+      \"skill_text\":\"When you paint yourself in blood and ash, roll +wits. On a [b]strong hit[/b], you may add +2 and take +1 momentum on a hit when you [i]Secure an Advantage[/i] or [i]Compel[/i] using fear or intimidation. If you roll a 1 on your action die when making a move aided by your visage, the magic is spent. On a [b]weak hit[/b], as above, but the blood must be your own; [i]Endure Harm[/i] (2 harm).\"
     }
   },
   
   {
     \"skill\" : {
       \"check\":\"false\",
-      \"skill_text\":\"As above, and you may also add +1 when you [i]Strike[/i], [/i]Clash, or [/i]Battle[/i] .\"
+      \"skill_text\":\"As above, and you may also add +1 when you [i]Strike[/i], [i]Clash[/i], or [i]Battle[/i] .\"
     }
   },
   

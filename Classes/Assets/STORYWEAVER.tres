@@ -11,7 +11,7 @@ data = "[
   {
     \"skill\" : {
       \"check\":\"true\",
-      \"skill_text\":\"When you [i]Secure an Advantage[/i], [i]Compel[/i], or [/i]Forge a Bond by sharing an inspiring or enlightening song, poem, or tale, envision the story you tell. Then, add +1 and take +1 momentum on a hit.\"
+      \"skill_text\":\"When you [i]Secure an Advantage[/i], [i]Compel[/i], or [i]Forge a Bond[/i] by sharing an inspiring or enlightening song, poem, or tale, envision the story you tell. Then, add +1 and take +1 momentum on a hit.\"
     }
   },
   
