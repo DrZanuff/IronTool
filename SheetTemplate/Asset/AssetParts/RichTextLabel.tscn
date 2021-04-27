@@ -1,43 +1,35 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Fonts/Montserrat/Montserrat-Italic.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+size = 12
 use_filter = true
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 12
 use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 12
 use_filter = true
 font_data = ExtResource( 1 )
-
-[sub_resource type="GDScript" id=4]
-script/source = "extends RichTextLabel
-
-
-func _ready() -> void:
-	var asset = load(\"res://Classes/Assets/CAVE LION.tres\")
-	var data = JSON.parse(asset.data).result
-	print(data[2].skill.skill_text)
-	bbcode_text = \"\"
-	append_bbcode(data[2].skill.skill_text)
-"
 
 [node name="RichTextLabel" type="RichTextLabel"]
 margin_right = 374.0
 margin_bottom = 301.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/italics_font = SubResource( 1 )
 custom_fonts/bold_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "my game \\n ok"
-text = "my game \\n ok"
-script = SubResource( 4 )
+fit_content_height = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }

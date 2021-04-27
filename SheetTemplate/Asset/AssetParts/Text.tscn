@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/Text.gd" type="Script" id=1]
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/RichTextLabel.tscn" type="PackedScene" id=2]
+
+[node name="Text" type="MarginContainer"]
+margin_right = 300.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/margin_top = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 2 )]
+margin_right = 300.0
+margin_bottom = 86.0

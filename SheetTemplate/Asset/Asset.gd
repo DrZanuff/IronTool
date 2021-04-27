@@ -1,6 +1,9 @@
 extends MarginContainer
 
 onready var opt_type =  $Body/Margin/OptMargin/OptType
+var skill = load("res://SheetTemplate/Asset/AssetParts/Skill.tscn")
+var text = load("res://SheetTemplate/Asset/AssetParts/Text.tscn")
+
 
 func _ready() -> void:
 	update_list()
@@ -48,8 +51,22 @@ func hide_all_assets_list():
 		node.visible = false
 
 func show_data(index,list : OptionButton):
+	clear_itens()
 	var type_name = opt_type.get_item_text(opt_type.selected)
 	var asset_name = list.get_item_text(list.selected)
 	var asset_data = JSON.parse(Global.assets[type_name][asset_name].data).result
 	for item in asset_data:
 		print(item)
+		if item.has("skill"):
+			var new_skill = skill.instance()
+			new_skill.set_text(item.skill.skill_text)
+			new_skill.check(item.skill.check)
+			$Body/Itens/Body.add_child(new_skill)
+		elif item.has("text"):
+			var new_text = text.instance()
+			new_text.set_text(item.text)
+			$Body/Itens/Body.add_child(new_text)
+
+func clear_itens():
+	for n in $Body/Itens/Body.get_children():
+		n.queue_free()
