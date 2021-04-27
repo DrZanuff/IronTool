@@ -4,7 +4,8 @@ onready var opt_type =  $Body/Margin/OptMargin/OptType
 var skill = load("res://SheetTemplate/Asset/AssetParts/Skill.tscn")
 var text = load("res://SheetTemplate/Asset/AssetParts/Text.tscn")
 var property = load("res://SheetTemplate/Asset/AssetParts/Property.tscn")
-var assetTrack = load("res://SheetTemplate/Asset/AssetParts/AssetTrack.tscn")
+var asset_track = load("res://SheetTemplate/Asset/AssetParts/AssetTrack.tscn")
+var named_asset_track = load("res://SheetTemplate/Asset/AssetParts/NamedAssetTrack.tscn")
 var asset_item = load("res://SheetTemplate/Asset/AssetParts/Item.tscn")
 
 func _ready() -> void:
@@ -80,9 +81,9 @@ func show_data(index,list : OptionButton):
 			new_prop.set_text(item.property.prop_name)
 			$Body/Itens/Body.add_child(new_prop)
 		elif item.has("track"):
-			var new_assetTrack = assetTrack.instance()
-			$Body/Itens/Body.add_child(new_assetTrack)
-			new_assetTrack.create_track( 
+			var new_asset_track = asset_track.instance()
+			$Body/Itens/Body.add_child(new_asset_track)
+			new_asset_track.create_track( 
 				int(item.track.size),
 				int(item.track.value)
 			)
@@ -90,6 +91,10 @@ func show_data(index,list : OptionButton):
 			var new_asset_item = asset_item.instance()
 			new_asset_item.set_text(item.item)
 			$Body/Itens/Body.add_child(new_asset_item)
+		elif item.has("named_track"):
+			var new_named_asset_track = named_asset_track.instance()
+			new_named_asset_track.create_track(item.named_track)
+			$Body/Itens/Body.add_child(new_named_asset_track)
 
 func clear_itens():
 	for n in $Body/Itens/Body.get_children():

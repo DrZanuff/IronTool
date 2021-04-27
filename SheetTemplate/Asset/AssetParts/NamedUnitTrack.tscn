@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/NamedUnitTrack.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[node name="NamedUnitTrack" type="MarginContainer"]
+margin_right = 119.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 119.0
+margin_bottom = 48.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 119.0
+margin_bottom = 48.0
+custom_constants/margin_right = 3
+custom_constants/margin_top = 3
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 3
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 116.0
+margin_bottom = 45.0
+
+[node name="Label" type="Label" parent="Margin/VBox"]
+margin_right = 113.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Asset Skill Name"
+align = 1
+valign = 2
+autowrap = true
+
+[node name="CheckBox" type="CheckBox" parent="Margin/VBox"]
+margin_left = 44.0
+margin_top = 18.0
+margin_right = 68.0
+margin_bottom = 42.0
+focus_mode = 0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+enabled_focus_mode = 0
+align = 1
+expand_icon = true

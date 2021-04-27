@@ -2457,7 +2457,7 @@ columns = 2
 
 [node name="Asset" parent="MainMargin/Body/Interfaces/GridContainer" instance=ExtResource( 14 )]
 margin_right = 350.0
-margin_bottom = 63.0
+margin_bottom = 64.0
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
