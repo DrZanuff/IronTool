@@ -3,7 +3,8 @@ extends MarginContainer
 onready var opt_type =  $Body/Margin/OptMargin/OptType
 var skill = load("res://SheetTemplate/Asset/AssetParts/Skill.tscn")
 var text = load("res://SheetTemplate/Asset/AssetParts/Text.tscn")
-
+var property = load("res://SheetTemplate/Asset/AssetParts/Property.tscn")
+var assetTrack = load("res://SheetTemplate/Asset/AssetParts/AssetTrack.tscn")
 
 func _ready() -> void:
 	update_list()
@@ -65,7 +66,18 @@ func show_data(index,list : OptionButton):
 		elif item.has("text"):
 			var new_text = text.instance()
 			new_text.set_text(item.text)
-			$Body/Itens/Body.add_child(new_text)
+			$Body/Itens/Body.add_child(new_text)	
+		elif item.has("property"):
+			var new_prop = property.instance()
+			new_prop.set_text(item.property.prop_name)
+			$Body/Itens/Body.add_child(new_prop)
+		elif item.has("track"):
+			var new_assetTrack = assetTrack.instance()
+			$Body/Itens/Body.add_child(new_assetTrack)
+			new_assetTrack.create_track( 
+				int(item.track.size),
+				int(item.track.value)
+			)
 
 func clear_itens():
 	for n in $Body/Itens/Body.get_children():

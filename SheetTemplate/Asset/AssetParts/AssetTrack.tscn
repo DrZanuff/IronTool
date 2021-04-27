@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SheetTemplate/Asset/AssetParts/AssetTrack.gd" type="Script" id=1]
+
+[node name="AssetTrack" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/margin_top = 5
+custom_constants/margin_bottom = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_top = 5.0
+margin_right = 300.0
+margin_bottom = 35.0
