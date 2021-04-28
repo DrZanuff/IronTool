@@ -13,6 +13,7 @@ border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 [node name="NamedUnitTrack" type="MarginContainer"]
 margin_right = 119.0
 margin_bottom = 48.0
+mouse_filter = 1
 size_flags_horizontal = 3
 script = ExtResource( 1 )
 __meta__ = {
@@ -22,11 +23,13 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="."]
 margin_right = 119.0
 margin_bottom = 48.0
+mouse_filter = 1
 custom_styles/panel = SubResource( 1 )
 
 [node name="Margin" type="MarginContainer" parent="."]
 margin_right = 119.0
 margin_bottom = 48.0
+mouse_filter = 1
 custom_constants/margin_right = 3
 custom_constants/margin_top = 3
 custom_constants/margin_left = 3
@@ -56,6 +59,5 @@ margin_bottom = 42.0
 focus_mode = 0
 size_flags_horizontal = 4
 size_flags_vertical = 3
-enabled_focus_mode = 0
 align = 1
 expand_icon = true

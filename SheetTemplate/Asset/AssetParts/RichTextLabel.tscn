@@ -22,6 +22,7 @@ font_data = ExtResource( 1 )
 [node name="RichTextLabel" type="RichTextLabel"]
 margin_right = 374.0
 margin_bottom = 301.0
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/italics_font = SubResource( 1 )

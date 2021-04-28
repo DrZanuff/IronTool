@@ -9,6 +9,8 @@ var named_asset_track = load("res://SheetTemplate/Asset/AssetParts/NamedAssetTra
 var asset_item = load("res://SheetTemplate/Asset/AssetParts/Item.tscn")
 var optionButton = load("res://SheetTemplate/Asset/AssetParts/OptionButton.tscn")
 
+var drag = false
+
 func _ready() -> void:
 	update_list()
 
@@ -43,7 +45,6 @@ func update_list():
 
 func check_saved_assets():
 	pass
-
 
 func _on_OptType_item_selected(index: int) -> void:
 	var type_name = opt_type.get_item_text(opt_type.selected)
@@ -121,3 +122,32 @@ func _input(event: InputEvent) -> void:
 				selection = $Body/Margin/OptMargin/OptType.get_item_count()-1
 			$Body/Margin/OptMargin/OptType.select(selection)
 		$Body/Margin/OptMargin/OptType.emit_signal("item_selected",selection)
+
+func show_control(visible:bool):
+	$Control.visible = visible
+
+func _on_Asset_gui_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_mouse_left"):
+		get_parent().asset_slot = self
+		modulate = Color("#aaddff")
+	
+	if event.is_action_released("ui_mouse_left"):
+		modulate = Color("#ffffff")
+	
+func _on_Asset_mouse_entered() -> void:
+	if get_parent().asset_slot != null:
+		modulate = Color("#aaddff")
+		yield( get_tree().create_timer(0.1) , "timeout" )
+		get_parent().move_child(get_parent().asset_slot,self.get_index() )
+		get_parent().asset_slot = null
+		modulate = Color("#ffffff")
+
+
+func _on_ButtonDelete_pressed() -> void:
+	$Delete.show()
+
+func _on_ButtonNo_pressed() -> void:
+	$Delete.hide()
+
+func _on_ButtonYes_pressed() -> void:
+	queue_free()

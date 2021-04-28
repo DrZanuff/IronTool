@@ -10,6 +10,9 @@ func _ready() -> void:
 	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Progresses/ProgressList.connect(
 		"progress_added", self , "scroll_vertical"
 	)
+	$MainScroll/SheetTemplate/MainMargin/Body/Interfaces/Assets/AssetsGrid.connect(
+		"asset_added", self , "scroll_vertical"
+	)
 	
 
 func scroll_vertical():

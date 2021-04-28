@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://SheetTemplate/Bond/Bond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://SheetTemplate/Scripts/BondList.gd" type="Script" id=13]
 [ext_resource path="res://SheetTemplate/Asset/Asset.tscn" type="PackedScene" id=14]
+[ext_resource path="res://SheetTemplate/AssetsGrid.gd" type="Script" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -188,7 +189,7 @@ __meta__ = {
 }
 
 [node name="MainMargin" type="MarginContainer" parent="."]
-margin_right = 1024.0
+margin_right = 1110.0
 margin_bottom = 600.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
@@ -201,24 +202,24 @@ __meta__ = {
 [node name="Body" type="VBoxContainer" parent="MainMargin"]
 margin_left = 25.0
 margin_top = 50.0
-margin_right = 999.0
+margin_right = 1085.0
 margin_bottom = 550.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HeaderMargin" type="MarginContainer" parent="MainMargin/Body"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 49.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 49.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/HeaderMargin"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 49.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -228,22 +229,22 @@ custom_constants/margin_bottom = 10
 [node name="Header" type="HBoxContainer" parent="MainMargin/Body/HeaderMargin/Margin"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 964.0
+margin_right = 1050.0
 margin_bottom = 39.0
 custom_constants/separation = 20
 
 [node name="Name" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_right = 251.0
+margin_right = 337.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Name"]
-margin_right = 251.0
+margin_right = 337.0
 margin_bottom = 29.0
 custom_styles/panel = SubResource( 3 )
 
 [node name="Box" type="HBoxContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header/Name"]
-margin_right = 251.0
+margin_right = 337.0
 margin_bottom = 29.0
 
 [node name="NameLabel" type="Label" parent="MainMargin/Body/HeaderMargin/Margin/Header/Name/Box"]
@@ -254,7 +255,7 @@ text = "NAME"
 
 [node name="NameInput" type="LineEdit" parent="MainMargin/Body/HeaderMargin/Margin/Header/Name/Box"]
 margin_left = 51.0
-margin_right = 251.0
+margin_right = 337.0
 margin_bottom = 29.0
 focus_mode = 1
 size_flags_horizontal = 3
@@ -263,8 +264,8 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Health" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_left = 271.0
-margin_right = 385.0
+margin_left = 357.0
+margin_right = 471.0
 margin_bottom = 29.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Health"]
@@ -292,8 +293,8 @@ items = [ "+5", null, false, 0, null, "+4", null, false, 1, null, "+3", null, fa
 selected = 0
 
 [node name="Spirit" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_left = 405.0
-margin_right = 506.0
+margin_left = 491.0
+margin_right = 592.0
 margin_bottom = 29.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Spirit"]
@@ -321,8 +322,8 @@ items = [ "+5", null, false, 0, null, "+4", null, false, 1, null, "+3", null, fa
 selected = 0
 
 [node name="Supply" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_left = 526.0
-margin_right = 639.0
+margin_left = 612.0
+margin_right = 725.0
 margin_bottom = 29.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Supply"]
@@ -350,8 +351,8 @@ items = [ "+5", null, false, 0, null, "+4", null, false, 1, null, "+3", null, fa
 selected = 0
 
 [node name="Experience" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_left = 659.0
-margin_right = 821.0
+margin_left = 745.0
+margin_right = 907.0
 margin_bottom = 29.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Experience"]
@@ -380,8 +381,8 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Spent" type="MarginContainer" parent="MainMargin/Body/HeaderMargin/Margin/Header"]
-margin_left = 841.0
-margin_right = 954.0
+margin_left = 927.0
+margin_right = 1040.0
 margin_bottom = 29.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/HeaderMargin/Margin/Header/Spent"]
@@ -411,28 +412,28 @@ caret_blink_speed = 0.5
 
 [node name="MomentumMargin" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 53.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 125.0
 custom_constants/margin_bottom = 0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/MomentumMargin"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 72.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MBody" type="VBoxContainer" parent="MainMargin/Body/MomentumMargin"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 72.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/MomentumMargin/MBody"]
-margin_right = 974.0
+margin_right = 1060.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MTitle" type="MarginContainer" parent="MainMargin/Body/MomentumMargin/MBody"]
 margin_top = 4.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 33.0
 custom_constants/margin_right = 5
 custom_constants/margin_top = 5
@@ -442,14 +443,14 @@ custom_constants/margin_bottom = 5
 [node name="Label" type="Label" parent="MainMargin/Body/MomentumMargin/MBody/MTitle"]
 margin_left = 5.0
 margin_top = 5.0
-margin_right = 969.0
+margin_right = 1055.0
 margin_bottom = 24.0
 text = "MOMENTUM"
 align = 1
 
 [node name="MarginInput" type="MarginContainer" parent="MainMargin/Body/MomentumMargin/MBody"]
 margin_top = 37.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 72.0
 custom_constants/margin_right = 10
 custom_constants/margin_left = 10
@@ -457,14 +458,14 @@ custom_constants/margin_bottom = 10
 
 [node name="BoxInputs" type="HBoxContainer" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput"]
 margin_left = 10.0
-margin_right = 964.0
+margin_right = 1050.0
 margin_bottom = 25.0
 custom_constants/separation = 15
 alignment = 1
 
 [node name="Inputs" type="HBoxContainer" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs"]
-margin_left = 28.0
-margin_right = 705.0
+margin_left = 71.0
+margin_right = 748.0
 margin_bottom = 25.0
 
 [node name="Button" type="Button" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs/Inputs"]
@@ -603,15 +604,15 @@ focus_mode = 1
 text = "-6"
 
 [node name="ButtonBurn" type="Button" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs"]
-margin_left = 720.0
-margin_right = 778.0
+margin_left = 763.0
+margin_right = 821.0
 margin_bottom = 25.0
 focus_mode = 1
 text = "BURN"
 
 [node name="MarginMax" type="MarginContainer" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs"]
-margin_left = 793.0
-margin_right = 848.0
+margin_left = 836.0
+margin_right = 891.0
 margin_bottom = 25.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs/MarginMax"]
@@ -626,8 +627,8 @@ margin_bottom = 22.0
 text = "MAX 10"
 
 [node name="MarginReset" type="MarginContainer" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs"]
-margin_left = 863.0
-margin_right = 925.0
+margin_left = 906.0
+margin_right = 968.0
 margin_bottom = 25.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/MomentumMargin/MBody/MarginInput/BoxInputs/MarginReset"]
@@ -643,15 +644,15 @@ text = "RESET 2"
 
 [node name="MainMenu" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 129.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 209.0
 
 [node name="Panel" type="Panel" parent="MainMargin/Body/MainMenu"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 80.0
 
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/MainMenu"]
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 80.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -661,49 +662,49 @@ custom_constants/margin_bottom = 10
 [node name="Body" type="VBoxContainer" parent="MainMargin/Body/MainMenu/Margin"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 964.0
+margin_right = 1050.0
 margin_bottom = 70.0
 custom_constants/separation = 10
 
 [node name="TopRow" type="HBoxContainer" parent="MainMargin/Body/MainMenu/Margin/Body"]
-margin_right = 954.0
+margin_right = 1040.0
 margin_bottom = 25.0
 custom_constants/separation = 14
 
 [node name="BtnSites" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/TopRow"]
-margin_right = 179.0
+margin_right = 196.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Sites"
 
 [node name="BtnProgress" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/TopRow"]
-margin_left = 193.0
-margin_right = 373.0
+margin_left = 210.0
+margin_right = 407.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Progress"
 
 [node name="BtnOracles" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/TopRow"]
-margin_left = 387.0
-margin_right = 566.0
+margin_left = 421.0
+margin_right = 618.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Oracles"
 
 [node name="BtnBonds" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/TopRow"]
-margin_left = 580.0
-margin_right = 760.0
+margin_left = 632.0
+margin_right = 829.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Bonds"
 
 [node name="BtnSettings" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/TopRow"]
-margin_left = 774.0
-margin_right = 954.0
+margin_left = 843.0
+margin_right = 1040.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
@@ -711,28 +712,28 @@ text = "Settings"
 
 [node name="BottomRow" type="HBoxContainer" parent="MainMargin/Body/MainMenu/Margin/Body"]
 margin_top = 35.0
-margin_right = 954.0
+margin_right = 1040.0
 margin_bottom = 60.0
 custom_constants/separation = 14
 
 [node name="BtnMoves" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/BottomRow"]
-margin_right = 308.0
+margin_right = 337.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Moves"
 
 [node name="BtnSummary" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/BottomRow"]
-margin_left = 322.0
-margin_right = 631.0
+margin_left = 351.0
+margin_right = 688.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
 text = "Summary"
 
 [node name="BtnAssets" type="Button" parent="MainMargin/Body/MainMenu/Margin/Body/BottomRow"]
-margin_left = 645.0
-margin_right = 954.0
+margin_left = 702.0
+margin_right = 1040.0
 margin_bottom = 25.0
 focus_mode = 1
 size_flags_horizontal = 3
@@ -740,15 +741,15 @@ text = "Assets"
 
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
-margin_right = 974.0
-margin_bottom = 328.0
+margin_right = 1060.0
+margin_bottom = 345.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
 [node name="Summary" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 visible = false
 margin_top = 10.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 1368.0
 
 [node name="Stats" type="MarginContainer" parent="MainMargin/Body/Interfaces/Summary"]
@@ -2135,7 +2136,7 @@ wrap_enabled = true
 [node name="Sites" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 visible = false
 margin_top = 10.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 240.0
 
 [node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
@@ -2184,7 +2185,7 @@ text = "MODIFY"
 [node name="Progresses" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 visible = false
 margin_top = 10.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 243.0
 
 [node name="ProgressList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Progresses"]
@@ -2231,7 +2232,7 @@ text = "MODIFY"
 [node name="Bonds" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 visible = false
 margin_top = 10.0
-margin_right = 974.0
+margin_right = 1060.0
 margin_bottom = 263.0
 
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
@@ -2329,16 +2330,16 @@ text = "MODIFY"
 [node name="Settings" type="MarginContainer" parent="MainMargin/Body/Interfaces"]
 visible = false
 margin_top = 10.0
-margin_right = 974.0
-margin_bottom = 115.0
+margin_right = 1060.0
+margin_bottom = 132.0
 rect_min_size = Vector2( 0, 100 )
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Settings"]
 margin_left = 50.0
-margin_right = 924.0
-margin_bottom = 105.0
+margin_right = 1010.0
+margin_bottom = 122.0
 alignment = 1
 
 [node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
@@ -2481,15 +2482,67 @@ margin_bottom = 57.0
 focus_mode = 0
 pressed = true
 
-[node name="GridContainer" type="GridContainer" parent="MainMargin/Body/Interfaces"]
+[node name="Assets" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
 margin_top = 10.0
-margin_right = 974.0
-margin_bottom = 115.0
-columns = 2
+margin_right = 1060.0
+margin_bottom = 132.0
 
-[node name="Asset" parent="MainMargin/Body/Interfaces/GridContainer" instance=ExtResource( 14 )]
-margin_right = 350.0
+[node name="AssetsGrid" type="GridContainer" parent="MainMargin/Body/Interfaces/Assets"]
+margin_left = 30.0
+margin_right = 1030.0
 margin_bottom = 73.0
+size_flags_horizontal = 4
+custom_constants/vseparation = 20
+custom_constants/hseparation = 5
+columns = 3
+script = ExtResource( 15 )
+
+[node name="Asset" parent="MainMargin/Body/Interfaces/Assets/AssetsGrid" instance=ExtResource( 14 )]
+margin_bottom = 73.0
+
+[node name="Asset2" parent="MainMargin/Body/Interfaces/Assets/AssetsGrid" instance=ExtResource( 14 )]
+margin_left = 335.0
+margin_right = 665.0
+margin_bottom = 73.0
+
+[node name="Asset3" parent="MainMargin/Body/Interfaces/Assets/AssetsGrid" instance=ExtResource( 14 )]
+margin_left = 670.0
+margin_right = 1000.0
+margin_bottom = 73.0
+
+[node name="AssetControl" type="MarginContainer" parent="MainMargin/Body/Interfaces/Assets"]
+margin_top = 77.0
+margin_right = 1060.0
+margin_bottom = 122.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Assets/AssetControl"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 1055.0
+margin_bottom = 35.0
+alignment = 1
+
+[node name="ButtonAddAsset" type="Button" parent="MainMargin/Body/Interfaces/Assets/AssetControl/HBoxContainer" groups=[
+"HideGroupAsset",
+]]
+margin_right = 56.0
+margin_bottom = 25.0
+focus_mode = 1
+size_flags_horizontal = 2
+text = "+ADD"
+
+[node name="ButtonModifyAsset" type="Button" parent="MainMargin/Body/Interfaces/Assets/AssetControl/HBoxContainer"]
+margin_left = 974.0
+margin_right = 1050.0
+margin_bottom = 25.0
+focus_mode = 1
+size_flags_horizontal = 10
+toggle_mode = true
+text = "MODIFY"
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
@@ -2515,3 +2568,5 @@ margin_bottom = 73.0
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonAddBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonAddBond_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonModifyBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonModifyBond_pressed"]
 [connection signal="toggled" from="MainMargin/Body/Interfaces/Bonds/BondControl/HBoxContainer/ButtonModifyBond" to="MainMargin/Body/Interfaces/Bonds/BondList" method="_on_ButtonModifyBond_toggled"]
+[connection signal="pressed" from="MainMargin/Body/Interfaces/Assets/AssetControl/HBoxContainer/ButtonAddAsset" to="MainMargin/Body/Interfaces/Assets/AssetsGrid" method="_on_ButtonAddAsset_pressed"]
+[connection signal="toggled" from="MainMargin/Body/Interfaces/Assets/AssetControl/HBoxContainer/ButtonModifyAsset" to="MainMargin/Body/Interfaces/Assets/AssetsGrid" method="_on_ButtonModifyAsset_toggled"]
