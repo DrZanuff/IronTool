@@ -5,8 +5,6 @@
 [node name="OptionButton" type="OptionButton"]
 margin_right = 197.0
 margin_bottom = 24.0
-focus_mode = 1
-enabled_focus_mode = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
