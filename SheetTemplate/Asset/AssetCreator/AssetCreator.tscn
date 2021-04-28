@@ -1,0 +1,495 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SheetTemplate/Asset/AssetCreator/AssetCreator.gd" type="Script" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends MarginContainer
+
+func _on_TrackSize_item_selected(index: int) -> void:
+	$Body/HBoxContainer/TrackValue.max_value = index+1
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends MarginContainer
+
+onready var unit = get_node(\"Body/Margin/HBox/Units/0\")
+onready var body = $Body/Margin/HBox/Units
+
+func _on_ButtonAdd_pressed() -> void:
+	$Body/Margin/HBox/Menu/Body/ButtonRemove.disabled = false
+	var new_unit =unit.duplicate()
+	body.add_child( new_unit )
+	new_unit.get_node(\"Label\").text = str(new_unit.get_index() )+\" - \"
+	new_unit.visible = true
+	if body.get_child_count() > 3:
+		printt(\"Here\" , body.get_child_count())
+		$Body/Margin/HBox/Menu/Body/ButtonAdd.disabled = true
+
+func _on_ButtonRemove_pressed() -> void:
+	$Body/Margin/HBox/Menu/Body/ButtonAdd.disabled = false
+	body.get_child(body.get_child_count()-1).queue_free()
+	if body.get_child_count() < 3:
+		printt(\"Down\" , body.get_child_count())
+		$Body/Margin/HBox/Menu/Body/ButtonRemove.disabled = true
+"
+
+[sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+border_width_bottom = 3
+border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[node name="AssetCreator" type="MarginContainer"]
+margin_right = 280.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="VBoxContainer" parent="."]
+margin_right = 280.0
+margin_bottom = 241.0
+
+[node name="Menu" type="MarginContainer" parent="Body"]
+margin_right = 280.0
+margin_bottom = 24.0
+
+[node name="Panel" type="Panel" parent="Body/Menu"]
+margin_right = 280.0
+margin_bottom = 24.0
+
+[node name="HBox" type="HBoxContainer" parent="Body/Menu"]
+margin_right = 280.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="CheckBoxCreator" type="CheckBox" parent="Body/Menu/HBox"]
+margin_right = 74.0
+margin_bottom = 24.0
+text = "Creator"
+
+[node name="CheckBoxView" type="CheckBox" parent="Body/Menu/HBox"]
+margin_left = 84.0
+margin_right = 142.0
+margin_bottom = 24.0
+text = "View"
+
+[node name="View" type="MarginContainer" parent="Body"]
+visible = false
+margin_top = 28.0
+margin_right = 280.0
+margin_bottom = 38.0
+
+[node name="Body" type="VBoxContainer" parent="Body/View"]
+margin_right = 280.0
+margin_bottom = 10.0
+custom_constants/separation = -1
+
+[node name="Itens" type="MarginContainer" parent="Body/View/Body"]
+margin_right = 280.0
+margin_bottom = 10.0
+mouse_filter = 1
+custom_constants/margin_right = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 10
+
+[node name="Body" type="VBoxContainer" parent="Body/View/Body/Itens"]
+margin_left = 8.0
+margin_right = 272.0
+
+[node name="Creator" type="MarginContainer" parent="Body"]
+margin_top = 28.0
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_vertical = 3
+
+[node name="Body" type="VBoxContainer" parent="Body/Creator"]
+margin_right = 280.0
+margin_bottom = 213.0
+size_flags_vertical = 3
+
+[node name="Itens" type="VBoxContainer" parent="Body/Creator/Body"]
+margin_right = 280.0
+margin_bottom = 179.0
+size_flags_vertical = 3
+
+[node name="ItensOpt" type="MarginContainer" parent="Body/Creator/Body"]
+margin_top = 183.0
+margin_right = 280.0
+margin_bottom = 213.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 5
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 5
+
+[node name="HBox" type="HBoxContainer" parent="Body/Creator/Body/ItensOpt"]
+margin_left = 8.0
+margin_top = 5.0
+margin_right = 272.0
+margin_bottom = 25.0
+
+[node name="OptItens" type="OptionButton" parent="Body/Creator/Body/ItensOpt/HBox"]
+margin_right = 219.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "TEXT"
+items = [ "TEXT", null, false, 0, null, "SKILL", null, false, 1, null, "TOPIC", null, false, 2, null, "PROPERTY", null, false, 3, null, "TRACK", null, false, 4, null, "NAMED TRACK", null, false, 5, null ]
+selected = 0
+
+[node name="ButtonAddItens" type="Button" parent="Body/Creator/Body/ItensOpt/HBox"]
+margin_left = 223.0
+margin_right = 264.0
+margin_bottom = 20.0
+text = "ADD"
+
+[node name="ItensRef" type="MarginContainer" parent="."]
+visible = false
+margin_right = 280.0
+margin_bottom = 241.0
+
+[node name="Text" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/Text"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+
+[node name="Label" type="Label" parent="ItensRef/Text/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "TEXT"
+align = 1
+
+[node name="TextEdit" type="TextEdit" parent="ItensRef/Text/Body"]
+margin_top = 18.0
+margin_right = 270.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="Button" type="Button" parent="ItensRef/Text/Body"]
+margin_left = 205.0
+margin_top = 206.0
+margin_right = 270.0
+margin_bottom = 226.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[node name="Skill" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/Skill"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+
+[node name="Label" type="Label" parent="ItensRef/Skill/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "SKILL"
+align = 1
+
+[node name="TextEdit" type="TextEdit" parent="ItensRef/Skill/Body"]
+margin_top = 18.0
+margin_right = 270.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 0, 180 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItensRef/Skill/Body"]
+margin_top = 202.0
+margin_right = 270.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+alignment = 2
+
+[node name="CheckBox" type="CheckBox" parent="ItensRef/Skill/Body/HBoxContainer"]
+margin_left = 115.0
+margin_right = 190.0
+margin_bottom = 24.0
+text = "Marked"
+
+[node name="Button" type="Button" parent="ItensRef/Skill/Body/HBoxContainer"]
+margin_left = 205.0
+margin_right = 270.0
+margin_bottom = 24.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[node name="Topic" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/Topic"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+
+[node name="Label" type="Label" parent="ItensRef/Topic/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "TOPIC"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="ItensRef/Topic/Body"]
+margin_top = 18.0
+margin_right = 270.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="ItensRef/Topic/Body"]
+margin_left = 205.0
+margin_top = 46.0
+margin_right = 270.0
+margin_bottom = 66.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[node name="Property" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/Property"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+
+[node name="Label" type="Label" parent="ItensRef/Property/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "PROPERTY"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="ItensRef/Property/Body"]
+margin_top = 18.0
+margin_right = 270.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+placeholder_text = "Property Name"
+
+[node name="Button" type="Button" parent="ItensRef/Property/Body"]
+margin_left = 205.0
+margin_top = 46.0
+margin_right = 270.0
+margin_bottom = 66.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[node name="Track" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+script = SubResource( 1 )
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/Track"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="ItensRef/Track/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "TRACK"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItensRef/Track/Body"]
+margin_top = 24.0
+margin_right = 270.0
+margin_bottom = 48.0
+
+[node name="TrackSize" type="OptionButton" parent="ItensRef/Track/Body/HBoxContainer"]
+margin_right = 66.0
+margin_bottom = 24.0
+text = "0 to 1"
+items = [ "0 to 1", null, false, 0, null, "0 to 2", null, false, 1, null, "0 to 3", null, false, 2, null, "0 to 4", null, false, 3, null, "0 to 5", null, false, 4, null, "0 to 6", null, false, 5, null ]
+selected = 0
+
+[node name="TrackValue" type="SpinBox" parent="ItensRef/Track/Body/HBoxContainer"]
+margin_left = 70.0
+margin_right = 270.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+max_value = 1.0
+align = 1
+prefix = "Initial Value"
+
+[node name="Button" type="Button" parent="ItensRef/Track/Body"]
+margin_left = 205.0
+margin_top = 58.0
+margin_right = 270.0
+margin_bottom = 78.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[node name="NamedTrack" type="MarginContainer" parent="ItensRef"]
+margin_right = 280.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+script = SubResource( 3 )
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/NamedTrack"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 275.0
+margin_bottom = 236.0
+custom_constants/separation = 7
+
+[node name="Label" type="Label" parent="ItensRef/NamedTrack/Body"]
+margin_right = 270.0
+margin_bottom = 14.0
+text = "NAMED TRACK"
+align = 1
+
+[node name="Margin" type="MarginContainer" parent="ItensRef/NamedTrack/Body"]
+margin_top = 21.0
+margin_right = 270.0
+margin_bottom = 72.0
+custom_constants/margin_top = 3
+custom_constants/margin_bottom = 3
+
+[node name="HBox" type="HBoxContainer" parent="ItensRef/NamedTrack/Body/Margin"]
+margin_top = 3.0
+margin_right = 270.0
+margin_bottom = 48.0
+
+[node name="Units" type="VBoxContainer" parent="ItensRef/NamedTrack/Body/Margin/HBox"]
+margin_right = 246.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="0" type="HBoxContainer" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units"]
+visible = false
+margin_right = 246.0
+margin_bottom = 17.0
+
+[node name="Label" type="Label" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units/0"]
+margin_right = 21.0
+margin_bottom = 17.0
+size_flags_vertical = 3
+text = "0 - "
+
+[node name="LineEdit" type="LineEdit" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units/0"]
+margin_left = 25.0
+margin_right = 200.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 175, 0 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+max_length = 20
+placeholder_text = "Name (20 char Max)"
+
+[node name="1" type="HBoxContainer" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units"]
+margin_right = 246.0
+margin_bottom = 17.0
+
+[node name="Label" type="Label" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units/1"]
+margin_right = 21.0
+margin_bottom = 17.0
+size_flags_vertical = 3
+text = "1 - "
+
+[node name="LineEdit" type="LineEdit" parent="ItensRef/NamedTrack/Body/Margin/HBox/Units/1"]
+margin_left = 25.0
+margin_right = 200.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 175, 0 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+max_length = 20
+placeholder_text = "Name (20 char Max)"
+
+[node name="Menu" type="MarginContainer" parent="ItensRef/NamedTrack/Body/Margin/HBox"]
+margin_left = 250.0
+margin_right = 270.0
+margin_bottom = 45.0
+
+[node name="Body" type="VBoxContainer" parent="ItensRef/NamedTrack/Body/Margin/HBox/Menu"]
+margin_right = 20.0
+margin_bottom = 45.0
+custom_constants/separation = 5
+
+[node name="ButtonRemove" type="Button" parent="ItensRef/NamedTrack/Body/Margin/HBox/Menu/Body"]
+margin_right = 20.0
+margin_bottom = 20.0
+disabled = true
+text = "-"
+
+[node name="ButtonAdd" type="Button" parent="ItensRef/NamedTrack/Body/Margin/HBox/Menu/Body"]
+margin_top = 25.0
+margin_right = 20.0
+margin_bottom = 45.0
+text = "+"
+
+[node name="HSeparator" type="HSeparator" parent="ItensRef/NamedTrack/Body"]
+margin_top = 79.0
+margin_right = 270.0
+margin_bottom = 83.0
+
+[node name="Button" type="Button" parent="ItensRef/NamedTrack/Body"]
+margin_left = 205.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 110.0
+size_flags_horizontal = 8
+text = "REMOVE"
+
+[connection signal="pressed" from="Body/Creator/Body/ItensOpt/HBox/ButtonAddItens" to="." method="_on_ButtonAddItens_pressed"]
+[connection signal="pressed" from="ItensRef/Text/Body/Button" to="ItensRef/Text" method="queue_free"]
+[connection signal="pressed" from="ItensRef/Skill/Body/HBoxContainer/Button" to="ItensRef/Skill" method="queue_free"]
+[connection signal="pressed" from="ItensRef/Topic/Body/Button" to="ItensRef/Topic" method="queue_free"]
+[connection signal="pressed" from="ItensRef/Property/Body/Button" to="ItensRef/Property" method="queue_free"]
+[connection signal="item_selected" from="ItensRef/Track/Body/HBoxContainer/TrackSize" to="ItensRef/Track" method="_on_TrackSize_item_selected"]
+[connection signal="pressed" from="ItensRef/Track/Body/Button" to="ItensRef/Track" method="queue_free"]
+[connection signal="pressed" from="ItensRef/NamedTrack/Body/Margin/HBox/Menu/Body/ButtonRemove" to="ItensRef/NamedTrack" method="_on_ButtonRemove_pressed"]
+[connection signal="pressed" from="ItensRef/NamedTrack/Body/Margin/HBox/Menu/Body/ButtonAdd" to="ItensRef/NamedTrack" method="_on_ButtonAdd_pressed"]
+[connection signal="pressed" from="ItensRef/NamedTrack/Body/Button" to="ItensRef/NamedTrack" method="queue_free"]

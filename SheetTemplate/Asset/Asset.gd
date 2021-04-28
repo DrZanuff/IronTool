@@ -56,6 +56,7 @@ func _on_OptType_item_selected(index: int) -> void:
 	if type_name == "SELECT":
 		$Body/Info/Types.hide()
 	elif type_name == "CUSTOM":
+		
 		pass
 	else:
 		if $Body/Info/Types.has_node(type_name):
