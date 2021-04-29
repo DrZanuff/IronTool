@@ -1,15 +1,62 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://SheetTemplate/Asset/AssetCreator/AssetCreator.gd" type="Script" id=1]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends MarginContainer
+
+func get_data():
+	return { \"text\" : $Body/TextEdit.text }
+"
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends MarginContainer
+
+func get_data():
+	return {
+		\"skill\" : {
+			\"check\" : $Body/HBoxContainer/CheckBox.pressed,
+			\"skill_text\" : $Body/TextEdit.text
+		} 
+	}
+"
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends MarginContainer
+
+func get_data():
+	return { \"item\" : $Body/LineEdit.text }
+"
+
+[sub_resource type="GDScript" id=7]
+script/source = "extends MarginContainer
+
+
+func get_data():
+	return {
+		\"property\" : {
+			\"prop_name\"  : $Body/LineEdit.text,
+			\"prop_value\" : \"\"
+		}
+	}
+"
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends MarginContainer
 
 func _on_TrackSize_item_selected(index: int) -> void:
 	$Body/HBoxContainer/TrackValue.max_value = index+1
+
+func get_data():
+	return { 
+		\"track\" : {
+			\"size\"  : $Body/HBoxContainer/TrackSize.selected+1,
+			\"value\" : $Body/HBoxContainer/TrackValue.value
+		}
+	}
 "
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=2]
 script/source = "extends MarginContainer
 
 onready var unit = get_node(\"Body/Margin/HBox/Units/0\")
@@ -22,25 +69,34 @@ func _on_ButtonAdd_pressed() -> void:
 	new_unit.get_node(\"Label\").text = str(new_unit.get_index() )+\" - \"
 	new_unit.visible = true
 	if body.get_child_count() > 3:
-		printt(\"Here\" , body.get_child_count())
 		$Body/Margin/HBox/Menu/Body/ButtonAdd.disabled = true
 
 func _on_ButtonRemove_pressed() -> void:
 	$Body/Margin/HBox/Menu/Body/ButtonAdd.disabled = false
 	body.get_child(body.get_child_count()-1).queue_free()
 	if body.get_child_count() < 3:
-		printt(\"Down\" , body.get_child_count())
 		$Body/Margin/HBox/Menu/Body/ButtonRemove.disabled = true
+
+
+func get_data():
+	var units = []
+	for node in body.get_children():
+		if node.get_index() > 0:
+			units.push_back( { \"name\" : node.get_node(\"LineEdit\").text , \"check\":false } )
+	return {
+		\"named_track\" : units
+	}
 "
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 draw_center = false
 border_width_bottom = 3
 border_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 
 [node name="AssetCreator" type="MarginContainer"]
 margin_right = 280.0
-margin_bottom = 69.0
+margin_bottom = 353.0
+rect_min_size = Vector2( 0, 350 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -50,75 +106,52 @@ __meta__ = {
 
 [node name="Body" type="VBoxContainer" parent="."]
 margin_right = 280.0
-margin_bottom = 241.0
-
-[node name="Menu" type="MarginContainer" parent="Body"]
-margin_right = 280.0
-margin_bottom = 24.0
-
-[node name="Panel" type="Panel" parent="Body/Menu"]
-margin_right = 280.0
-margin_bottom = 24.0
-
-[node name="HBox" type="HBoxContainer" parent="Body/Menu"]
-margin_right = 280.0
-margin_bottom = 24.0
-custom_constants/separation = 10
-
-[node name="CheckBoxCreator" type="CheckBox" parent="Body/Menu/HBox"]
-margin_right = 74.0
-margin_bottom = 24.0
-text = "Creator"
-
-[node name="CheckBoxView" type="CheckBox" parent="Body/Menu/HBox"]
-margin_left = 84.0
-margin_right = 142.0
-margin_bottom = 24.0
-text = "View"
-
-[node name="View" type="MarginContainer" parent="Body"]
-visible = false
-margin_top = 28.0
-margin_right = 280.0
-margin_bottom = 38.0
-
-[node name="Body" type="VBoxContainer" parent="Body/View"]
-margin_right = 280.0
-margin_bottom = 10.0
-custom_constants/separation = -1
-
-[node name="Itens" type="MarginContainer" parent="Body/View/Body"]
-margin_right = 280.0
-margin_bottom = 10.0
-mouse_filter = 1
-custom_constants/margin_right = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 10
-
-[node name="Body" type="VBoxContainer" parent="Body/View/Body/Itens"]
-margin_left = 8.0
-margin_right = 272.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
 
 [node name="Creator" type="MarginContainer" parent="Body"]
-margin_top = 28.0
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_vertical = 3
 
 [node name="Body" type="VBoxContainer" parent="Body/Creator"]
 margin_right = 280.0
-margin_bottom = 213.0
+margin_bottom = 353.0
 size_flags_vertical = 3
 
-[node name="Itens" type="VBoxContainer" parent="Body/Creator/Body"]
+[node name="AssetName" type="MarginContainer" parent="Body/Creator/Body"]
 margin_right = 280.0
-margin_bottom = 179.0
+margin_bottom = 34.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 5
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 5
+
+[node name="LineEdit" type="LineEdit" parent="Body/Creator/Body/AssetName"]
+margin_left = 10.0
+margin_top = 5.0
+margin_right = 270.0
+margin_bottom = 29.0
+placeholder_text = "ASSET NAME"
+
+[node name="Scroll" type="ScrollContainer" parent="Body/Creator/Body"]
+margin_top = 38.0
+margin_right = 280.0
+margin_bottom = 319.0
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Itens" type="VBoxContainer" parent="Body/Creator/Body/Scroll"]
+margin_right = 280.0
+margin_bottom = 281.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ItensOpt" type="MarginContainer" parent="Body/Creator/Body"]
-margin_top = 183.0
+margin_top = 323.0
 margin_right = 280.0
-margin_bottom = 213.0
+margin_bottom = 353.0
 custom_constants/margin_right = 8
 custom_constants/margin_top = 5
 custom_constants/margin_left = 8
@@ -147,23 +180,23 @@ text = "ADD"
 [node name="ItensRef" type="MarginContainer" parent="."]
 visible = false
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 
 [node name="Text" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+script = SubResource( 4 )
 
 [node name="Body" type="VBoxContainer" parent="ItensRef/Text"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 
 [node name="Label" type="Label" parent="ItensRef/Text/Body"]
 margin_right = 270.0
@@ -174,8 +207,8 @@ align = 1
 [node name="TextEdit" type="TextEdit" parent="ItensRef/Text/Body"]
 margin_top = 18.0
 margin_right = 270.0
-margin_bottom = 202.0
-rect_min_size = Vector2( 0, 80 )
+margin_bottom = 88.0
+rect_min_size = Vector2( 0, 70 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 wrap_enabled = true
@@ -190,19 +223,19 @@ text = "REMOVE"
 
 [node name="Skill" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+script = SubResource( 5 )
 
 [node name="Body" type="VBoxContainer" parent="ItensRef/Skill"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 
 [node name="Label" type="Label" parent="ItensRef/Skill/Body"]
 margin_right = 270.0
@@ -213,8 +246,8 @@ align = 1
 [node name="TextEdit" type="TextEdit" parent="ItensRef/Skill/Body"]
 margin_top = 18.0
 margin_right = 270.0
-margin_bottom = 198.0
-rect_min_size = Vector2( 0, 180 )
+margin_bottom = 118.0
+rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 wrap_enabled = true
@@ -242,18 +275,19 @@ text = "REMOVE"
 
 [node name="Topic" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+script = SubResource( 6 )
 
 [node name="Body" type="VBoxContainer" parent="ItensRef/Topic"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 
 [node name="Label" type="Label" parent="ItensRef/Topic/Body"]
 margin_right = 270.0
@@ -277,19 +311,20 @@ text = "REMOVE"
 
 [node name="Property" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+script = SubResource( 7 )
 
 [node name="Body" type="VBoxContainer" parent="ItensRef/Property"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 
 [node name="Label" type="Label" parent="ItensRef/Property/Body"]
 margin_right = 270.0
@@ -314,7 +349,7 @@ text = "REMOVE"
 
 [node name="Track" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 5
@@ -327,7 +362,7 @@ script = SubResource( 1 )
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 custom_constants/separation = 10
 
 [node name="Label" type="Label" parent="ItensRef/Track/Body"]
@@ -367,20 +402,20 @@ text = "REMOVE"
 
 [node name="NamedTrack" type="MarginContainer" parent="ItensRef"]
 margin_right = 280.0
-margin_bottom = 241.0
+margin_bottom = 353.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 5
 custom_constants/margin_top = 10
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
-script = SubResource( 3 )
+script = SubResource( 2 )
 
 [node name="Body" type="VBoxContainer" parent="ItensRef/NamedTrack"]
 margin_left = 5.0
 margin_top = 10.0
 margin_right = 275.0
-margin_bottom = 236.0
+margin_bottom = 348.0
 custom_constants/separation = 7
 
 [node name="Label" type="Label" parent="ItensRef/NamedTrack/Body"]
@@ -423,8 +458,8 @@ margin_left = 25.0
 margin_right = 200.0
 margin_bottom = 17.0
 rect_min_size = Vector2( 175, 0 )
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
 max_length = 20
 placeholder_text = "Name (20 char Max)"
 
@@ -443,8 +478,8 @@ margin_left = 25.0
 margin_right = 200.0
 margin_bottom = 17.0
 rect_min_size = Vector2( 175, 0 )
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
 max_length = 20
 placeholder_text = "Name (20 char Max)"
 
@@ -483,6 +518,7 @@ margin_bottom = 110.0
 size_flags_horizontal = 8
 text = "REMOVE"
 
+[connection signal="text_changed" from="Body/Creator/Body/AssetName/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="Body/Creator/Body/ItensOpt/HBox/ButtonAddItens" to="." method="_on_ButtonAddItens_pressed"]
 [connection signal="pressed" from="ItensRef/Text/Body/Button" to="ItensRef/Text" method="queue_free"]
 [connection signal="pressed" from="ItensRef/Skill/Body/HBoxContainer/Button" to="ItensRef/Skill" method="queue_free"]

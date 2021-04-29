@@ -12,6 +12,22 @@ var optionButton = load("res://SheetTemplate/Asset/AssetParts/OptionButton.tscn"
 var drag = false
 
 func _ready() -> void:
+	var menu = [$Body/Menu/HBox/CheckBoxCreator,$Body/Menu/HBox/CheckBoxView]
+	$Body/Menu/HBox/CheckBoxCreator.connect(
+		"pressed",
+		$Body/AssetCreator,
+		"view",[menu]
+	)
+	$Body/Menu/HBox/CheckBoxCreator.connect(
+		"pressed",
+		self,
+		"clear_itens"
+	)
+	$Body/Menu/HBox/CheckBoxView.connect(
+		"pressed",
+		$Body/AssetCreator,
+		"build",[menu]
+	)
 	update_list()
 
 func update_list():
@@ -39,7 +55,14 @@ func update_list():
 		for a in assets_array:
 			new_opt.add_item(a)
 	
-	$Body/Margin/OptMargin/OptType.add_item("CUSTOM")
+	var types = []
+	for t in range($Body/Margin/OptMargin/OptType.get_item_count()):
+		types.push_back(
+			$Body/Margin/OptMargin/OptType.get_item_text(t)
+		)
+	
+	if not types.has("CUSTOM"):
+		$Body/Margin/OptMargin/OptType.add_item("CUSTOM")
 	
 	check_saved_assets()
 
@@ -50,15 +73,19 @@ func _on_OptType_item_selected(index: int) -> void:
 	var type_name = opt_type.get_item_text(opt_type.selected)
 	clear_itens()
 	hide_all_assets_list()
-	$Body/Info/Types.show()
-	$Body/Info/Types.show()
+	$Body/Info.show()
 	
 	if type_name == "SELECT":
-		$Body/Info/Types.hide()
+		$Body/Info.hide()
+		$Body/Menu.hide()
+		$Body/AssetCreator.hide()
 	elif type_name == "CUSTOM":
-		
-		pass
+		$Body/Info.hide()
+		$Body/Menu.show()
+		$Body/AssetCreator.show()
 	else:
+		$Body/Menu.hide()
+		$Body/AssetCreator.hide()
 		if $Body/Info/Types.has_node(type_name):
 			$Body/Info/Types.get_node(type_name).show()
 
@@ -68,13 +95,20 @@ func hide_all_assets_list():
 		if node is OptionButton:
 			node.select(0)
 
-func show_data(index,list : OptionButton):
+func show_data(index,list : OptionButton , custom_asset = ""):
 	clear_itens()
 	var type_name = opt_type.get_item_text(opt_type.selected)
-	var asset_name = list.get_item_text(list.selected)
+	var asset_name = list.get_item_text(list.selected) if list != null else ""
+
 	if asset_name == "SELECT":
 		return
-	var asset_data = JSON.parse(Global.assets[type_name][asset_name].data).result
+	
+	var asset_data
+	if list != null:
+		asset_data = JSON.parse(Global.assets[type_name][asset_name].data).result
+	else:
+		asset_data = JSON.parse(Global.assets["CUSTOM"][custom_asset].data).result
+		
 	for item in asset_data:
 		if item.has("skill"):
 			var new_skill = skill.instance()
@@ -129,19 +163,21 @@ func show_control(visible:bool):
 
 func _on_Asset_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_mouse_left"):
-		get_parent().asset_slot = self
-		modulate = Color("#aaddff")
-	
+		if not get_parent() is Viewport:
+			get_parent().asset_slot = self
+			modulate = Color("#aaddff")
+		
 	if event.is_action_released("ui_mouse_left"):
 		modulate = Color("#ffffff")
 	
 func _on_Asset_mouse_entered() -> void:
-	if get_parent().asset_slot != null:
-		modulate = Color("#aaddff")
-		yield( get_tree().create_timer(0.1) , "timeout" )
-		get_parent().move_child(get_parent().asset_slot,self.get_index() )
-		get_parent().asset_slot = null
-		modulate = Color("#ffffff")
+	if not get_parent() is Viewport:
+		if get_parent().asset_slot != null:
+			modulate = Color("#aaddff")
+			yield( get_tree().create_timer(0.1) , "timeout" )
+			get_parent().move_child(get_parent().asset_slot,self.get_index() )
+			get_parent().asset_slot = null
+			modulate = Color("#ffffff")
 
 
 func _on_ButtonDelete_pressed() -> void:
@@ -152,3 +188,8 @@ func _on_ButtonNo_pressed() -> void:
 
 func _on_ButtonYes_pressed() -> void:
 	queue_free()
+
+
+func _on_AssetCreator_built(custom) -> void:
+	show_data(0 , null , custom)
+

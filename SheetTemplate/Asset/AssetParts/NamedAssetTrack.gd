@@ -12,8 +12,13 @@ func create_track(units : Array):
 		
 
 func mark_track(checkbox_node):
-	for node in $HBox.get_children():
-		if node.get_checkbox() is CheckBox:
-			node.get_checkbox().pressed = false
-			
-	checkbox_node.pressed = true
+	if $HBox.get_child_count() > 1:
+		for node in $HBox.get_children():
+			if node.get_checkbox() is CheckBox:
+				node.get_checkbox().pressed = false
+		
+		checkbox_node.pressed = true
+	#	checkbox_node.pressed = !checkbox_node.pressed
+		
+	#	if $HBox.get_child_count() == 1:
+	#		checkbox_node.pressed = !checkbox_node.pressed 

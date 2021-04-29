@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://SheetTemplate/Asset/Asset.gd" type="Script" id=1]
+[ext_resource path="res://SheetTemplate/Asset/AssetCreator/AssetCreator.tscn" type="PackedScene" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 draw_center = false
@@ -78,6 +79,40 @@ custom_constants/margin_right = 150
 custom_constants/margin_top = 10
 custom_constants/margin_left = 8
 custom_constants/margin_bottom = 10
+
+[node name="Menu" type="MarginContainer" parent="Body"]
+visible = false
+margin_top = 58.0
+margin_right = 330.0
+margin_bottom = 82.0
+custom_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="Body/Menu"]
+margin_right = 330.0
+margin_bottom = 19.0
+
+[node name="HBox" type="HBoxContainer" parent="Body/Menu"]
+margin_right = 330.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="CheckBoxCreator" type="CheckBox" parent="Body/Menu/HBox"]
+margin_right = 74.0
+margin_bottom = 24.0
+pressed = true
+text = "Creator"
+
+[node name="CheckBoxView" type="CheckBox" parent="Body/Menu/HBox"]
+margin_left = 84.0
+margin_right = 142.0
+margin_bottom = 24.0
+text = "View"
+
+[node name="AssetCreator" parent="Body" instance=ExtResource( 2 )]
+visible = false
+margin_top = 58.0
+margin_right = 330.0
+margin_bottom = 158.0
 
 [node name="Itens" type="MarginContainer" parent="Body"]
 margin_top = 58.0
@@ -183,6 +218,7 @@ text = "Yes"
 [connection signal="gui_input" from="." to="." method="_on_Asset_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_Asset_mouse_entered"]
 [connection signal="item_selected" from="Body/Margin/OptMargin/OptType" to="." method="_on_OptType_item_selected"]
+[connection signal="built" from="Body/AssetCreator" to="." method="_on_AssetCreator_built"]
 [connection signal="pressed" from="Control/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
 [connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]
 [connection signal="pressed" from="Delete/Body/Options/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
