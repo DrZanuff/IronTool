@@ -1,0 +1,298 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TestScene.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+#export (String , MULTILINE) var data 
+#
+#var table = []
+#
+#func _ready() -> void:	
+#	table = JSON.parse(data).result
+#
+#	for element in table:
+#		var e = Expression.new()
+#		e.parse(element.range,[])
+#		element.range = e.execute([],self)
+#
+#func _input(event: InputEvent) -> void:
+#	if event.is_action_pressed(\"ui_select\"):
+#		randomize()
+#		var roll = ( randi() % 100 ) + 1
+##		var roll = 39
+#
+#		for element in table:
+#			if roll in element.range:
+#				var numbers = str(element.range[0])+( \"-\"+str(element.range[-1]) if element.range.size() > 1 else \"\" )
+#				printt( numbers , element.name )
+#				return
+#
+#func range(n : int , nx = 0):
+#	if nx == 0:
+#		nx = n+1
+#	else:
+#		nx += 1
+#
+#	return range(n,nx)
+#
+#
+#
+#
+
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends TextEdit
+
+export (String,MULTILINE) var data_input
+
+func _ready() -> void:
+	var data = data_input.split(\"\\n\")
+	var new_data = []
+	for x in range( data.size() ):
+		if x%2 == 1:
+			new_data.push_back(data[x])
+		
+	print(new_data)
+			
+	print(data.size() )
+	for i in range(100):
+		text += '{\"range\" : \"'+str(i+1)+'\"  , \"name\"     : \"'+new_data[i]+'\"},\\n'
+"
+
+[node name="TestScene" type="Node"]
+script = ExtResource( 2 )
+data = "[
+  
+  {\"range\" : \"1,38\"     , \"name\"     : \"Some Enemy\"},
+  {\"range\" : \"39\"        , \"name\"     : \"Helpfull Fellow\"},
+  {\"range\" : \"40,50\"   , \"name\"   : \"Some Monster\"},
+  {\"range\" : \"51,79\"   , \"name\"   : \"Strong Foe\"},
+  {\"range\" : \"80,100\" , \"name\"    : \"Some NPC\"}
+  
+]"
+
+[node name="ParseExcute" type="Node" parent="."]
+script = SubResource( 1 )
+__meta__ = {
+"_editor_description_": "[
+  
+  {\"range\" : \"range(1,38)\"     , \"name\"     : \"Some Enemy\"},
+  {\"range\" : \"range(39)\"        , \"name\"     : \"Helpfull Fellow\"},
+  {\"range\" : \"range(40,50)\"   , \"name\"   : \"Some Monster\"},
+  {\"range\" : \"range(51,79)\"   , \"name\"   : \"Strong Foe\"},
+  {\"range\" : \"range(80,100)\" , \"name\"    : \"Some NPC\"}
+  
+]"
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 758.0
+margin_bottom = 597.0
+wrap_enabled = true
+script = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+data_input = "1
+Scheme
+2
+Clash
+3
+Weaken
+4
+Initiate
+5
+Create
+6
+Swear
+7
+Avenge
+8
+Guard
+9
+Defeat
+10
+Control
+11
+Break
+12
+Risk
+13
+Surrender
+14
+Inspect
+15
+Raid
+16
+Evade
+17
+Assault
+18
+Deflect
+19
+Threaten
+20
+Attack
+21
+Leave
+22
+Preserve
+23
+Manipulate
+24
+Remove
+25
+Eliminate
+26
+Withdraw
+27
+Abandon
+28
+Investigate
+29
+Hold
+30
+Focus
+31
+Uncover
+32
+Breach
+33
+Aid
+34
+Uphold
+35
+Falter
+36
+Suppress
+37
+Hunt
+38
+Share
+39
+Destroy
+40
+Avoid
+41
+Reject
+42
+Demand
+43
+Explore
+44
+Bolster
+45
+Seize
+46
+Mourn
+47
+Reveal
+48
+Gather
+49
+Defy
+50
+Transform
+51
+Persevere
+52
+Serve
+53
+Begin
+54
+Move
+55
+Coordinate
+56
+Resist
+57
+Await
+58
+Impress
+59
+Take
+60
+Oppose
+61
+Capture
+62
+Overwhelm
+63
+Challenge
+64
+Acquire
+65
+Protect
+66
+Finish
+67
+Strengthen
+68
+Restore
+69
+Advance
+70
+Command
+71
+Refuse
+72
+Find
+73
+Deliver
+74
+Hide
+75
+Fortify
+76
+Betray
+77
+Secure
+78
+Arrive
+79
+Affect
+80
+Change
+81
+Defend
+82
+Debate
+83
+Support
+84
+Follow
+85
+Construct
+86
+Locate
+87
+Endure
+88
+Release
+89
+Lose
+90
+Reduce
+91
+Escalate
+92
+Distract
+93
+Journey
+94
+Escort
+95
+Learn
+96
+Communicate
+97
+Depart
+98
+Search
+99
+Charge
+100
+Summon"

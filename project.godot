@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://Classes/Assets.gd"
 }, {
 "base": "Resource",
+"class": "Oracles",
+"language": "GDScript",
+"path": "res://Classes/Oracles.gd"
+}, {
+"base": "Resource",
 "class": "ThemesDomains",
 "language": "GDScript",
 "path": "res://Classes/ThemesDomains.gd"
 } ]
 _global_script_class_icons={
 "Assets": "",
+"Oracles": "",
 "ThemesDomains": ""
 }
 
