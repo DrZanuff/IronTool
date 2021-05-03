@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NAME"
+oracle_name = "DETAIL"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Blight\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Strife\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Nightfall\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Fury\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Terror\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Truth\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Spring\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Sanctuary\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Bone\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Specters\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Daybreak\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Doom\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Treachery\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Blood\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"War\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Torment\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Iron\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Silence\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Mist\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Isolation\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Runes\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Rot\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Corruption\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Prophecy\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Fate\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Twilight\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Power\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Darkness\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Gloom\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Storms\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Hope\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Lament\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Frost\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Souls\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Winter\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Sadness\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Desolation\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Bane\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Lies\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Ash\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Banishment\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Shadow\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Madness\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Stone\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Secrets\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Despair\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Blades\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Dread\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Light\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Wrath\"}
+]"

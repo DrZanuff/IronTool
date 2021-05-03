@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NAME"
+oracle_name = "PLACE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,6\"  , \"name\"     : \"Barrow\"},
+{\"range\" : \"7,18\"  , \"name\"     : \"Cavern\"},
+{\"range\" : \"19,28\"  , \"name\"     : \"Frozen Cavern\"},
+{\"range\" : \"29,32\"  , \"name\"     : \"Icereach\"},
+{\"range\" : \"33,38\"  , \"name\"     : \"Mine\"},
+{\"range\" : \"39,48\"  , \"name\"     : \"Pass\"},
+{\"range\" : \"49,58\"  , \"name\"     : \"Ruin\"},
+{\"range\" : \"59,68\"  , \"name\"     : \"Sea Cave\"},
+{\"range\" : \"69,78\"  , \"name\"     : \"Shadowfen\"},
+{\"range\" : \"79,83\"  , \"name\"     : \"Stronghold\"},
+{\"range\" : \"84,95\"  , \"name\"     : \"Tanglewood\"},
+{\"range\" : \"96,100\"  , \"name\"     : \"Underkeep\"}
+]"

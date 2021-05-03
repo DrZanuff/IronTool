@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "CATEGORY"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Burgeoning Conflict\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Cursed Site\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Environmental Calamity\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Malignant Plague\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Rampaging Creature\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Ravaging Horde\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Scheming Leader\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Power-Hungry Mystic\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Zealous Cult\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Roll Twice\"}
+]"

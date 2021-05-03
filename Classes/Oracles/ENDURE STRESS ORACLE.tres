@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "ENDURE STRESS ORACLE"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"You are overwhelmed. Face Desolation.\"},
+{\"range\" : \"11,25\"  , \"name\"     : \"You give up. Forsake Your Vow (if possible, one relevant to your current crisis).\"},
+{\"range\" : \"26,50\"  , \"name\"     : \"You give in to a fear or compulsion, and act against your better instincts.\"},
+{\"range\" : \"51,100\"  , \"name\"     : \"You persevere\"}
+]"

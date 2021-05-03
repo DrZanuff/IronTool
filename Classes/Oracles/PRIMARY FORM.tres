@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MONSTROSITY"
+oracle_name = "PRIMARY FORM"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,15\"  , \"name\"     : \"Beast / mammal\"},
+{\"range\" : \"16,25\"  , \"name\"     : \"Humanoid\"},
+{\"range\" : \"26,31\"  , \"name\"     : \"Bird\"},
+{\"range\" : \"32,37\"  , \"name\"     : \"Spider\"},
+{\"range\" : \"38,43\"  , \"name\"     : \"Snake\"},
+{\"range\" : \"44,49\"  , \"name\"     : \"Worm / slug\"},
+{\"range\" : \"50,55\"  , \"name\"     : \"Lizard\"},
+{\"range\" : \"56,61\"  , \"name\"     : \"Insect\"},
+{\"range\" : \"62,66\"  , \"name\"     : \"Amorphous\"},
+{\"range\" : \"67,69\"  , \"name\"     : \"Crustacean\"},
+{\"range\" : \"70,71\"  , \"name\"     : \"Fish\"},
+{\"range\" : \"72,73\"  , \"name\"     : \"Octopoid\"},
+{\"range\" : \"74,75\"  , \"name\"     : \"Amphibian\"},
+{\"range\" : \"76,77\"  , \"name\"     : \"Plant\"},
+{\"range\" : \"78\"  , \"name\"     : \"Incorporeal\"},
+{\"range\" : \"79\"  , \"name\"     : \"Mineral\"},
+{\"range\" : \"80\"  , \"name\"     : \"Elemental\"},
+{\"range\" : \"81,100\"  , \"name\"     : \"Hybrid (roll twice)\"}
+]"

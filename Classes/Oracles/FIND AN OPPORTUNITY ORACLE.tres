@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "FIND AN OPPORTUNITY ORACLE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,25\"  , \"name\"     : \"The terrain favors you, or you find a hidden path.\"},
+{\"range\" : \"26,45\"  , \"name\"     : \"An aspect of the history or nature of this place is revealed.\"},
+{\"range\" : \"46,57\"  , \"name\"     : \"You locate a secure area.\"},
+{\"range\" : \"58,68\"  , \"name\"     : \"A clue offers insight or direction.\"},
+{\"range\" : \"69,78\"  , \"name\"     : \"You get the drop on a denizen.\"},
+{\"range\" : \"79,86\"  , \"name\"     : \"This area provides an opportunity to scavenge, forage, or hunt.\"},
+{\"range\" : \"87,90\"  , \"name\"     : \"You locate an interesting or helpful object.\"},
+{\"range\" : \"91,94\"  , \"name\"     : \"You are alerted to a potential threat.\"},
+{\"range\" : \"95,98\"  , \"name\"     : \"You encounter a denizen who might support you.\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"You encounter a denizen in need of help.\"}
+]"

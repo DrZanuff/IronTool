@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NAME"
+oracle_name = "DESCRIPTION"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Deep\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Tainted\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Grey\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Forgotten\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Flooded\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Forbidden\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Barren\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Lost\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Cursed\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Fell\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Sunken\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Nightmare\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Infernal\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Dark\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Bloodstained\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Haunted\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"White\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Shrouded\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Wasted\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Grim\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Endless\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Crumbling\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Undying\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Bloodied\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Forsaken\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Silent\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Blighted\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Iron\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Frozen\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Abyssal\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Crimson\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Silver\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Desecrated\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Ashen\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Elder\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Scorched\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Unknown\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Scarred\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Broken\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Chaotic\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Black\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Hidden\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Sundered\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Shattered\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Dreaded\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Secret\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"High\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Sacred\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Fallen\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Ruined\"}
+]"

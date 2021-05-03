@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "RAMPAGING CREATURE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Reveal a new aspect of its nature or abilities\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Expand its territory\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Make a sudden and brutal attack\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Control or influence lesser creatures\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Create confusion or strife\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Leave foreboding signs\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Lure the unwary\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Imperil an event\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Assert control over a location\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Threaten resources\"}
+]"

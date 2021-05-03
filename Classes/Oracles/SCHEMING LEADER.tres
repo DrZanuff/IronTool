@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "SCHEMING LEADER"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Defeat an enemy\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Form a new alliance\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Usurp or undermine another leader\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Force the loyalty of a community or important person\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Enact a new law or tradition\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Rescind an old law or tradition\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Reveal a true intention\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Unravel an existing alliance\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Incite conflict\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Use an unexpected capability or asset\"}
+]"

@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 type = "PLOT"
-oracle_name = "Action"
+oracle_name = "ACTION"
+module = "IRONSWORN"
 data = "[
 
   {\"range\" : \"1\"  , \"name\"     : \"Scheme\"},

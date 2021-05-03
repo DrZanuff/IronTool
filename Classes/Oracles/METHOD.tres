@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT EVENT"
+oracle_name = "METHOD"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Defy\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Break\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Trick\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Evade\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Protect\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Overwhelm\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Persevere\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Assist\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Await\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Abort\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Block\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Collide\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Focus\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Advance\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Breach\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Endure\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Assault\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Charge\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Escalate\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Sunder\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Shatter\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Aim\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Stagger\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Counter\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Seize\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Impact\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Entangle\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Hold\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Deflect\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Drop\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Lose\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Sweep\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Secure\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Cover\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Withdraw\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Clash\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Amplify\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Batter\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Feint\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Shove\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Embed\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Affect\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Probe\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Force\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Intensify\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Distract\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Challenge\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Brawl\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Coordinate\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Overrun\"}
+]"

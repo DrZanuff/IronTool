@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NAME"
+oracle_name = "NAMESAKE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Breckon\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Issara\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Milenna\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Thorval\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Khulan\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Aurvang\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Kalida\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Keeara\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Andor\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Zakaria\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Willa\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Etana\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Valgard\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Kenrick\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Wyland\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Sidura\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Svala\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Kajir\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Saiven\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Callwen\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Zhan\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Solana\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Ildar\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Keelan\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Thrain\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Kynan\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Jadina\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Radek\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Wulan\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Garion\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Eysa\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Kolor\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Katarra\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Dain\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Farina\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Yala\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Kodroth\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Morien\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Akida\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Haldorr\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Nyrad\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Edda\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Jorund\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Morraine\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Lindar\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Sithra\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Torgan\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Arnorr\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Thyri\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Erisia\"}
+]"

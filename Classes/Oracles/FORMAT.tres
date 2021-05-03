@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NAME"
+oracle_name = "FORMAT"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,25\"  , \"name\"     : \"[Description] [Place]\"},
+{\"range\" : \"26,50\"  , \"name\"     : \"[Place] of [Detail]\"},
+{\"range\" : \"51,70\"  , \"name\"     : \"[Place] of [Description] [Detail]\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"[Place] of [Namesake's] [Detail]\"},
+{\"range\" : \"81,85\"  , \"name\"     : \"[Namesake's] [Place]\"},
+{\"range\" : \"86,95\"  , \"name\"     : \"[Description] [Place] of [Namesake]\"},
+{\"range\" : \"96,100\"  , \"name\"     : \"[Place] of [Namesake]\"}
+]"

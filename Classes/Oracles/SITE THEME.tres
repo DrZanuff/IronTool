@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "SITE NATURE"
+oracle_name = "SITE THEME"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,11\"  , \"name\"     : \"Ancient\"},
+{\"range\" : \"12,23\"  , \"name\"     : \"Corrupted\"},
+{\"range\" : \"24,35\"  , \"name\"     : \"Fortified\"},
+{\"range\" : \"36,48\"  , \"name\"     : \"Hallowed\"},
+{\"range\" : \"49,61\"  , \"name\"     : \"Haunted\"},
+{\"range\" : \"62,74\"  , \"name\"     : \"Infested\"},
+{\"range\" : \"75,87\"  , \"name\"     : \"Ravaged\"},
+{\"range\" : \"88,100\"  , \"name\"     : \"Wild\"}
+]"

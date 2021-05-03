@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "CHARACTER"
+oracle_name = "DISPOSITION"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,6\"  , \"name\"     : \"Helpful\"},
+{\"range\" : \"7,13\"  , \"name\"     : \"Friendly\"},
+{\"range\" : \"14,20\"  , \"name\"     : \"Cooperative\"},
+{\"range\" : \"21,28\"  , \"name\"     : \"Curious\"},
+{\"range\" : \"29,36\"  , \"name\"     : \"Indifferent\"},
+{\"range\" : \"37,47\"  , \"name\"     : \"Suspicious\"},
+{\"range\" : \"48,57\"  , \"name\"     : \"Wanting\"},
+{\"range\" : \"58,67\"  , \"name\"     : \"Desperate\"},
+{\"range\" : \"68,76\"  , \"name\"     : \"Demanding\"},
+{\"range\" : \"77,85\"  , \"name\"     : \"Unfriendly\"},
+{\"range\" : \"86,93\"  , \"name\"     : \"Threatening\"},
+{\"range\" : \"94,100\"  , \"name\"     : \"Hostile\"}
+]"

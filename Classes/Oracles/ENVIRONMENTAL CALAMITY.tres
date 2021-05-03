@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "ENVIRONMENTAL CALAMITY"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Devastate a place\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Block a path\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Threaten a community with imminent destruction\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Manifest unexpected effects\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Expand in scope or intensity\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Allow someone to take advantage\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Deprive of resources\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Isolate an important person or community\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Force refugees into hostile lands\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Disrupt natural ecosystems\"}
+]"

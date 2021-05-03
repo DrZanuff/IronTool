@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "LOCATION"
+oracle_name = "COASTAL WATERS LOCATION"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1\"  , \"name\"     : \"Fleet\"},
+{\"range\" : \"2\"  , \"name\"     : \"Sargassum\"},
+{\"range\" : \"3\"  , \"name\"     : \"Flotsam\"},
+{\"range\" : \"4\"  , \"name\"     : \"Mystical Site\"},
+{\"range\" : \"5\"  , \"name\"     : \"Lair\"},
+{\"range\" : \"6,10\"  , \"name\"     : \"Wreck\"},
+{\"range\" : \"11,15\"  , \"name\"     : \"Harbor\"},
+{\"range\" : \"16,23\"  , \"name\"     : \"Ship\"},
+{\"range\" : \"24,30\"  , \"name\"     : \"Rocks\"},
+{\"range\" : \"31,38\"  , \"name\"     : \"Fjord\"},
+{\"range\" : \"39,46\"  , \"name\"     : \"Estuary\"},
+{\"range\" : \"47,54\"  , \"name\"     : \"Cove\"},
+{\"range\" : \"55,62\"  , \"name\"     : \"Bay\"},
+{\"range\" : \"63,70\"  , \"name\"     : \"Ice\"},
+{\"range\" : \"71,85\"  , \"name\"     : \"Island\"},
+{\"range\" : \"86,99\"  , \"name\"     : \"Open Water\"},
+{\"range\" : \"100\"  , \"name\"     : \"Anomaly\"}
+]"

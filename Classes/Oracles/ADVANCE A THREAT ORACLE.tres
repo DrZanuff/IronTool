@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "ADVANCE A THREAT ORACLE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,30\"  , \"name\"     : \"The threat readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, Reach a Milestone. Otherwise, mark menace.\"},
+{\"range\" : \"31,70\"  , \"name\"     : \"The threat works subtly to advance toward its goal, or the danger escalates. Mark menace.\"},
+{\"range\" : \"71,100\"  , \"name\"     : \"The threat makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice\"}
+]"

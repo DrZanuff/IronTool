@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MONSTROSITY"
+oracle_name = "SIZE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,5\"  , \"name\"     : \"Tiny (rodent-sized)\"},
+{\"range\" : \"6,30\"  , \"name\"     : \"Small (hound-sized)\"},
+{\"range\" : \"31,65\"  , \"name\"     : \"Medium (person-sized)\"},
+{\"range\" : \"66,94\"  , \"name\"     : \"Large (giant-sized)\"},
+{\"range\" : \"95,99\"  , \"name\"     : \"Huge (whale-sized)\"},
+{\"range\" : \"100\"  , \"name\"     : \"Titanic (incomprehensible)\"}
+]"

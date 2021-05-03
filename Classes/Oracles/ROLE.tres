@@ -1,0 +1,41 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "CHARACTER"
+oracle_name = "ROLE"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Criminal\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Healer\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Bandit\"},
+{\"range\" : \"7,9\"  , \"name\"     : \"Guide\"},
+{\"range\" : \"10,12\"  , \"name\"     : \"Performer\"},
+{\"range\" : \"13,15\"  , \"name\"     : \"Miner\"},
+{\"range\" : \"16,18\"  , \"name\"     : \"Mercenary\"},
+{\"range\" : \"19,21\"  , \"name\"     : \"Outcast\"},
+{\"range\" : \"22,24\"  , \"name\"     : \"Vagrant\"},
+{\"range\" : \"25,27\"  , \"name\"     : \"Forester\"},
+{\"range\" : \"28,30\"  , \"name\"     : \"Traveler\"},
+{\"range\" : \"31,33\"  , \"name\"     : \"Mystic\"},
+{\"range\" : \"34,36\"  , \"name\"     : \"Priest\"},
+{\"range\" : \"37,39\"  , \"name\"     : \"Sailor\"},
+{\"range\" : \"40,42\"  , \"name\"     : \"Pilgrim\"},
+{\"range\" : \"43,45\"  , \"name\"     : \"Thief\"},
+{\"range\" : \"46,48\"  , \"name\"     : \"Adventurer\"},
+{\"range\" : \"49,51\"  , \"name\"     : \"Forager\"},
+{\"range\" : \"52,54\"  , \"name\"     : \"Leader\"},
+{\"range\" : \"55,58\"  , \"name\"     : \"Guard\"},
+{\"range\" : \"59,62\"  , \"name\"     : \"Artisan\"},
+{\"range\" : \"63,66\"  , \"name\"     : \"Scout\"},
+{\"range\" : \"67,70\"  , \"name\"     : \"Herder\"},
+{\"range\" : \"71,74\"  , \"name\"     : \"Fisher\"},
+{\"range\" : \"75,79\"  , \"name\"     : \"Warrior\"},
+{\"range\" : \"80,84\"  , \"name\"     : \"Hunter\"},
+{\"range\" : \"85,89\"  , \"name\"     : \"Raider\"},
+{\"range\" : \"90,94\"  , \"name\"     : \"Trader\"},
+{\"range\" : \"95,99\"  , \"name\"     : \"Farmer\"},
+{\"range\" : \"100\"  , \"name\"     : \"Unusual role\"}
+]"

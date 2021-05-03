@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TestScene.gd" type="Script" id=2]
 
@@ -45,21 +45,52 @@ script/source = "extends Node
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends TextEdit
+#
+#export (String,MULTILINE) var data_input
+#
+#func _ready() -> void:
+#	var data = data_input.split(\"\\n\")
+#	var new_data = []
+#	for x in range( data.size() ):
+#		if x%2 == 1:
+#			new_data.push_back(data[x])
+#
+#	print(new_data)
+#
+#	print(data.size() )
+#	for i in range(100):
+#		text += '{\"range\" : \"'+str(i+1)+'\"  , \"name\"     : \"'+new_data[i]+'\"},\\n'
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends TextEdit
 
 export (String,MULTILINE) var data_input
 
 func _ready() -> void:
 	var data = data_input.split(\"\\n\")
-	var new_data = []
+	var dice = []
+	var desc = []
 	for x in range( data.size() ):
-		if x%2 == 1:
-			new_data.push_back(data[x])
-		
-	print(new_data)
-			
-	print(data.size() )
-	for i in range(100):
-		text += '{\"range\" : \"'+str(i+1)+'\"  , \"name\"     : \"'+new_data[i]+'\"},\\n'
+		if x%2 == 0:
+			var numbers = data[x].split(\"-\")
+			var string_range = str(numbers).replace(\"[\",\"\")
+			string_range = string_range.replace(\"]\",\"\")
+			string_range = string_range.replace(\" \",\"\")
+			string_range = str(string_range).dedent()
+			dice.push_back(string_range)
+		else:
+			desc.push_back(data[x])
+	
+	
+	text = \"[\\n\"
+	for i in range(data.size() / 2):
+		if i == (data.size() / 2)-1:
+			text += '{\"range\" : \"'+dice[i]+'\"  , \"name\"     : \"'+desc[i]+'\"}\\n'
+		else:
+			text += '{\"range\" : \"'+dice[i]+'\"  , \"name\"     : \"'+desc[i]+'\"},\\n'
+	
+	text += \"]\"
 "
 
 [node name="TestScene" type="Node"]
@@ -89,6 +120,7 @@ __meta__ = {
 }
 
 [node name="TextEdit" type="TextEdit" parent="."]
+visible = false
 margin_right = 758.0
 margin_bottom = 597.0
 wrap_enabled = true
@@ -96,203 +128,17 @@ script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-data_input = "1
-Scheme
-2
-Clash
-3
-Weaken
-4
-Initiate
-5
-Create
-6
-Swear
-7
-Avenge
-8
-Guard
-9
-Defeat
-10
-Control
-11
-Break
-12
-Risk
-13
-Surrender
-14
-Inspect
-15
-Raid
-16
-Evade
-17
-Assault
-18
-Deflect
-19
-Threaten
-20
-Attack
-21
-Leave
-22
-Preserve
-23
-Manipulate
-24
-Remove
-25
-Eliminate
-26
-Withdraw
-27
-Abandon
-28
-Investigate
-29
-Hold
-30
-Focus
-31
-Uncover
-32
-Breach
-33
-Aid
-34
-Uphold
-35
-Falter
-36
-Suppress
-37
-Hunt
-38
-Share
-39
-Destroy
-40
-Avoid
-41
-Reject
-42
-Demand
-43
-Explore
-44
-Bolster
-45
-Seize
-46
-Mourn
-47
-Reveal
-48
-Gather
-49
-Defy
-50
-Transform
-51
-Persevere
-52
-Serve
-53
-Begin
-54
-Move
-55
-Coordinate
-56
-Resist
-57
-Await
-58
-Impress
-59
-Take
-60
-Oppose
-61
-Capture
-62
-Overwhelm
-63
-Challenge
-64
-Acquire
-65
-Protect
-66
-Finish
-67
-Strengthen
-68
-Restore
-69
-Advance
-70
-Command
-71
-Refuse
-72
-Find
-73
-Deliver
-74
-Hide
-75
-Fortify
-76
-Betray
-77
-Secure
-78
-Arrive
-79
-Affect
-80
-Change
-81
-Defend
-82
-Debate
-83
-Support
-84
-Follow
-85
-Construct
-86
-Locate
-87
-Endure
-88
-Release
-89
-Lose
-90
-Reduce
-91
-Escalate
-92
-Distract
-93
-Journey
-94
-Escort
-95
-Learn
-96
-Communicate
-97
-Depart
-98
-Search
-99
-Charge
-100
-Summon"
+
+[node name="TextOracleGrabber" type="TextEdit" parent="."]
+margin_right = 710.0
+margin_bottom = 597.0
+script = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+data_input = "1-30
+The threat readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, Reach a Milestone. Otherwise, mark menace.
+31-70
+The threat works subtly to advance toward its goal, or the danger escalates. Mark menace.
+71-100
+The threat makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice"

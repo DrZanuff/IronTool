@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "RAVAGING HORDE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Overrun defenses\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Gather resources\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Attack a location\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Expand forces\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Appoint or reveal a leader\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Send forth a champion\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Create a diversion\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Undermine an opposing force from within\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Cut off supplies or reinforcements\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Employ a new weapon\"}
+]"

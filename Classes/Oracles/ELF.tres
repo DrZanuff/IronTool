@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "NAMES"
+oracle_name = "ELF"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Arsula\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Naidita\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Belesunna\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Vidarna\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Ninsunu\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Balathu\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Dorosi\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Gezera\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Zursan\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Seleeku\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Utamara\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Nebakay\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Dismashk\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Mitunu\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Atani\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Kinzura\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Sumula\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Ukames\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Ahmeshki\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Ilsit\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Mayatanay\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Etana\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Gamanna\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Nessana\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Uralar\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Tishetu\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Leucia\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Sutahe\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Dotani\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Uktannu\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Retenay\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Kendalanu\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Tahuta\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Mattissa\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Anatu\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Aralu\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Arakhi\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Ibrahem\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Sinosu\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Jemshida\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Visapni\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Hullata\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Sidura\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Kerihu\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Ereshki\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Cybela\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Anunna\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Otani\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Ditani\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Faraza\"}
+]"

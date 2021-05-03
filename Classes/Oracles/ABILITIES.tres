@@ -1,0 +1,51 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MONSTROSITY"
+oracle_name = "ABILITIES"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,4\"  , \"name\"     : \"Keen senses\"},
+{\"range\" : \"5,8\"  , \"name\"     : \"Intimidating vocalization\"},
+{\"range\" : \"9,12\"  , \"name\"     : \"Climber\"},
+{\"range\" : \"13,16\"  , \"name\"     : \"Intelligent\"},
+{\"range\" : \"17,20\"  , \"name\"     : \"Swift\"},
+{\"range\" : \"21,24\"  , \"name\"     : \"Powerful bite\"},
+{\"range\" : \"25,28\"  , \"name\"     : \"Stealthy / ambusher\"},
+{\"range\" : \"29,32\"  , \"name\"     : \"Horrid visage\"},
+{\"range\" : \"33,36\"  , \"name\"     : \"Strong\"},
+{\"range\" : \"37,40\"  , \"name\"     : \"Camouflaged\"},
+{\"range\" : \"41,43\"  , \"name\"     : \"Flier / glider\"},
+{\"range\" : \"44,46\"  , \"name\"     : \"Poisonous\"},
+{\"range\" : \"47,49\"  , \"name\"     : \"Semiaquatic / swimmer\"},
+{\"range\" : \"50,52\"  , \"name\"     : \"Grappler / entangler\"},
+{\"range\" : \"53,55\"  , \"name\"     : \"Leaper\"},
+{\"range\" : \"56,58\"  , \"name\"     : \"Crusher / constrictor\"},
+{\"range\" : \"59,61\"  , \"name\"     : \"Armored\"},
+{\"range\" : \"62,64\"  , \"name\"     : \"Burrower\"},
+{\"range\" : \"65,67\"  , \"name\"     : \"Noxious smell\"},
+{\"range\" : \"68,69\"  , \"name\"     : \"Trap-setter\"},
+{\"range\" : \"70,71\"  , \"name\"     : \"Parasitic\"},
+{\"range\" : \"72,73\"  , \"name\"     : \"Vibration sense\"},
+{\"range\" : \"74,75\"  , \"name\"     : \"Breath weapon / toxic spew\"},
+{\"range\" : \"76,77\"  , \"name\"     : \"Mimicry\"},
+{\"range\" : \"78,79\"  , \"name\"     : \"Shapeshifting\"},
+{\"range\" : \"80,81\"  , \"name\"     : \"Control lesser creatures\"},
+{\"range\" : \"82,83\"  , \"name\"     : \"Echolocation\"},
+{\"range\" : \"84,85\"  , \"name\"     : \"Electric shock\"},
+{\"range\" : \"86,87\"  , \"name\"     : \"Acidic\"},
+{\"range\" : \"88,89\"  , \"name\"     : \"Symbiotic\"},
+{\"range\" : \"90,91\"  , \"name\"     : \"Shoot projectiles\"},
+{\"range\" : \"92\"  , \"name\"     : \"Paralyzing\"},
+{\"range\" : \"93\"  , \"name\"     : \"Immune to iron\"},
+{\"range\" : \"94\"  , \"name\"     : \"Feels no pain\"},
+{\"range\" : \"95\"  , \"name\"     : \"Enact rituals\"},
+{\"range\" : \"96\"  , \"name\"     : \"Create illusions\"},
+{\"range\" : \"97\"  , \"name\"     : \"Mind control / telepathy\"},
+{\"range\" : \"98\"  , \"name\"     : \"Move between realities\"},
+{\"range\" : \"99\"  , \"name\"     : \"Wield weapons\"},
+{\"range\" : \"100\"  , \"name\"     : \"Control elements\"}
+]"

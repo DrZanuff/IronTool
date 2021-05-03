@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "ENDURE HARM ORACLE"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"The harm is mortal.\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"You are dying. You need to Heal within an hour or two, or Face Death.\"},
+{\"range\" : \"21,35\"  , \"name\"     : \"You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to a foe not inclined to show mercy, Face Death.\"},
+{\"range\" : \"36,50\"  , \"name\"     : \"You are reeling and fighting to stay conscious. If you engage in any vigorous activity (such as running or fighting) before taking a breather for a few minutes, roll on this table again (before resolving the other move).\"},
+{\"range\" : \"51,100\"  , \"name\"     : \"You are battered but still standing.\"}
+]"

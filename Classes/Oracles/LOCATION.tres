@@ -1,0 +1,65 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "LOCATION"
+oracle_name = "LOCATION"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1\"  , \"name\"     : \"Hideout\"},
+{\"range\" : \"2\"  , \"name\"     : \"Ruin\"},
+{\"range\" : \"3\"  , \"name\"     : \"Mine\"},
+{\"range\" : \"4\"  , \"name\"     : \"Waste\"},
+{\"range\" : \"5\"  , \"name\"     : \"Mystical Site\"},
+{\"range\" : \"6\"  , \"name\"     : \"Path\"},
+{\"range\" : \"7\"  , \"name\"     : \"Outpost\"},
+{\"range\" : \"8\"  , \"name\"     : \"Wall\"},
+{\"range\" : \"9\"  , \"name\"     : \"Battlefield\"},
+{\"range\" : \"10\"  , \"name\"     : \"Hovel\"},
+{\"range\" : \"11\"  , \"name\"     : \"Spring\"},
+{\"range\" : \"12\"  , \"name\"     : \"Lair\"},
+{\"range\" : \"13\"  , \"name\"     : \"Fort\"},
+{\"range\" : \"14\"  , \"name\"     : \"Bridge\"},
+{\"range\" : \"15\"  , \"name\"     : \"Camp\"},
+{\"range\" : \"16\"  , \"name\"     : \"Cairn/Grave\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Caravan\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Waterfall\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Cave\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Swamp\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Fen\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Ravine\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Road\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Tree\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Pond\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Fields\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Marsh\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Steading\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Rapids\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Pass\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Trail\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Glade\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Plain\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Ridge\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Cliff\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Grove\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Village\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Moor\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Thicket\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"River Ford\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Valley\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Bay/Fjord\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Foothills\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Lake\"},
+{\"range\" : \"73,75\"  , \"name\"     : \"River\"},
+{\"range\" : \"76,79\"  , \"name\"     : \"Forest\"},
+{\"range\" : \"80,83\"  , \"name\"     : \"Coast\"},
+{\"range\" : \"84,88\"  , \"name\"     : \"Hill\"},
+{\"range\" : \"89,93\"  , \"name\"     : \"Mountain\"},
+{\"range\" : \"94,99\"  , \"name\"     : \"Woods\"},
+{\"range\" : \"100\"  , \"name\"     : \"Anomaly\"}
+
+  
+]"

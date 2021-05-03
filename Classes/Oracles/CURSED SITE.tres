@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "CURSED SITE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Unleash a creature or being\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Lure the unwary into its depths\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Offer promises of power\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Reveal a new aspect of its cursed history\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Expand its malignancy to surrounding lands\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Leave its mark on an inhabitant or visitor\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Reveal hidden depths\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Ensnare an important person or object\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Corrupt the environment\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Transform its nature\"}
+]"

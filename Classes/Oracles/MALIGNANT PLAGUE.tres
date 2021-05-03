@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "MALIGNANT PLAGUE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Manifest new symptoms or effects\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Infect someone important\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Expand to new territory or communities\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Allow someone to take advantage\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Allow someone to take the blame\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Create panic or disorder\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Force a horrible decision\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Lure into complacency\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Reveal the root of the sickness\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Undermine a potential cure\"}
+]"

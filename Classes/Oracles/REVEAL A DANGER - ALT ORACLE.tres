@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "REVEAL A DANGER - ALT ORACLE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,22\"  , \"name\"     : \"You encounter a hostile denizen.\"},
+{\"range\" : \"23,42\"  , \"name\"     : \"You face an environmental or architectural hazard.\"},
+{\"range\" : \"43,58\"  , \"name\"     : \"A discovery undermines or complicates your quest.\"},
+{\"range\" : \"59,64\"  , \"name\"     : \"You confront a harrowing situation or sensation.\"},
+{\"range\" : \"65,70\"  , \"name\"     : \"You face the consequences of an earlier choice or approach.\"},
+{\"range\" : \"71,76\"  , \"name\"     : \"The path is blocked or trapped.\"},
+{\"range\" : \"77,82\"  , \"name\"     : \"A resource is diminished, broken, or lost.\"},
+{\"range\" : \"83,88\"  , \"name\"     : \"You face a perplexing mystery or tough choice.\"},
+{\"range\" : \"89,94\"  , \"name\"     : \"You lose your way or are delayed.\"},
+{\"range\" : \"95,100\"  , \"name\"     : \"Roll twice more on this table. Both results occur. If they are the same result, make it worse.\"}
+]"

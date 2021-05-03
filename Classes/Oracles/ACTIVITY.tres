@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "CHARACTER"
+oracle_name = "ACTIVITY"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Guarding\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Preserving\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Constructing\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Mending\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Assisting\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Securing\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Learning\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Sneaking\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Fleeing\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Sacrificing\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Creating\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Luring\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Hunting\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Seizing\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Bargaining\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Mimicking\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Tricking\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Tracking\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Escorting\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Hiding\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Raiding\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Socializing\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Exploring\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Journeying\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Supporting\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Avoiding\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Disabling\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Leading\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Assaulting\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Ensnaring\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Defending\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Recovering\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Patrolling\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Resting\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Distracting\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Leaving\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Fighting\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Ambushing\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Controlling\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Observing\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Gathering\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Suffering\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Threatening\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Searching\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Destroying\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Restoring\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Consuming\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Removing\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Inspecting\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Summoning\"}
+]"

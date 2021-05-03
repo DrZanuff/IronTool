@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "REVEAL A DANGER ORACLE"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,30\"  , \"name\"     : \"Check the theme card.\"},
+{\"range\" : \"31,45\"  , \"name\"     : \"Check the domain card.\"},
+{\"range\" : \"46,57\"  , \"name\"     : \"You encounter a hostile denizen.\"},
+{\"range\" : \"58,68\"  , \"name\"     : \"You face an environmental or architectural hazard.\"},
+{\"range\" : \"69,76\"  , \"name\"     : \"A discovery undermines or complicates your quest.\"},
+{\"range\" : \"77,79\"  , \"name\"     : \"You confront a harrowing situation or sensation.\"},
+{\"range\" : \"80,82\"  , \"name\"     : \"You face the consequences of an earlier choice or approach.\"},
+{\"range\" : \"83,85\"  , \"name\"     : \"Your way is blocked or trapped.\"},
+{\"range\" : \"86,88\"  , \"name\"     : \"A resource is diminished, broken, or lost.\"},
+{\"range\" : \"89,91\"  , \"name\"     : \"You face a perplexing mystery or tough choice.\"},
+{\"range\" : \"92,94\"  , \"name\"     : \"You lose your way or are delayed.\"},
+{\"range\" : \"95,100\"  , \"name\"     : \"Roll twice more on this table. Both results occur. If they are the same result, make it worse.\"}
+]"

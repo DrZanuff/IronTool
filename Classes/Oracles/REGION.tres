@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "LOCATION"
+oracle_name = "REGION"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1,12\"  , \"name\"     : \"Barrier Islands\"},
+{\"range\" : \"13,24\"  , \"name\"     : \"Ragged Coast\"},
+{\"range\" : \"25,34\"  , \"name\"     : \"Deep Wilds\"},
+{\"range\" : \"35,46\"  , \"name\"     : \"Flooded Lands\"},
+{\"range\" : \"47,60\"  , \"name\"     : \"Havens\"},
+{\"range\" : \"61,72\"  , \"name\"     : \"Hinterlands\"},
+{\"range\" : \"73,84\"  , \"name\"     : \"Tempest Hills\"},
+{\"range\" : \"85,94\"  , \"name\"     : \"Veiled Mountains\"},
+{\"range\" : \"95,99\"  , \"name\"     : \"Shattered Wastes\"},
+{\"range\" : \"100\"  , \"name\"     : \"Elsewhere\"}
+
+  
+]"

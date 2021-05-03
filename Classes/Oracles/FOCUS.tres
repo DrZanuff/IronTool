@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "FEATURE"
+oracle_name = "FOCUS"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Attack\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Threshold\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Boundary\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Alarm\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Exit\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Passage\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Crossing\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Trigger\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Trap\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Hideaway\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Nature\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Sign\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Refuge\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Valuables\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Breach\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Route\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Location\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Trail\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Supply\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"History\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Prisoner\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Habitation\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Debris\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Creature\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Lair\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Person\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Enclosure\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Remains\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Water\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Message\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Darkness\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Opening\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Weapon\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Entry\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Illumination\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Obstacle\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Craft\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Container\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Information\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Grave\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Equipment\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Shelter\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Denizen\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Environment\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Material\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Resource\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Corruption\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Death\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Function\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Power\"}
+]"

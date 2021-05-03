@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "TRAP"
+oracle_name = "COMPONENT"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,4\"  , \"name\"     : \"Pit\"},
+{\"range\" : \"5,8\"  , \"name\"     : \"Water\"},
+{\"range\" : \"9,12\"  , \"name\"     : \"Fire\"},
+{\"range\" : \"13,16\"  , \"name\"     : \"Projectile\"},
+{\"range\" : \"17,20\"  , \"name\"     : \"Passage\"},
+{\"range\" : \"21,24\"  , \"name\"     : \"Fall\"},
+{\"range\" : \"25,28\"  , \"name\"     : \"Debris\"},
+{\"range\" : \"29,32\"  , \"name\"     : \"Fear\"},
+{\"range\" : \"33,36\"  , \"name\"     : \"Alarm\"},
+{\"range\" : \"37,40\"  , \"name\"     : \"Trigger\"},
+{\"range\" : \"41,44\"  , \"name\"     : \"Cold\"},
+{\"range\" : \"45,48\"  , \"name\"     : \"Weapon\"},
+{\"range\" : \"49,52\"  , \"name\"     : \"Darkness\"},
+{\"range\" : \"53,56\"  , \"name\"     : \"Decay\"},
+{\"range\" : \"57,60\"  , \"name\"     : \"Path\"},
+{\"range\" : \"61,64\"  , \"name\"     : \"Stone\"},
+{\"range\" : \"65,68\"  , \"name\"     : \"Terrain\"},
+{\"range\" : \"69,72\"  , \"name\"     : \"Poison\"},
+{\"range\" : \"73,76\"  , \"name\"     : \"Barrier\"},
+{\"range\" : \"77,80\"  , \"name\"     : \"Overhead\"},
+{\"range\" : \"81,84\"  , \"name\"     : \"Magic\"},
+{\"range\" : \"85,88\"  , \"name\"     : \"Toxin\"},
+{\"range\" : \"89,92\"  , \"name\"     : \"Earth\"},
+{\"range\" : \"93,96\"  , \"name\"     : \"Light\"},
+{\"range\" : \"97,100\"  , \"name\"     : \"Denizen\"}
+]"

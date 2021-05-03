@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "NAMES"
+oracle_name = "GIANT"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,4\"  , \"name\"     : \"Chony\"},
+{\"range\" : \"5,8\"  , \"name\"     : \"Banda\"},
+{\"range\" : \"9,12\"  , \"name\"     : \"Jochu\"},
+{\"range\" : \"13,16\"  , \"name\"     : \"Kira\"},
+{\"range\" : \"17,20\"  , \"name\"     : \"Khatir\"},
+{\"range\" : \"21,24\"  , \"name\"     : \"Chaidu\"},
+{\"range\" : \"25,28\"  , \"name\"     : \"Atan\"},
+{\"range\" : \"29,32\"  , \"name\"     : \"Buandu\"},
+{\"range\" : \"33,36\"  , \"name\"     : \"Javyn\"},
+{\"range\" : \"37,40\"  , \"name\"     : \"Khashin\"},
+{\"range\" : \"41,44\"  , \"name\"     : \"Bayara\"},
+{\"range\" : \"45,48\"  , \"name\"     : \"Temura\"},
+{\"range\" : \"49,52\"  , \"name\"     : \"Kidha\"},
+{\"range\" : \"53,56\"  , \"name\"     : \"Kathos\"},
+{\"range\" : \"57,60\"  , \"name\"     : \"Tanua\"},
+{\"range\" : \"61,64\"  , \"name\"     : \"Bashtu\"},
+{\"range\" : \"65,68\"  , \"name\"     : \"Jaran\"},
+{\"range\" : \"69,72\"  , \"name\"     : \"Othos\"},
+{\"range\" : \"73,76\"  , \"name\"     : \"Khutan\"},
+{\"range\" : \"77,80\"  , \"name\"     : \"Otaan\"},
+{\"range\" : \"81,84\"  , \"name\"     : \"Martu\"},
+{\"range\" : \"85,88\"  , \"name\"     : \"Baku\"},
+{\"range\" : \"89,92\"  , \"name\"     : \"Tuban\"},
+{\"range\" : \"93,96\"  , \"name\"     : \"Qudan\"},
+{\"range\" : \"97,100\"  , \"name\"     : \"Denua\"}
+]"

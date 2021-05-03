@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "LOCATION"
+oracle_name = "SETTLEMENT NAME"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,15\"  , \"name\"     : \"A feature of the landscape. Envision what it is. What makes it unusual or distinctive?\"},
+{\"range\" : \"16,30\"  , \"name\"     : \"A manmade edifice. What is it? Why is it important to this settlement’s history?\"},
+{\"range\" : \"31,45\"  , \"name\"     : \"A creature. Why have the people of this settlement chosen this creature as their totem? How is it represented in art or rituals?\"},
+{\"range\" : \"46,60\"  , \"name\"     : \"A historical event. What happened here? What place or practice commemorates this event?\"},
+{\"range\" : \"61,75\"  , \"name\"     : \"A word in an Old World language. What culture is represented by this word? What does it translate to?\"},
+{\"range\" : \"76,90\"  , \"name\"     : \"A season or environmental aspect. What influence does the weather have on this settlement?\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Something Else...\"}
+]"

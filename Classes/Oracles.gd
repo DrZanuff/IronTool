@@ -2,6 +2,7 @@ class_name Oracles extends Resource
 
 export (String) var type
 export (String) var oracle_name
+export (String) var module
 export (String,MULTILINE) var data
 
 func get_data_as_object():

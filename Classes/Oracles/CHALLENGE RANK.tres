@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PLOT"
+oracle_name = "CHALLENGE RANK"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1,20\"  , \"name\"     : \"Troublesome\"},
+{\"range\" : \"21,55\"  , \"name\"     : \"Dangerous\"},
+{\"range\" : \"56,80\"  , \"name\"     : \"Formidable\"},
+{\"range\" : \"81,93\"  , \"name\"     : \"Extreme\"},
+{\"range\" : \"94,100\"  , \"name\"     : \"Epic\"}
+  
+]"

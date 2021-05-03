@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "COMBAT EVENT"
+oracle_name = "TARGET"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Control\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Defense\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Limbs\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Focus\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Advantage\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Range\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Stress\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Sense\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Weakness\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Opening\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Fear\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Instinct\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Footing\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Maneuver\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Reach\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Harm\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Finesse\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Weapon\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Environment\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Technique\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Surprise\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Pride\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Wound\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Precision\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Ally\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Ground\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Courage\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Companion\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Object\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Momentum\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Speed\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Strength\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Supply\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Terrain\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Armor\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Skill\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Body\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Protection\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Resolve\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Ferocity\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Shield\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Ammo\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Anger\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Opportunity\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Balance\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Position\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Barrier\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Strategy\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Grasp\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Power\"}
+]"

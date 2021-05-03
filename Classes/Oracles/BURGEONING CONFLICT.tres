@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "BURGEONING CONFLICT"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Allow warmongers to gain influence\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Break a treaty\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Force a hasty decision\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Deepen suspicions\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Trigger a confrontation\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Subvert a potential accord\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Isolate the antagonists\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Draw new battle lines\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Reveal an unexpected aspect of the dispute\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Introduce a new person or faction to complicate the situation\"}
+]"

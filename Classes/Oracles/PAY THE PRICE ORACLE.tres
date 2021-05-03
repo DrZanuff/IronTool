@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "MOVES"
+oracle_name = "PAY THE PRICE ORACLE"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Roll again and apply that result but make it worse. If you roll this result yet again, think of something dreadful that changes the course of your quest (Ask the Oracle if unsure) and make it happen.\"},
+{\"range\" : \"3,5\"  , \"name\"     : \"A person or community you trusted loses faith in you, or acts against you.\"},
+{\"range\" : \"6,9\"  , \"name\"     : \"A person or community you care about is exposed to danger.\"},
+{\"range\" : \"10,16\"  , \"name\"     : \"You are separated from something or someone.\"},
+{\"range\" : \"17,23\"  , \"name\"     : \"Your action has an unintended effect.\"},
+{\"range\" : \"24,32\"  , \"name\"     : \"Something of value is lost or destroyed.\"},
+{\"range\" : \"33,41\"  , \"name\"     : \"The current situation worsens.\"},
+{\"range\" : \"42,50\"  , \"name\"     : \"A new danger or foe is revealed.\"},
+{\"range\" : \"51,59\"  , \"name\"     : \"It causes a delay or puts you at a disadvantage.\"},
+{\"range\" : \"60,68\"  , \"name\"     : \"It is harmful.\"},
+{\"range\" : \"69,77\"  , \"name\"     : \"It is stressful.\"},
+{\"range\" : \"78,85\"  , \"name\"     : \"A surprising development complicates your quest.\"},
+{\"range\" : \"86,90\"  , \"name\"     : \"It wastes resources.\"},
+{\"range\" : \"91,94\"  , \"name\"     : \"It forces you to act against your best intentions.\"},
+{\"range\" : \"95,98\"  , \"name\"     : \"A friend, companion, or ally is put in harm’s way (or you are, if alone)\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Roll twice more on this table. Both results occur. If they are the same result, make it worse.\"}
+]"

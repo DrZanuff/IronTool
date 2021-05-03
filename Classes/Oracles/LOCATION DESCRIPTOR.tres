@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "LOCATION"
+oracle_name = "LOCATION DESCRIPTOR"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"High\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Remote\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Exposed\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Small\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Broken\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Diverse\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Rough\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Dark\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Shadowy\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Contested\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Grim\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Wild\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Fertile\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Blocked\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Ancient\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Perilous\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Hidden\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Occupied\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Rich\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Big\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Savage\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Defended\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Withered\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Mystical\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Inaccessible\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Protected\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Abandoned\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Wide\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Foul\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Dead\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Ruined\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Barren\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Cold\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Blighted\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Low\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Beautiful\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Abundant\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Lush\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Flooded\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Empty\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Strange\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Corrupted\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Peaceful\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Forgotten\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Expansive\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Settled\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Dense\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Civilized\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Desolate\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Isolated\"}
+]"

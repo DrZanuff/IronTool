@@ -1,0 +1,61 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "FEATURE"
+oracle_name = "ASPECT"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,2\"  , \"name\"     : \"Blocked\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Crafted\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Ancient\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Sunken\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Trapped\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Secret\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Toxic\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Ruined\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Defended\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Decaying\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Marked\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Guarded\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Inaccessible\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Foreboding\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Veiled\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Deep\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Depleted\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Foul\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"Elevated\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Moving\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Unnatural\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"Active\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Confined\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Fortified\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Collapsed\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Isolated\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Destroyed\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Open\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Sacred\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Flooded\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Complex\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"Abundant\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Hidden\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Expansive\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Mysterious\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Unstable\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Fragile\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Broken\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Ensnaring\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Pillaged\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Sealed\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"Makeshift\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Treacherous\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Natural\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Dead\"},
+{\"range\" : \"91,92\"  , \"name\"     : \"Unusual\"},
+{\"range\" : \"93,94\"  , \"name\"     : \"Abandoned\"},
+{\"range\" : \"95,96\"  , \"name\"     : \"Deadly\"},
+{\"range\" : \"97,98\"  , \"name\"     : \"Forgotten\"},
+{\"range\" : \"99,100\"  , \"name\"     : \"Mystical\"}
+]"

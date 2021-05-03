@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PLOT"
+oracle_name = "MAJOR PLOT TWIST"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1,5\"  , \"name\"     : \"It was all a diversion.\"},
+{\"range\" : \"6,10\"  , \"name\"     : \"A dark secret is revealed.\"},
+{\"range\" : \"11,15\"  , \"name\"     : \"A trap is sprung.\"},
+{\"range\" : \"16,20\"  , \"name\"     : \"An assumption is revealed to be false.\"},
+{\"range\" : \"21,25\"  , \"name\"     : \"A secret alliance is revealed.\"},
+{\"range\" : \"26,30\"  , \"name\"     : \"Your actions benefit an enemy.\"},
+{\"range\" : \"31,35\"  , \"name\"     : \"Someone returns unexpectedly.\"},
+{\"range\" : \"36,40\"  , \"name\"     : \"A more dangerous foe is revealed.\"},
+{\"range\" : \"41,45\"  , \"name\"     : \"You and an enemy share a common goal.\"},
+{\"range\" : \"46,50\"  , \"name\"     : \"A true identity is revealed.\"},
+{\"range\" : \"51,55\"  , \"name\"     : \"You are betrayed by someone who was trusted.\"},
+{\"range\" : \"56,60\"  , \"name\"     : \"You are too late.\"},
+{\"range\" : \"61,65\"  , \"name\"     : \"The true enemy is revealed.\"},
+{\"range\" : \"66,70\"  , \"name\"     : \"The enemy gains new allies.\"},
+{\"range\" : \"71,75\"  , \"name\"     : \"A new danger appears.\"},
+{\"range\" : \"76,80\"  , \"name\"     : \"Someone or something goes missing.\"},
+{\"range\" : \"81,85\"  , \"name\"     : \"The truth of a relationship is revealed.\"},
+{\"range\" : \"86,90\"  , \"name\"     : \"Two seemingly unrelated situations are shown to be connected.\"},
+{\"range\" : \"91,95\"  , \"name\"     : \"Unexpected powers or abilities are revealed.\"},
+{\"range\" : \"96,100\"  , \"name\"     : \"Roll twice more on this table. Both results occur. If they are the same result, make it more dramatic.\"}
+
+  
+]"

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PLOT"
+oracle_name = "SETTLEMENT TROUBLE"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1,2\"  , \"name\"     : \"Outsiders rejected\"},
+{\"range\" : \"3,4\"  , \"name\"     : \"Dangerous discovery\"},
+{\"range\" : \"5,6\"  , \"name\"     : \"Dreadful omens\"},
+{\"range\" : \"7,8\"  , \"name\"     : \"Natural disaster\"},
+{\"range\" : \"9,10\"  , \"name\"     : \"Old wounds reopened\"},
+{\"range\" : \"11,12\"  , \"name\"     : \"Important object is lost\"},
+{\"range\" : \"13,14\"  , \"name\"     : \"Someone is captured\"},
+{\"range\" : \"15,16\"  , \"name\"     : \"Mysterious phenomenon\"},
+{\"range\" : \"17,18\"  , \"name\"     : \"Revolt against a leader\"},
+{\"range\" : \"19,20\"  , \"name\"     : \"Vengeful outcast\"},
+{\"range\" : \"21,22\"  , \"name\"     : \"Rival settlement\"},
+{\"range\" : \"23,24\"  , \"name\"     : \"Nature strikes back\"},
+{\"range\" : \"25,26\"  , \"name\"     : \"Someone is missing\"},
+{\"range\" : \"27,28\"  , \"name\"     : \"Production halts\"},
+{\"range\" : \"29,30\"  , \"name\"     : \"Mysterious murders\"},
+{\"range\" : \"31,32\"  , \"name\"     : \"Debt comes due\"},
+{\"range\" : \"33,34\"  , \"name\"     : \"Unjust leadership\"},
+{\"range\" : \"35,36\"  , \"name\"     : \"Disastrous accident\"},
+{\"range\" : \"37,38\"  , \"name\"     : \"In league with the enemy\"},
+{\"range\" : \"39,40\"  , \"name\"     : \"Raiders prey on the weak\"},
+{\"range\" : \"41,42\"  , \"name\"     : \"Cursed past\"},
+{\"range\" : \"43,44\"  , \"name\"     : \"An innocent is accused\"},
+{\"range\" : \"45,46\"  , \"name\"     : \"Corrupted by dark magic\"},
+{\"range\" : \"47,48\"  , \"name\"     : \"Isolated by brutal weather\"},
+{\"range\" : \"49,50\"  , \"name\"     : \"Provisions are scarce\"},
+{\"range\" : \"51,52\"  , \"name\"     : \"Sickness run amok\"},
+{\"range\" : \"53,54\"  , \"name\"     : \"Allies become enemies\"},
+{\"range\" : \"55,56\"  , \"name\"     : \"Attack is imminent\"},
+{\"range\" : \"57,58\"  , \"name\"     : \"Lost caravan\"},
+{\"range\" : \"59,60\"  , \"name\"     : \"Dark secret revealed\"},
+{\"range\" : \"61,62\"  , \"name\"     : \"Urgent expedition\"},
+{\"range\" : \"63,64\"  , \"name\"     : \"A leader falls\"},
+{\"range\" : \"65,66\"  , \"name\"     : \"Families in conflict\"},
+{\"range\" : \"67,68\"  , \"name\"     : \"Incompetent leadership\"},
+{\"range\" : \"69,70\"  , \"name\"     : \"Reckless warmongering\"},
+{\"range\" : \"71,72\"  , \"name\"     : \"Beast on the hunt\"},
+{\"range\" : \"73,74\"  , \"name\"     : \"Betrayed from within\"},
+{\"range\" : \"75,76\"  , \"name\"     : \"Broken truce\"},
+{\"range\" : \"77,78\"  , \"name\"     : \"Wrathful haunt\"},
+{\"range\" : \"79,80\"  , \"name\"     : \"Conflict with firstborn\"},
+{\"range\" : \"81,82\"  , \"name\"     : \"Trade route blocked\"},
+{\"range\" : \"83,84\"  , \"name\"     : \"In the crossfire\"},
+{\"range\" : \"85,86\"  , \"name\"     : \"Stranger causes discord\"},
+{\"range\" : \"87,88\"  , \"name\"     : \"Important event threatened\"},
+{\"range\" : \"89,90\"  , \"name\"     : \"Dangerous tradition\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Roll twice\"}
+
+  
+]"

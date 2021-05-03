@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "NAMES"
+oracle_name = "VAROU"
+module = "IRONSWORN"
+data = "[
+{\"range\" : \"1,4\"  , \"name\"     : \"Vata\"},
+{\"range\" : \"5,8\"  , \"name\"     : \"Zora\"},
+{\"range\" : \"9,12\"  , \"name\"     : \"Jasna\"},
+{\"range\" : \"13,16\"  , \"name\"     : \"Charna\"},
+{\"range\" : \"17,20\"  , \"name\"     : \"Tana\"},
+{\"range\" : \"21,24\"  , \"name\"     : \"Soveen\"},
+{\"range\" : \"25,28\"  , \"name\"     : \"Radka\"},
+{\"range\" : \"29,32\"  , \"name\"     : \"Zlata\"},
+{\"range\" : \"33,36\"  , \"name\"     : \"Leesla\"},
+{\"range\" : \"37,40\"  , \"name\"     : \"Byna\"},
+{\"range\" : \"41,44\"  , \"name\"     : \"Meeka\"},
+{\"range\" : \"45,48\"  , \"name\"     : \"Iskra\"},
+{\"range\" : \"49,52\"  , \"name\"     : \"Jarek\"},
+{\"range\" : \"53,56\"  , \"name\"     : \"Darva\"},
+{\"range\" : \"57,60\"  , \"name\"     : \"Neda\"},
+{\"range\" : \"61,64\"  , \"name\"     : \"Keha\"},
+{\"range\" : \"65,68\"  , \"name\"     : \"Zhivka\"},
+{\"range\" : \"69,72\"  , \"name\"     : \"Kvata\"},
+{\"range\" : \"73,76\"  , \"name\"     : \"Staysa\"},
+{\"range\" : \"77,80\"  , \"name\"     : \"Evka\"},
+{\"range\" : \"81,84\"  , \"name\"     : \"Vuksha\"},
+{\"range\" : \"85,88\"  , \"name\"     : \"Muko\"},
+{\"range\" : \"89,92\"  , \"name\"     : \"Dreko\"},
+{\"range\" : \"93,96\"  , \"name\"     : \"Aleko\"},
+{\"range\" : \"97,100\"  , \"name\"     : \"Vojan\"}
+]"

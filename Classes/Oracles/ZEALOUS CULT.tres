@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "ZEALOUS CULT"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Overtake a faction or community\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Unlock secrets to greater power\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Establish false credibility\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Appoint or reveal a leader\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Lure new members or establish alliances\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Subvert opposition through devious schemes\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Attack opposition directly\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Spread the word of its doctrine\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Reveal a dire prophecy\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Reveal its true nature or goal\"}
+]"

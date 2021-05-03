@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "PLOT"
+oracle_name = "COMBAT ACTIONS"
+module = "IRONSWORN"
+data = "[
+
+{\"range\" : \"1,3\"  , \"name\"     : \"Compel a surrender\"},
+{\"range\" : \"4,6\"  , \"name\"     : \"Coordinate with allies\"},
+{\"range\" : \"7,9\"  , \"name\"     : \"Gather reinforcements\"},
+{\"range\" : \"10,13\"  , \"name\"     : \"Seize something or someone\"},
+{\"range\" : \"14,17\"  , \"name\"     : \"Provoke a reckless response\"},
+{\"range\" : \"18,21\"  , \"name\"     : \"Intimidate or frighten\"},
+{\"range\" : \"22,25\"  , \"name\"     : \"Reveal a surprising truth\"},
+{\"range\" : \"26,29\"  , \"name\"     : \"Shift focus to someone or something else\"},
+{\"range\" : \"30,33\"  , \"name\"     : \"Destroy something, or render it useless\"},
+{\"range\" : \"34,39\"  , \"name\"     : \"Take a decisive action\"},
+{\"range\" : \"40,45\"  , \"name\"     : \"Reinforce defenses\"},
+{\"range\" : \"46,52\"  , \"name\"     : \"Ready an action\"},
+{\"range\" : \"53,60\"  , \"name\"     : \"Use the terrain to gain advantage\"},
+{\"range\" : \"61,68\"  , \"name\"     : \"Leverage the advantage of a weapon or ability\"},
+{\"range\" : \"69,78\"  , \"name\"     : \"Create an opportunity\"},
+{\"range\" : \"79,89\"  , \"name\"     : \"Attack with precision\"},
+{\"range\" : \"90,99\"  , \"name\"     : \"Attack with power\"},
+{\"range\" : \"100\"  , \"name\"     : \"Take a completely unexpected action\"}
+
+
+  
+]"

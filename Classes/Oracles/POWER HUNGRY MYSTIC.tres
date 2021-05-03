@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/Oracles.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+type = "THREAT"
+oracle_name = "POWER HUNGRY MYSTIC"
+module = "DELVE"
+data = "[
+{\"range\" : \"1,10\"  , \"name\"     : \"Gain hidden knowledge\"},
+{\"range\" : \"11,20\"  , \"name\"     : \"Assault an enemy with magic\"},
+{\"range\" : \"21,30\"  , \"name\"     : \"Despoil a place through magic\"},
+{\"range\" : \"31,40\"  , \"name\"     : \"Forge a bond with ancient forces\"},
+{\"range\" : \"41,50\"  , \"name\"     : \"Create magical wards or protections\"},
+{\"range\" : \"51,60\"  , \"name\"     : \"Obtain a powerful artifact\"},
+{\"range\" : \"61,70\"  , \"name\"     : \"Tempt with power or secrets\"},
+{\"range\" : \"71,80\"  , \"name\"     : \"Recruit a follower or ally\"},
+{\"range\" : \"81,90\"  , \"name\"     : \"Sacrifice something in exchange for greater power\"},
+{\"range\" : \"91,100\"  , \"name\"     : \"Use magic to trick or deceive\"}
+]"
