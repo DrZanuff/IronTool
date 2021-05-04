@@ -9,6 +9,7 @@ func get_data_as_object():
 	var oracle_data = {
 		"type" : type,
 		"oracle_name" : oracle_name,
+		"module" : module,
 		"data" : data
 	}
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://SheetTemplate/Scripts/BondList.gd" type="Script" id=13]
 [ext_resource path="res://SheetTemplate/Asset/Asset.tscn" type="PackedScene" id=14]
 [ext_resource path="res://SheetTemplate/AssetsGrid.gd" type="Script" id=15]
+[ext_resource path="res://SheetTemplate/OracleBody.gd" type="Script" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -742,7 +743,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 1060.0
-margin_bottom = 345.0
+margin_bottom = 423.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
@@ -2331,7 +2332,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 132.0
+margin_bottom = 210.0
 rect_min_size = Vector2( 0, 100 )
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -2339,7 +2340,7 @@ custom_constants/margin_left = 50
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Settings"]
 margin_left = 50.0
 margin_right = 1010.0
-margin_bottom = 122.0
+margin_bottom = 200.0
 alignment = 1
 
 [node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
@@ -2483,9 +2484,10 @@ focus_mode = 0
 pressed = true
 
 [node name="Assets" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 132.0
+margin_bottom = 210.0
 
 [node name="AssetsGrid" type="GridContainer" parent="MainMargin/Body/Interfaces/Assets"]
 margin_left = 30.0
@@ -2543,6 +2545,54 @@ focus_mode = 1
 size_flags_horizontal = 10
 toggle_mode = true
 text = "MODIFY"
+
+[node name="Oracles" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+margin_top = 10.0
+margin_right = 1060.0
+margin_bottom = 210.0
+
+[node name="OracleBody" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Oracles"]
+margin_right = 1060.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 16 )
+
+[node name="OracleMenu" type="GridContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody"]
+margin_left = 530.0
+margin_right = 530.0
+margin_bottom = 98.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 5
+
+[node name="Tables" type="MarginContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody"]
+margin_top = 102.0
+margin_right = 1060.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBox" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody/Tables"]
+margin_right = 1060.0
+margin_bottom = 98.0
+
+[node name="SideMenu" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody/Tables/HBox"]
+margin_right = 301.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="Table" type="MarginContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody/Tables/HBox"]
+margin_left = 305.0
+margin_right = 1060.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
