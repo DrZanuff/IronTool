@@ -19,3 +19,5 @@ data = "[
 {\"range\" : \"81,90\"  , \"name\"     : \"Zealous Cult\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Roll Twice\"}
 ]"
+type_order = 1
+oracle_order = 0

@@ -1,5 +1,7 @@
 extends MarginContainer
 
+var order = 0
+
 func set_title(text):
 	$Body/Margin/Title.text = text
 

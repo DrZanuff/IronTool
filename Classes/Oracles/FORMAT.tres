@@ -16,3 +16,5 @@ data = "[
 {\"range\" : \"86,95\"  , \"name\"     : \"[Description] [Place] of [Namesake]\"},
 {\"range\" : \"96,100\"  , \"name\"     : \"[Place] of [Namesake]\"}
 ]"
+type_order = 6
+oracle_order = 0

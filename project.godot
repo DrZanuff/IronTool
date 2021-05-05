@@ -52,10 +52,6 @@ ui_mouse_left={
  ]
 }
 
-[network]
-
-limits/debugger_stdout/max_chars_per_second=90960
-
 [rendering]
 
 quality/driver/driver_name="GLES2"
