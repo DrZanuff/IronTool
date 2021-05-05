@@ -49,3 +49,5 @@ data = "[
 {\"range\" : \"99\"  , \"name\"     : \"Wield weapons\"},
 {\"range\" : \"100\"  , \"name\"     : \"Control elements\"}
 ]"
+type_order = 0
+oracle_order = 0

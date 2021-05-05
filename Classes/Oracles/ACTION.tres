@@ -111,3 +111,5 @@ data = "[
   {\"range\" : \"100\"  , \"name\"     : \"Summon\"}
   
 ]"
+type_order = 3
+oracle_order = 7

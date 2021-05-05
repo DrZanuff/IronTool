@@ -56,6 +56,7 @@ func _ready() -> void:
 				oracles[oracle.module][oracle.type] = {}
 			
 			oracles[oracle.module][oracle.type][oracle.oracle_name] = oracle.get_data_as_object()
+			oracles[oracle.module][oracle.type].order = 0
 			 
 		file_name = dir.get_next()
 	

@@ -54,7 +54,7 @@ ui_mouse_left={
 
 [network]
 
-limits/debugger_stdout/max_chars_per_second=40960
+limits/debugger_stdout/max_chars_per_second=90960
 
 [rendering]
 
