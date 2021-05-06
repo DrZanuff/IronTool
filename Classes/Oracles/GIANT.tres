@@ -34,3 +34,5 @@ data = "[
 {\"range\" : \"93,96\"  , \"name\"     : \"Qudan\"},
 {\"range\" : \"97,100\"  , \"name\"     : \"Denua\"}
 ]"
+type_order = 0
+oracle_order = 3

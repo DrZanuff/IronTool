@@ -21,3 +21,5 @@ data = "[
 {\"range\" : \"86,93\"  , \"name\"     : \"Threatening\"},
 {\"range\" : \"94,100\"  , \"name\"     : \"Hostile\"}
 ]"
+type_order = 0
+oracle_order = 2

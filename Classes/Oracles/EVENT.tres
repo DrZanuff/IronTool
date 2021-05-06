@@ -35,4 +35,4 @@ data = "[
 {\"range\" : \"97,100\"  , \"name\"     : \"Trigger\"}
 ]"
 type_order = 3
-oracle_order = 0
+oracle_order = 2

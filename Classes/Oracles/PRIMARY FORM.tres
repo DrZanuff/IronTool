@@ -27,3 +27,5 @@ data = "[
 {\"range\" : \"80\"  , \"name\"     : \"Elemental\"},
 {\"range\" : \"81,100\"  , \"name\"     : \"Hybrid (roll twice)\"}
 ]"
+type_order = 0
+oracle_order = 3

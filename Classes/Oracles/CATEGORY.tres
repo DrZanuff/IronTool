@@ -20,4 +20,4 @@ data = "[
 {\"range\" : \"91,100\"  , \"name\"     : \"Roll Twice\"}
 ]"
 type_order = 1
-oracle_order = 0
+oracle_order = 10

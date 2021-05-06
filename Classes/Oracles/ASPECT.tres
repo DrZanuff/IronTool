@@ -60,4 +60,4 @@ data = "[
 {\"range\" : \"99,100\"  , \"name\"     : \"Mystical\"}
 ]"
 type_order = 7
-oracle_order = 0
+oracle_order = 2

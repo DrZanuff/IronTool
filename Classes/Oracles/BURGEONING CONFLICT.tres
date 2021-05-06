@@ -19,3 +19,5 @@ data = "[
 {\"range\" : \"81,90\"  , \"name\"     : \"Reveal an unexpected aspect of the dispute\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Introduce a new person or faction to complicate the situation\"}
 ]"
+type_order = 0
+oracle_order = 9

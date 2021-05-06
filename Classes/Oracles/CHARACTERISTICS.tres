@@ -37,3 +37,5 @@ data = "[
 {\"range\" : \"99\"  , \"name\"     : \"Multi-headed\"},
 {\"range\" : \"100\"  , \"name\"     : \"Etched with mystic runes\"}
 ]"
+type_order = 0
+oracle_order = 2

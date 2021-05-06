@@ -19,3 +19,5 @@ data = "[
 {\"range\" : \"81,90\"  , \"name\"     : \"Force refugees into hostile lands\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Disrupt natural ecosystems\"}
 ]"
+type_order = 0
+oracle_order = 7

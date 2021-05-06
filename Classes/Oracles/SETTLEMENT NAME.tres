@@ -16,3 +16,5 @@ data = "[
 {\"range\" : \"76,90\"  , \"name\"     : \"A season or environmental aspect. What influence does the weather have on this settlement?\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Something Else...\"}
 ]"
+type_order = 0
+oracle_order = 2

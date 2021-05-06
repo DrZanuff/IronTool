@@ -42,3 +42,5 @@ data = "[
 {\"range\" : \"93,95\"  , \"name\"     : \"Resolve a dispute\"},
 {\"range\" : \"96,100\"  , \"name\"     : \"Roll twice\"}
 ]"
+type_order = 0
+oracle_order = 4

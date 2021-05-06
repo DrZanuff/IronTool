@@ -18,4 +18,4 @@ data = "[
 {\"range\" : \"88,100\"  , \"name\"     : \"Wild\"}
 ]"
 type_order = 5
-oracle_order = 0
+oracle_order = 2

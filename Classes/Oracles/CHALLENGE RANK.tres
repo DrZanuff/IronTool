@@ -16,3 +16,5 @@ data = "[
 {\"range\" : \"94,100\"  , \"name\"     : \"Epic\"}
   
 ]"
+type_order = 0
+oracle_order = 1

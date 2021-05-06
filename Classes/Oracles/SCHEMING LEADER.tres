@@ -19,3 +19,5 @@ data = "[
 {\"range\" : \"81,90\"  , \"name\"     : \"Incite conflict\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Use an unexpected capability or asset\"}
 ]"
+type_order = 0
+oracle_order = 3

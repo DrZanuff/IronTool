@@ -37,3 +37,5 @@ data = "[
 
   
 ]"
+type_order = 0
+oracle_order = 2

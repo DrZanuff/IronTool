@@ -19,3 +19,5 @@ data = "[
 {\"range\" : \"81,90\"  , \"name\"     : \"Sacrifice something in exchange for greater power\"},
 {\"range\" : \"91,100\"  , \"name\"     : \"Use magic to trick or deceive\"}
 ]"
+type_order = 0
+oracle_order = 2
