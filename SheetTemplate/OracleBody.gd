@@ -7,12 +7,14 @@ func _ready() -> void:
 	var oraclesGroupsOrder = {}
 	var oraclesButtonOrder = {}
 	for module in Global.oracles:
+		#Adiciona novo Button na parte de cima
 		var btn = Button.new()
 		btn.toggle_mode = true
 		btn.rect_min_size.x = 180
 		btn.text = module
 		$OracleMenu.add_child(btn)
 		
+		#Adiciona nova Table
 		var newTable = $Tables.duplicate()
 		newTable.name = module
 		add_child(newTable)
@@ -37,6 +39,7 @@ func _ready() -> void:
 				
 				
 			if type != "MOVES":
+				#Adiciona novo agrupador de Oracles
 				var newOracleGroup = oracleGroup.instance()
 				newTable.get_node("HBox/SideMenu").add_child(newOracleGroup)
 				
@@ -47,7 +50,17 @@ func _ready() -> void:
 				for oracle in Global.oracles[module][type]:
 					if typeof(Global.oracles[module][type][oracle]) != TYPE_INT:
 						newOracleGroup.name = type
-						var oracleButton = newOracleGroup.add_button(oracle , Global.oracles[module][type][oracle].oracle_order)
+						#Adiciona novo Oracle Button
+						var oracleButton = newOracleGroup.add_button(
+							Global.oracles[module][type][oracle].oracle_order,
+							module,
+							type,
+							oracle
+						)
+						
+#						oracleButton.btnRoll.connect()
+						oracleButton.btnOracle.connect("pressed",self,"show_oracle",[module,type,oracle])
+						
 						
 						if not oraclesButtonOrder[module].has(type):
 							oraclesButtonOrder[module][type] = []
@@ -83,3 +96,12 @@ class MyCustomSorter:
 		if a.order > b.order:
 			return true
 		return false
+
+
+func show_oracle(module,type,oracle):
+	print( Global.oracles[module][type][oracle].data  )
+	printt(module,type,oracle)
+	var btn = Button.new()
+	randomize()
+	btn.text = str(randi())
+	get_node(module).get_node("HBox/Table").add_child( btn )

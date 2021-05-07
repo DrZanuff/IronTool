@@ -7,6 +7,14 @@
 script/source = "extends HBoxContainer
 
 var order = 0
+
+var module =\" \"
+var type = \"\"
+var oracle = \"\"
+
+onready var btnRoll = $BtnRoll
+onready var btnOracle = $BtnOracle
+
 "
 
 [node name="OracleGroup" type="MarginContainer"]

@@ -55,10 +55,22 @@ func _ready() -> void:
 			if oracles[oracle.module].has(oracle.type) == false:
 				oracles[oracle.module][oracle.type] = {}
 			
+			
 			oracles[oracle.module][oracle.type][oracle.oracle_name] = oracle.get_data_as_object()
 			oracles[oracle.module][oracle.type].order = 0
+			
+			var new_data = JSON.parse( oracle.get_data_as_object().data ).result
+			oracles[oracle.module][oracle.type][oracle.oracle_name].data = new_data
+			
+			for element in oracles[oracle.module][oracle.type][oracle.oracle_name].data:
+				var array = element.range.split(",")
+				element.str_range = element.range 
+				element.range = new_range(array)
 			 
 		file_name = dir.get_next()
 	
 
-
+func new_range(a : Array):
+	var start = int( a[0] )
+	var end = int( a[-1] )+1 if a.size() > 1 else int( a[0] )+1
+	return range( start, end )

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SheetTemplate/Oracle/OracleElement.gd" type="Script" id=1]
+
+[node name="OracleElement" type="MarginContainer"]
+margin_right = 234.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 234.0
+margin_bottom = 24.0
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 234.0
+margin_bottom = 24.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="Margin"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 229.0
+margin_bottom = 19.0
+text = "Somte Text"
+autowrap = true
