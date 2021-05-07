@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://SheetTemplate/Oracle/OracleGroup.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends HBoxContainer
+
+var order = 0
+"
 
 [node name="OracleGroup" type="MarginContainer"]
 margin_right = 323.0
@@ -56,6 +62,7 @@ custom_constants/separation = 5
 visible = false
 margin_right = 303.0
 margin_bottom = 20.0
+script = SubResource( 1 )
 
 [node name="BtnRoll" type="Button" parent="Body/OracleList/Content/Item"]
 margin_right = 20.0
