@@ -99,9 +99,13 @@ class MyCustomSorter:
 
 
 func show_oracle(module,type,oracle):
-	print( Global.oracles[module][type][oracle].data  )
-	printt(module,type,oracle)
-	var btn = Button.new()
-	randomize()
-	btn.text = str(randi())
-	get_node(module).get_node("HBox/Table").add_child( btn )
+	get_node(module).get_node("HBox/Table/OracleTable").populate_table(
+		Global.oracles[module][type][oracle].data , 
+		Global.oracles[module][type][oracle].data.size()
+	)
+#	print( Global.oracles[module][type][oracle].data  )
+#	printt(module,type,oracle)
+#	var btn = Button.new()
+#	randomize()
+#	btn.text = str(randi())
+#	get_node(module).get_node("HBox/Table").add_child( btn )

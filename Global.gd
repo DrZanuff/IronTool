@@ -64,7 +64,7 @@ func _ready() -> void:
 			
 			for element in oracles[oracle.module][oracle.type][oracle.oracle_name].data:
 				var array = element.range.split(",")
-				element.str_range = element.range 
+				element.str_range = str(element.range).replace(",","-")
 				element.range = new_range(array)
 			 
 		file_name = dir.get_next()

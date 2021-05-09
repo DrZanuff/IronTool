@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://SheetTemplate/Asset/Asset.tscn" type="PackedScene" id=14]
 [ext_resource path="res://SheetTemplate/AssetsGrid.gd" type="Script" id=15]
 [ext_resource path="res://SheetTemplate/OracleBody.gd" type="Script" id=16]
+[ext_resource path="res://SheetTemplate/Oracle/OracleTable.tscn" type="PackedScene" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -2569,7 +2570,7 @@ script = ExtResource( 16 )
 [node name="OracleMenu" type="GridContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody"]
 margin_left = 530.0
 margin_right = 530.0
-margin_bottom = 200.0
+margin_bottom = 98.0
 size_flags_horizontal = 6
 size_flags_vertical = 3
 custom_constants/vseparation = 20
@@ -2577,7 +2578,6 @@ custom_constants/hseparation = 20
 columns = 5
 
 [node name="Tables" type="MarginContainer" parent="MainMargin/Body/Interfaces/Oracles/OracleBody"]
-visible = false
 margin_top = 102.0
 margin_right = 1060.0
 margin_bottom = 200.0
@@ -2602,6 +2602,10 @@ margin_right = 1060.0
 margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="OracleTable" parent="MainMargin/Body/Interfaces/Oracles/OracleBody/Tables/HBox/Table" instance=ExtResource( 17 )]
+margin_right = 755.0
+margin_bottom = 98.0
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]
