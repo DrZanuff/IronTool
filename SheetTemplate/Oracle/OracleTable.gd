@@ -22,7 +22,9 @@ func populate_table(oracle , size):
 			newOracleElement.set_row_color(i % 2 , "light_first" )
 	
 		newOracleElement.set_text(oracle[i].str_range,oracle[i].name)
-
-		if i == 57 or i == 24:
+		
+		print(i)
+		if i == 74 or i == 49 or i == 24:
+			
 			current_col += 1
 			get_child(current_col).visible = true

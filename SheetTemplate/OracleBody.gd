@@ -26,8 +26,10 @@ func _ready() -> void:
 			$OracleMenu.move_child(btn,0)
 			newTable.show()
 			btn.pressed = true
+			newTable.show()
 		if module == "DELVE":
 			$OracleMenu.move_child(btn,1)
+			newTable.hide()
 		
 		for type in Global.oracles[module]:
 			
@@ -58,7 +60,6 @@ func _ready() -> void:
 							oracle
 						)
 						
-#						oracleButton.btnRoll.connect()
 						oracleButton.btnOracle.connect("pressed",self,"show_oracle",[module,type,oracle])
 						
 						
@@ -103,9 +104,3 @@ func show_oracle(module,type,oracle):
 		Global.oracles[module][type][oracle].data , 
 		Global.oracles[module][type][oracle].data.size()
 	)
-#	print( Global.oracles[module][type][oracle].data  )
-#	printt(module,type,oracle)
-#	var btn = Button.new()
-#	randomize()
-#	btn.text = str(randi())
-#	get_node(module).get_node("HBox/Table").add_child( btn )
