@@ -39,7 +39,6 @@ func _ready() -> void:
 			if not oraclesButtonOrder.has(module):
 				oraclesButtonOrder[module] = {}
 				
-				
 			if type != "MOVES":
 				#Adiciona novo agrupador de Oracles
 				var newOracleGroup = oracleGroup.instance()

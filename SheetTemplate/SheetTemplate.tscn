@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Assets/perspective-dice-six-faces-six.svg" type="Texture" id=1]
 [ext_resource path="res://Assets/ArrowLeft.svg" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://SheetTemplate/AssetsGrid.gd" type="Script" id=15]
 [ext_resource path="res://SheetTemplate/OracleBody.gd" type="Script" id=16]
 [ext_resource path="res://SheetTemplate/Oracle/OracleTable.tscn" type="PackedScene" id=17]
+[ext_resource path="res://SheetTemplate/Moves/Moves.tscn" type="PackedScene" id=18]
 
 [sub_resource type="DynamicFont" id=1]
 size = 15
@@ -199,7 +200,7 @@ __meta__ = {
 
 [node name="MainMargin" type="MarginContainer" parent="."]
 margin_right = 1110.0
-margin_bottom = 600.0
+margin_bottom = 923.0
 custom_constants/margin_right = 25
 custom_constants/margin_top = 50
 custom_constants/margin_left = 25
@@ -212,7 +213,7 @@ __meta__ = {
 margin_left = 25.0
 margin_top = 50.0
 margin_right = 1085.0
-margin_bottom = 550.0
+margin_bottom = 873.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -751,7 +752,7 @@ text = "Assets"
 [node name="Interfaces" type="MarginContainer" parent="MainMargin/Body"]
 margin_top = 213.0
 margin_right = 1060.0
-margin_bottom = 423.0
+margin_bottom = 823.0
 rect_min_size = Vector2( 0, 115 )
 custom_constants/margin_top = 10
 
@@ -2146,7 +2147,7 @@ wrap_enabled = true
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 240.0
+margin_bottom = 610.0
 
 [node name="SiteList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Sites"]
 margin_right = 974.0
@@ -2195,7 +2196,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 243.0
+margin_bottom = 610.0
 
 [node name="ProgressList" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Progresses"]
 margin_right = 974.0
@@ -2242,7 +2243,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 263.0
+margin_bottom = 610.0
 
 [node name="Margin" type="MarginContainer" parent="MainMargin/Body/Interfaces/Bonds"]
 margin_right = 974.0
@@ -2340,7 +2341,7 @@ text = "MODIFY"
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 210.0
+margin_bottom = 610.0
 rect_min_size = Vector2( 0, 100 )
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
@@ -2348,7 +2349,7 @@ custom_constants/margin_left = 50
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/Body/Interfaces/Settings"]
 margin_left = 50.0
 margin_right = 1010.0
-margin_bottom = 200.0
+margin_bottom = 600.0
 alignment = 1
 
 [node name="Title" type="MarginContainer" parent="MainMargin/Body/Interfaces/Settings/HBoxContainer"]
@@ -2495,7 +2496,7 @@ pressed = true
 visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 210.0
+margin_bottom = 610.0
 
 [node name="AssetsGrid" type="GridContainer" parent="MainMargin/Body/Interfaces/Assets"]
 margin_left = 30.0
@@ -2555,9 +2556,10 @@ toggle_mode = true
 text = "MODIFY"
 
 [node name="Oracles" type="VBoxContainer" parent="MainMargin/Body/Interfaces"]
+visible = false
 margin_top = 10.0
 margin_right = 1060.0
-margin_bottom = 210.0
+margin_bottom = 610.0
 
 [node name="OracleBody" type="VBoxContainer" parent="MainMargin/Body/Interfaces/Oracles"]
 margin_right = 1060.0
@@ -2606,6 +2608,9 @@ size_flags_vertical = 3
 [node name="OracleTable" parent="MainMargin/Body/Interfaces/Oracles/OracleBody/Tables/HBox/Table" instance=ExtResource( 17 )]
 margin_right = 755.0
 margin_bottom = 98.0
+
+[node name="Moves" parent="MainMargin/Body/Interfaces" instance=ExtResource( 18 )]
+margin_bottom = 610.0
 
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Minus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Minus_pressed"]
 [connection signal="pressed" from="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge/Body/Margin/StatControl/Plus" to="MainMargin/Body/Interfaces/Summary/Stats/Stats/Stats/Edge" method="_on_Plus_pressed"]

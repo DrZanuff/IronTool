@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SheetTemplate/Moves/Moves.gd" type="Script" id=2]
+
+[node name="Moves" type="HBoxContainer"]
+margin_top = 10.0
+margin_right = 1060.0
+margin_bottom = 144.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 352.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+custom_constants/margin_top = 0
+custom_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="Margin"]
+margin_right = 352.0
+margin_bottom = 640.0
+
+[node name="InnerMargin" type="MarginContainer" parent="Margin"]
+margin_right = 352.0
+margin_bottom = 640.0
+custom_constants/margin_top = 10
+custom_constants/margin_bottom = 10
+
+[node name="SideMenu" type="ScrollContainer" parent="Margin/InnerMargin"]
+margin_top = 10.0
+margin_right = 352.0
+margin_bottom = 630.0
+rect_min_size = Vector2( 0, 600 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="Margin/InnerMargin/SideMenu"]
+margin_right = 352.0
+margin_bottom = 620.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Margin/InnerMargin/SideMenu/Margin"]
+margin_right = 352.0
+margin_bottom = 620.0
+
+[node name="M" type="MarginContainer" parent="Margin/InnerMargin/SideMenu/Margin"]
+margin_right = 352.0
+margin_bottom = 620.0
+custom_constants/margin_bottom = 10
+
+[node name="List" type="VBoxContainer" parent="Margin/InnerMargin/SideMenu/Margin/M"]
+margin_right = 352.0
+margin_bottom = 610.0
+custom_constants/separation = -1
+
+[node name="Body" type="MarginContainer" parent="."]
+margin_left = 356.0
+margin_right = 1060.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3

@@ -5,6 +5,7 @@ var domains = {}
 var assets_types = ["COMPANION","PATH","COMBAT TALENT","RITUAL","CUSTOM"]
 var assets = {}
 var oracles = {}
+var moves_menu = {}
 
 
 func _ready() -> void:
@@ -69,6 +70,10 @@ func _ready() -> void:
 			 
 		file_name = dir.get_next()
 	
+	var moves_data_menu = Node.new()
+	moves_data_menu.set_script(load("res://Classes/MovesMenu.gd"))
+	moves_menu = moves_data_menu.list
+	moves_data_menu.queue_free()
 
 func new_range(a : Array):
 	var start = int( a[0] )
